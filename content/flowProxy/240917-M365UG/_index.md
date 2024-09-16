@@ -1,5 +1,5 @@
 +++
-title = "01deliverCustomReports"
+title = "CustomReports"
 description = "A Hugo theme for creating Reveal.js presentations"
 outputs = ["Reveal"]
 [reveal_hugo]
@@ -133,7 +133,7 @@ touch = true
 
 <div class="col" >
 
-  <img src="/techTweedie_150x150.png" alt="Image" style="height:250px; box-shadow: none;">
+  <img src="/techTweedie_150x150.png" alt="Image" style="box-shadow: none;">
 
 </div>
 
