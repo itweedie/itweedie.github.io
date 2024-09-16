@@ -158,10 +158,27 @@ touch = true
 
 ---
 {{< slide  transition="zoom" >}}
+{{% section %}}
 
 ## Current solution
 Demo 1
 
+---
+
+## Live Demo 1
+1. [Settlement App](https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&pagetype=entityrecord&etn=techtwed_settlement&id=3272841e-6c32-ef11-8e4e-6045bd0d261b&formid=44e105a1-df32-ef11-8e4e-6045bd0d261b)
+2. [Check email](https://outlook.office365.com/mail/demo@Tweed.technology/)
+3. [Power automate flow](https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/25bc4d07-1da5-4c21-86bc-5ca9c7f9e994/view)
+
+---
+
+{{< slide background-image="brave_xcvrNMgav7.gif" >}}
+
+---
+
+{{< slide background-image="brave_gq4lsiNoTM.gif" >}}
+
+{{% /section %}}
 
 ---
 ## Problems
@@ -177,79 +194,152 @@ Demo 1
 
 
 ---
+
+{{< slide  transition="zoom" >}}
+{{% section %}}
 # Lets give it a go
 Demo 2
 
+---
+
+## Live Demo 2
+1. [Web Page Flow](https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/25b74e7e-6734-4e38-9847-dc230c444aeb/view)
+2. [Try it out](https://prod-16.uksouth.logic.azure.com/workflows/c59c21c2e87b4267a3f51327e8b0a9c6/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4o_YOe9rzXb6InvBIeOh3pM9GLXVfQOuR1GWuI81bVs)
+
+---
+
+{{< slide background-image="brave_oH77AXXsqV.gif" >}}
+
+---
+
+{{< slide background-image="brave_t9jrFNWxl4.gif" >}}
+
+{{% /section %}}
 
 ---
 
 {{% section %}}
 
-# Key component
+## Key component
 
 ### Web Page
+
 - Flow with HTTP Request trigger
-- Set MIME Types
-[Common MIME types - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+- Response Headers 
+
 ```json
 content-type : text/html
 ```
 
+- Full list can be found [Common MIME types - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+
 ---
 
+{{< slide background-image="msedge_RN3ZkQUXPp.gif" >}}
 
-## Section slide 2
- <iframe data-src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types"></iframe>
+
+{{% /section %}}
+
+---
+
+{{< slide  transition="zoom" >}}
+{{% section %}}
+# Lets give it a go
+Demo 3
+
+---
+
+## Live Demo 3
+1. [PDF Flow](https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/53909a74-b04d-4ffd-9983-9b73d095e10c/view)
+2. [Try it out](https://prod-21.uksouth.logic.azure.com/workflows/5ba0def50b7e43498b887e8aac99bfae/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=wt-FxeMbuDM_UwFENGNdX-BGwFYX-u7hWtIqjw4Z5xQ)
+
+
+---
+
+{{< slide background-image="brave_sDYNnTX3w6.gif" >}}
 
 {{% /section %}}
 
 --- 
 
-# Key component
+{{% section %}}
+## Key component
 
 ### PDF
-#### MIME Types
-[Common MIME types - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+- Response Headers 
 ```json
 Content-Type: application/pdf
 ```
-#### Content Disposition
-[Content-Disposition - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition)
+[Common MIME types - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+
+
 ```json
 Content-Disposition: inline
 Content-Disposition: attachment; filename="filename.pdf"
 ```
+[Content-Disposition - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition)
 
 ---
 
+{{< slide background-image="msedge_rO7rHF3uIl.gif" >}}
+
+{{% /section %}}
+
+---
+
+{{< slide  transition="zoom" >}}
+{{% section %}}
 # Lets see that working
-Demo 3
+Demo 4
 
 ---
-# Key component
+
+## Live Demo 4
+1. [View Form](https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&pagetype=entityrecord&etn=techtwed_settlement&id=3272841e-6c32-ef11-8e4e-6045bd0d261b&formid=44e105a1-df32-ef11-8e4e-6045bd0d261b)
+2. [Try it out](https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&pagetype=entityrecord&etn=techtwed_settlement&id=3272841e-6c32-ef11-8e4e-6045bd0d261b&formid=44e105a1-df32-ef11-8e4e-6045bd0d261b)
+3. [View Flow](https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/a999aa73-d908-47b5-82c5-311a8814e270/view)
+
+
+---
+
+{{< slide background-image="brave_GPF5DnIcsA.gif" >}}
+
+---
+
+{{< slide background-image="brave_dBvaPf9yIY.gif" >}}
+
+{{% /section %}}
+
+---
+## Key component
 
 ```csharp
 @{triggerOutputs()['queries']}
 ```
 ---
 
-### Overview of the Solution
+### Overview
 
-<div style="transform: scale(2);">
+
+<div style="margin: 20px 0; transform: scale(2); margin-top: 150px;">
+
 {{< mermaid >}}
 graph LR
-    A[User] --> B[Flow] --> C[Dataverse]
+    A(User) --> B(Flow) --> C(Dataverse)
 {{< /mermaid >}}
+
 </div>
 
 ---
-### Sequence Diagram of the Solution
+### Sequence 
+
+<div style="margin: 20px 0; transform: scale(1.2); margin-top: 50px;">
 
 {{< mermaid >}}
 sequenceDiagram
     autonumber
     actor User
-    User->>Flow: Clicks link
+    User->>Flow: Clicks link HTTP
     Flow->>Dataverse: Requests data
     Dataverse-->>Flow: Data returned
     Flow->>SharePoint: Requests template
@@ -258,30 +348,35 @@ sequenceDiagram
     Flow-->>User: Returns PDF
 {{< /mermaid >}}
 
+</div>
+
 
 ---
 # We still have a problem
 
 
 ---
-## What do we need
 
-<div style="transform: scale(1.5);">
+### What do we need?
+    
+  <div style="transform: scale(1.3); margin-top: 150px;">
+  
+  {{< mermaid >}}
+  sequenceDiagram
+      autonumber
+      actor User
+      User->>Flow: Clicks link
+      Flow-->>User: Returns PDF
+  {{< /mermaid >}}
+  </div>
 
-{{< mermaid >}}
-sequenceDiagram
-    autonumber
-    actor User
-    User->>Flow: Clicks link
-    Flow-->>User: Returns PDF
-{{< /mermaid >}}
 
-</div>
+
 
 ---
 
-# Reverse Proxy
-<div style="transform: scale(2);">
+### Reverse Proxy
+<div style="transform: scale(1.3);  margin-top: 100px;">
 {{< mermaid >}}
 sequenceDiagram
     autonumber
@@ -295,44 +390,58 @@ sequenceDiagram
 </div>
 
 ---
-# Solution requirements
-- Need to authenticate by Azure B2C
+### Solution requirements
+
+- Authenticate by Azure B2C
 - Reverse Proxy function
 
 ---
-# Where can I find this
+### Where can I find this
 
-- App Service Authentication
+<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container">
+
+<div class="col" style="justify-content: center; align-items: center;">
+
+  <img src="image-1.png" alt="Image" style="height:80%; box-shadow: none;">
+
+</div>
+
+
+
+<div class="col">
+  <ul>
+    <li>Out of the box Authentication Authentication</li>
+  </ul>
+</div>
+
+</div>
 
 --- 
-# Azure Function
 
-
----
-# Azure function
-
-![[P-azurefunction.png]]
+# Azure App Service
 
 ---
+
 # App Service
 
+1. [shibayan/AppServiceProxy.SiteExtension: Site Extension-based Reverse Proxy compatible with Azure Functions Proxies (github.com)](https://github.com/shibayan/AppServiceProxy.SiteExtension)
 
 
----
-# App Service
-
-[shibayan/AppServiceProxy.SiteExtension: Site Extension-based Reverse Proxy compatible with Azure Functions Proxies (github.com)](https://github.com/shibayan/AppServiceProxy.SiteExtension)
-
-![[Pastedimage20240626110641.png]]
-
----
-# App Service
-
-![[Pastedimage20240626110751.png]]
-
+1. Deploy it
+2. [Configure it](https://app-ttdemo01a-bomg.scm.azurewebsites.net/dev/wwwroot/proxies.json)
 
 ---
 # Lets look at the config
+
 Demo 4
 
 

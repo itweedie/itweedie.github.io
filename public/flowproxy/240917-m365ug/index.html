@@ -135,12 +135,30 @@
 <li>The clients must access these documents securely</li>
 </ul>
 </section>
-
+<p>
 <section data-noprocess data-shortcode-slide
       data-transition="zoom">
   
+
+
+<section data-shortcode-section>
 <h2 id="current-solution">Current solution</h2>
 <p>Demo 1</p>
+</section><section>
+<h2 id="live-demo-1">Live Demo 1</h2>
+<ol>
+<li><a href="https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&amp;pagetype=entityrecord&amp;etn=techtwed_settlement&amp;id=3272841e-6c32-ef11-8e4e-6045bd0d261b&amp;formid=44e105a1-df32-ef11-8e4e-6045bd0d261b">Settlement App</a></li>
+<li><a href="https://outlook.office365.com/mail/demo@Tweed.technology/">Check email</a></li>
+<li><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/25bc4d07-1da5-4c21-86bc-5ca9c7f9e994/view">Power automate flow</a></li>
+</ol>
+</section>
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_xcvrNMgav7.gif">
+</section>
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_gq4lsiNoTM.gif">
+
+</section></p>
 </section><section>
 <h2 id="problems">Problems</h2>
 </section><section>
@@ -154,64 +172,140 @@
 <li>Get power automate to make a web page for us</li>
 <li>Can that web page present a PDF document</li>
 </ul>
-</section><section>
+</section>
+<p>
+<section data-noprocess data-shortcode-slide
+      data-transition="zoom">
+  
+
+
+<section data-shortcode-section>
 <h1 id="lets-give-it-a-go">Lets give it a go</h1>
 <p>Demo 2</p>
+</section><section>
+<h2 id="live-demo-2">Live Demo 2</h2>
+<ol>
+<li><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/25b74e7e-6734-4e38-9847-dc230c444aeb/view">Web Page Flow</a></li>
+<li><a href="https://prod-16.uksouth.logic.azure.com/workflows/c59c21c2e87b4267a3f51327e8b0a9c6/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=4o_YOe9rzXb6InvBIeOh3pM9GLXVfQOuR1GWuI81bVs">Try it out</a></li>
+</ol>
+</section>
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_oH77AXXsqV.gif">
+</section>
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_t9jrFNWxl4.gif">
+
+</section></p>
 </section><section>
 
 
 <section data-shortcode-section>
-<h1 id="key-component">Key component</h1>
+<h2 id="key-component">Key component</h2>
 <h3 id="web-page">Web Page</h3>
 <ul>
 <li>Flow with HTTP Request trigger</li>
-<li>Set MIME Types
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">Common MIME types - HTTP | MDN (mozilla.org)</a></li>
+<li>Response Headers</li>
 </ul>
 <pre><code class="language-json">content-type : text/html
 </code></pre>
-</section><section>
-<h2 id="section-slide-2">Section slide 2</h2>
- <iframe data-src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types"></iframe>
+<ul>
+<li>Full list can be found <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">Common MIME types - HTTP | MDN (mozilla.org)</a></li>
+</ul>
+</section>
+<section data-noprocess data-shortcode-slide
+      data-background-image="msedge_RN3ZkQUXPp.gif">
 
 </section>
+</section>
+<p>
+<section data-noprocess data-shortcode-slide
+      data-transition="zoom">
+  
+
+
+<section data-shortcode-section>
+<h1 id="lets-give-it-a-go">Lets give it a go</h1>
+<p>Demo 3</p>
 </section><section>
-<h1 id="key-component">Key component</h1>
+<h2 id="live-demo-3">Live Demo 3</h2>
+<ol>
+<li><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/53909a74-b04d-4ffd-9983-9b73d095e10c/view">PDF Flow</a></li>
+<li><a href="https://prod-21.uksouth.logic.azure.com/workflows/5ba0def50b7e43498b887e8aac99bfae/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=wt-FxeMbuDM_UwFENGNdX-BGwFYX-u7hWtIqjw4Z5xQ">Try it out</a></li>
+</ol>
+</section>
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_sDYNnTX3w6.gif">
+
+</section></p>
+</section><section>
+
+
+<section data-shortcode-section>
+<h2 id="key-component">Key component</h2>
 <h3 id="pdf">PDF</h3>
-<h4 id="mime-types">MIME Types</h4>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">Common MIME types - HTTP | MDN (mozilla.org)</a></p>
+<ul>
+<li>Response Headers</li>
+</ul>
 <pre><code class="language-json">Content-Type: application/pdf
 </code></pre>
-<h4 id="content-disposition">Content Disposition</h4>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition">Content-Disposition - HTTP | MDN (mozilla.org)</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">Common MIME types - HTTP | MDN (mozilla.org)</a></p>
 <pre><code class="language-json">Content-Disposition: inline
 Content-Disposition: attachment; filename=&quot;filename.pdf&quot;
 </code></pre>
-</section><section>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition">Content-Disposition - HTTP | MDN (mozilla.org)</a></p>
+</section>
+<section data-noprocess data-shortcode-slide
+      data-background-image="msedge_rO7rHF3uIl.gif">
+
+</section>
+</section>
+<p>
+<section data-noprocess data-shortcode-slide
+      data-transition="zoom">
+  
+
+
+<section data-shortcode-section>
 <h1 id="lets-see-that-working">Lets see that working</h1>
-<p>Demo 3</p>
+<p>Demo 4</p>
 </section><section>
-<h1 id="key-component-1">Key component</h1>
+<h2 id="live-demo-4">Live Demo 4</h2>
+<ol>
+<li><a href="https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&amp;pagetype=entityrecord&amp;etn=techtwed_settlement&amp;id=3272841e-6c32-ef11-8e4e-6045bd0d261b&amp;formid=44e105a1-df32-ef11-8e4e-6045bd0d261b">View Form</a></li>
+<li><a href="https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&amp;pagetype=entityrecord&amp;etn=techtwed_settlement&amp;id=3272841e-6c32-ef11-8e4e-6045bd0d261b&amp;formid=44e105a1-df32-ef11-8e4e-6045bd0d261b">Try it out</a></li>
+<li><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/a999aa73-d908-47b5-82c5-311a8814e270/view">View Flow</a></li>
+</ol>
+</section>
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_GPF5DnIcsA.gif">
+</section>
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_dBvaPf9yIY.gif">
+
+</section></p>
+</section><section>
+<h2 id="key-component">Key component</h2>
 <pre><code class="language-csharp">@{triggerOutputs()['queries']}
 </code></pre>
 </section><section>
-<h3 id="overview-of-the-solution">Overview of the Solution</h3>
-<div style="transform: scale(2);">
+<h3 id="overview">Overview</h3>
+<div style="margin: 20px 0; transform: scale(2); margin-top: 150px;">
 <div class="mermaid">
 graph LR
-    A[User] --> B[Flow] --> C[Dataverse]
+    A(User) --> B(Flow) --> C(Dataverse)
 
 </div>
 
 
 </div>
 </section><section>
-<h3 id="sequence-diagram-of-the-solution">Sequence Diagram of the Solution</h3>
+<h3 id="sequence">Sequence</h3>
+<div style="margin: 20px 0; transform: scale(1.2); margin-top: 50px;">
 <div class="mermaid">
 sequenceDiagram
     autonumber
     actor User
-    User->>Flow: Clicks link
+    User->>Flow: Clicks link HTTP
     Flow->>Dataverse: Requests data
     Dataverse-->>Flow: Data returned
     Flow->>SharePoint: Requests template
@@ -222,25 +316,26 @@ sequenceDiagram
 </div>
 
 
+</div>
 </section><section>
 <h1 id="we-still-have-a-problem">We still have a problem</h1>
 </section><section>
-<h2 id="what-do-we-need">What do we need</h2>
-<div style="transform: scale(1.5);">
+<h3 id="what-do-we-need">What do we need?</h3>
+  <div style="transform: scale(1.3); margin-top: 150px;">
 <div class="mermaid">
-sequenceDiagram
-    autonumber
-    actor User
-    User->>Flow: Clicks link
-    Flow-->>User: Returns PDF
-
+  sequenceDiagram
+      autonumber
+      actor User
+      User->>Flow: Clicks link
+      Flow-->>User: Returns PDF
+  
 </div>
 
 
-</div>
+  </div>
 </section><section>
-<h1 id="reverse-proxy">Reverse Proxy</h1>
-<div style="transform: scale(2);">
+<h3 id="reverse-proxy">Reverse Proxy</h3>
+<div style="transform: scale(1.3);  margin-top: 100px;">
 <div class="mermaid">
 sequenceDiagram
     autonumber
@@ -256,30 +351,105 @@ sequenceDiagram
 
 </div>
 </section><section>
-<h1 id="solution-requirements">Solution requirements</h1>
+<h3 id="solution-requirements">Solution requirements</h3>
 <ul>
-<li>Need to authenticate by Azure B2C</li>
+<li>Authenticate by Azure B2C</li>
 <li>Reverse Proxy function</li>
 </ul>
 </section><section>
-<h1 id="where-can-i-find-this">Where can I find this</h1>
-<ul>
-<li>App Service Authentication</li>
-</ul>
+<h3 id="where-can-i-find-this">Where can I find this</h3>
+<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+<div class="container">
+<div class="col" style="justify-content: center; align-items: center;">
+  <img src="image-1.png" alt="Image" style="height:80%; box-shadow: none;">
+</div>
+<div class="col">
+  <ul>
+    <li>Out of the box Authentication Authentication</li>
+  </ul>
+</div>
+</div>
 </section><section>
 <h1 id="azure-function">Azure Function</h1>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="msedge_TeQ2S2Q5TZ.gif">
+  
+<div style="background-color: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<h3 id="azure-function-1">Azure function</h3>
+<ul>
+<li>Forwards all headers received from the incoming request.</li>
+<li>Adds custom header Flow-Key (from environment variables).</li>
+<li>Handles GET method.</li>
+<li>Appends query parameters from the incoming request to the external URL.</li>
+</ul>
+</div>
+<pre><code>
+FLOW_URL=https://prod-21.uksouth.logic.azure.com/workflows/your-logic-app-url
+FLOW_KEY=your-flow-key-value
+
+</code></pre>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-transition="zoom">
+  
+<h3 id="lets-deploy-it">Lets deploy it</h3>
+<ol>
+<li>Fork it</li>
+</ol>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_ckTNRaGKk5.gif">
+  
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-transition="zoom">
+  
+<h3 id="lets-deploy-it-1">Lets deploy it</h3>
+<ol>
+<li>Fork it</li>
+<li>Deploy it</li>
+</ol>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_WeA1UkipGi.gif">
+  
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-transition="zoom">
+  
+<h3 id="lets-deploy-it-2">Lets deploy it</h3>
+<ol>
+<li>Fork it</li>
+<li>Deploy it</li>
+<li>Add Environment variables</li>
+</ol>
+<pre><code>
+FLOW_URL=https://prod-15.uksouth.logic.azure.com/workflows/7a854d30969e4158bac2b17ac15d1ad7/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=FrLhWsuldO9AiPgF4ztcjuvjsSrBrJtlD5Mf17jjU_I 
+
+FLOW_KEY=ABC123
+
+</code></pre>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_bBNZhNjqA7.gif">
+  
 </section><section>
-<h1 id="azure-function-1">Azure function</h1>
-<p>![[P-azurefunction.png]]</p>
-</section><section>
-<h1 id="app-service">App Service</h1>
-</section><section>
-<h1 id="app-service-1">App Service</h1>
-<p><a href="https://github.com/shibayan/AppServiceProxy.SiteExtension">shibayan/AppServiceProxy.SiteExtension: Site Extension-based Reverse Proxy compatible with Azure Functions Proxies (github.com)</a></p>
-<p>![[Pastedimage20240626110641.png]]</p>
-</section><section>
-<h1 id="app-service-2">App Service</h1>
-<p>![[Pastedimage20240626110751.png]]</p>
+<p>@{triggerOutputs()[&lsquo;headers&rsquo;][&lsquo;Flow-Key&rsquo;]}&quot; /&gt;</p>
 </section><section>
 <h1 id="lets-look-at-the-config">Lets look at the config</h1>
 <p>Demo 4</p>
@@ -299,12 +469,12 @@ sequenceDiagram
 } 
 </code></pre>
 </section><section>
-<h1 id="key-component-2">Key component</h1>
+<h1 id="key-component-1">Key component</h1>
 <h2 id="inbound-header">Inbound Header</h2>
 <pre><code class="language-JSON">  &quot;X-MS-CLIENT-PRINCIPAL-ID&quot;: &quot;1ebcd192-5366-48eb-9028-04610ae1704d&quot;
 </code></pre>
 </section><section>
-<h1 id="key-component-3">Key component</h1>
+<h1 id="key-component-2">Key component</h1>
 <h2 id="fetch-xml">Fetch XML</h2>
 <pre><code class="language-XML">&lt;fetch&gt;
   &lt;entity name=&quot;techtwed_settlement&quot;&gt;
@@ -476,6 +646,9 @@ sequenceDiagram
 
   
     
+  
+  
+
   
   
 

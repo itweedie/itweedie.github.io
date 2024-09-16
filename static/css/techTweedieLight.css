@@ -349,12 +349,14 @@ body {
   z-index: 1000;
   color: #063533; }
 
+  
+/*
 .mermaid {
-transform: scale(1); /* Scale the diagram */
+transform: scale(1); 
 width: 90% !important;
 margin: 0 auto;
 display: flex;
-justify-content: center; /* Center horizontally */
+justify-content: center; 
 margin: 0 auto;
 }
 
@@ -364,12 +366,11 @@ margin: 0 auto;
 
 
 .mermaid text {
-    /* Customize text appearance */
     font-family: "Quicksand", sans-serif;
     font-size: 18px;
     fill: #c52a2a;
 }
-
+*/
 /* Optional: Adjust the size of the Mermaid diagram */
 /*
 .mermaid svg {
