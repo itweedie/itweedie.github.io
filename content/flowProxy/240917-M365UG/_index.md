@@ -53,7 +53,7 @@ touch = true
 
 <div class="container">
 
-<div class="col" stype="justify-content: center; align-items: center;">
+<div class="col" style="justify-content: center; align-items: center;">
 
   <img src="content/qr.jpg" alt="Image" style="height:250px; box-shadow: none;">
 
@@ -119,10 +119,35 @@ touch = true
 ---
 {{< slide background="#fdfdfd"  >}}
 ## Community Content
-- https://techtweedie.github.io/ 
-- https://github.com/itweedie
-- https://www.youtube.com/@techtweedie
 
+<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container">
+
+<div class="col" >
+
+  <img src="/techTweedie_150x150.png" alt="Image" style="height:250px; box-shadow: none;">
+
+</div>
+
+
+
+<div class="col" >
+  <ul>
+    <li>https://techtweedie.github.io/ </li>
+    <li>https://github.com/itweedie</li>
+    <li>https://www.youtube.com/@techtweedie</li>
+  </ul>
+</div>
+
+</div>
 
 ---
 {{< slide background="#fdfdfd" transition="zoom"   >}}
@@ -155,7 +180,11 @@ Demo 1
 # Lets give it a go
 Demo 2
 
+
 ---
+
+{{% section %}}
+
 # Key component
 
 ### Web Page
@@ -166,7 +195,16 @@ Demo 2
 content-type : text/html
 ```
 
+---
+
+
+## Section slide 2
+ <iframe data-src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types"></iframe>
+
+{{% /section %}}
+
 --- 
+
 # Key component
 
 ### PDF

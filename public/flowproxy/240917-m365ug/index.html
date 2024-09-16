@@ -44,7 +44,7 @@
 }
 </style>
 <div class="container">
-<div class="col" stype="justify-content: center; align-items: center;">
+<div class="col" style="justify-content: center; align-items: center;">
   <img src="content/qr.jpg" alt="Image" style="height:250px; box-shadow: none;">
 </div>
 <div class="col">
@@ -102,11 +102,26 @@
       data-background="#fdfdfd">
   
 <h2 id="community-content">Community Content</h2>
-<ul>
-<li><a href="https://techtweedie.github.io/">https://techtweedie.github.io/</a></li>
-<li><a href="https://github.com/itweedie">https://github.com/itweedie</a></li>
-<li><a href="https://www.youtube.com/@techtweedie">https://www.youtube.com/@techtweedie</a></li>
-</ul>
+<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+<div class="container">
+<div class="col" >
+  <img src="/techTweedie_150x150.png" alt="Image" style="height:250px; box-shadow: none;">
+</div>
+<div class="col" >
+  <ul>
+    <li>https://techtweedie.github.io/ </li>
+    <li>https://github.com/itweedie</li>
+    <li>https://www.youtube.com/@techtweedie</li>
+  </ul>
+</div>
+</div>
 </section>
 
 <section data-noprocess data-shortcode-slide
@@ -143,6 +158,9 @@
 <h1 id="lets-give-it-a-go">Lets give it a go</h1>
 <p>Demo 2</p>
 </section><section>
+
+
+<section data-shortcode-section>
 <h1 id="key-component">Key component</h1>
 <h3 id="web-page">Web Page</h3>
 <ul>
@@ -153,7 +171,12 @@
 <pre><code class="language-json">content-type : text/html
 </code></pre>
 </section><section>
-<h1 id="key-component-1">Key component</h1>
+<h2 id="section-slide-2">Section slide 2</h2>
+ <iframe data-src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types"></iframe>
+
+</section>
+</section><section>
+<h1 id="key-component">Key component</h1>
 <h3 id="pdf">PDF</h3>
 <h4 id="mime-types">MIME Types</h4>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">Common MIME types - HTTP | MDN (mozilla.org)</a></p>
@@ -168,7 +191,7 @@ Content-Disposition: attachment; filename=&quot;filename.pdf&quot;
 <h1 id="lets-see-that-working">Lets see that working</h1>
 <p>Demo 3</p>
 </section><section>
-<h1 id="key-component-2">Key component</h1>
+<h1 id="key-component-1">Key component</h1>
 <pre><code class="language-csharp">@{triggerOutputs()['queries']}
 </code></pre>
 </section><section>
@@ -276,12 +299,12 @@ sequenceDiagram
 } 
 </code></pre>
 </section><section>
-<h1 id="key-component-3">Key component</h1>
+<h1 id="key-component-2">Key component</h1>
 <h2 id="inbound-header">Inbound Header</h2>
 <pre><code class="language-JSON">  &quot;X-MS-CLIENT-PRINCIPAL-ID&quot;: &quot;1ebcd192-5366-48eb-9028-04610ae1704d&quot;
 </code></pre>
 </section><section>
-<h1 id="key-component-4">Key component</h1>
+<h1 id="key-component-3">Key component</h1>
 <h2 id="fetch-xml">Fetch XML</h2>
 <pre><code class="language-XML">&lt;fetch&gt;
   &lt;entity name=&quot;techtwed_settlement&quot;&gt;
