@@ -497,12 +497,13 @@ Demo 4
 ---
 # High Level Solution
 
-
+<div style="transform: scale(1.3);  margin-top: 100px;">
 {{< mermaid >}}
 graph LR
 
     A[User] --> R[Reverse Proxy] --> B[Flow] --> C[Dataverse]
 {{< /mermaid >}}
+</div>
 
 ---
 # Sequence Diagram
