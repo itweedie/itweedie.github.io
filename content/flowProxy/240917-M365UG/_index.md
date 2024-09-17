@@ -621,5 +621,9 @@ sequenceDiagram
     <div>Feedback</div>
     <div><img src="image.png" alt="Image" style="height:250px; box-shadow: none;"></div>
   </div>
+    <div class="col" stype="justify-content: center; align-items: center;">
+    <div>Presentation</div>
+    <div><img src="image-2.png" alt="Image" style="height:250px; box-shadow: none;"></div>
+  </div>
 </div>
 

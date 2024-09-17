@@ -23,6 +23,6 @@ touch = true
 
 
 ## Presentations
-- [240917-M365UG](flowProxy/240917-M365UG/)
+- [240917-m365ug](flowproxy/240917-m365ug/)
 
 
