@@ -376,39 +376,110 @@ sequenceDiagram
   </ul>
 </div>
 </div>
-</section><section>
-<h1 id="azure-app-service">Azure App Service</h1>
-</section><section>
-<h1 id="app-service">App Service</h1>
-<ol>
-<li>
-<p><a href="https://github.com/shibayan/AppServiceProxy.SiteExtension">shibayan/AppServiceProxy.SiteExtension: Site Extension-based Reverse Proxy compatible with Azure Functions Proxies (github.com)</a></p>
-</li>
-<li>
-<p>Deploy it</p>
-</li>
-<li>
-<p><a href="https://app-ttdemo01a-bomg.scm.azurewebsites.net/dev/wwwroot/proxies.json">Configure it</a></p>
-</li>
-</ol>
-</section><section>
-<h1 id="lets-look-at-the-config">Lets look at the config</h1>
-<p>Demo 4</p>
-</section><section>
-<h1 id="configuration-of-app-service">Configuration of App Service</h1>
-<pre><code class="language-JSON">{
-  &quot;$schema&quot;: &quot;http://json.schemastore.org/proxies&quot;,
-  &quot;proxies&quot;: {
-    &quot;Demo01&quot;: {
-      &quot;matchCondition&quot;: {
-        &quot;methods&quot;: [ &quot;GET&quot; ],
-        &quot;route&quot;: &quot;/Demo01/{*path}&quot;
-      },
-      &quot;backendUri&quot;: &quot;https://prod-15.uksouth.logic.azure.com:443/workflows/7a854d30969e4158bac2b17ac15d1ad7/triggers/manual/paths/{path}&quot;
-    }
-  }
-} 
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="msedge_TeQ2S2Q5TZ.gif">
+  
+<div style="background-color: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<h3 id="azure-function">Azure function</h3>
+<ul>
+<li>Forwards all headers received from the incoming request.</li>
+<li>Adds custom header Flow-Key (from environment variables).</li>
+<li>Handles GET method.</li>
+<li>Appends query parameters from the incoming request to the external URL.</li>
+</ul>
+</div>
+<pre><code>
+FLOW_URL=https://prod-21.uksouth.logic.azure.com/workflows/your-logic-app-url
+FLOW_KEY=your-flow-key-value
+
 </code></pre>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-transition="zoom">
+  
+<h3 id="lets-deploy-it">Lets deploy it</h3>
+<ol>
+<li>Fork it</li>
+</ol>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_ckTNRaGKk5.gif">
+  
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-transition="zoom">
+  
+<h3 id="lets-deploy-it-1">Lets deploy it</h3>
+<ol>
+<li>Fork it</li>
+<li>Deploy it</li>
+</ol>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_WeA1UkipGi.gif">
+  
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-transition="zoom">
+  
+<h3 id="lets-deploy-it-2">Lets deploy it</h3>
+<ol>
+<li>Fork it</li>
+<li>Deploy it</li>
+<li>Add Environment variables</li>
+</ol>
+<pre><code>
+FLOW_URL=https://prod-15.uksouth.logic.azure.com/workflows/7a854d30969e4158bac2b17ac15d1ad7/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=FrLhWsuldO9AiPgF4ztcjuvjsSrBrJtlD5Mf17jjU_I 
+
+https://prod-15.uksouth.logic.azure.com:443/workflows/7a854d30969e4158bac2b17ac15d1ad7/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=FrLhWsuldO9AiPgF4ztcjuvjsSrBrJtlD5Mf17jjU_I
+
+FLOW_KEY=ABC123
+
+</code></pre>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_bBNZhNjqA7.gif">
+  
+</section><section>
+<h3 id="lets-deploy-it-3">Lets deploy it</h3>
+<ol>
+<li>Fork it</li>
+<li>Deploy it</li>
+<li>Add Environment variables</li>
+<li>Setup Azure B2C</li>
+</ol>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="msedge_je378lkZiP.gif">
+  
+</section>
+<p>
+<section data-noprocess data-shortcode-slide
+      data-transition="zoom">
+  
+
+
+<section data-shortcode-section>
+<h1 id="lets-see-that-working">Lets see that working</h1>
+<p>Demo 5</p>
+</section><section>
+<h2 id="live-demo-5">Live Demo 5</h2>
+<ol>
+<li><a href="https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&amp;pagetype=entityrecord&amp;etn=techtwed_settlement&amp;id=3272841e-6c32-ef11-8e4e-6045bd0d261b&amp;formid=4225fbe1-7174-ef11-a670-000d3a0d2d37">View Form</a></li>
+<li><a href="https://flowproxy1.azurewebsites.net/api/proxy/?row=SET-1000-R2R2">Try it out</a></li>
+<li><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/a999aa73-d908-47b5-82c5-311a8814e270/view">View Flow</a></li>
+</ol>
+
+</section></p>
 </section><section>
 <h1 id="key-component-1">Key component</h1>
 <h2 id="inbound-header">Inbound Header</h2>
@@ -674,7 +745,7 @@ sequenceDiagram
 
 
   
-  <script type="text/javascript" src="/mermaid.min_6838052300336322795.js"></script>
+  <script type="text/javascript" src="/mermaid.min_16862243754454536095.js"></script>
   <script type="text/javascript">
     mermaid.initialize({startOnLoad: false});
     let render = (event) => {
@@ -711,7 +782,7 @@ sequenceDiagram
 </script>
   
 
-<script type="text/javascript" id="MathJax-script" async src="/tex-svg_10887261161190234492.js"></script>
+<script type="text/javascript" id="MathJax-script" async src="/tex-svg_7522271970123696654.js"></script>
 
     
     
