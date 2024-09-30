@@ -116,3 +116,46 @@ Demo 5
 {{< slide background-image="brave_dBvaPf9yIY.gif" >}}
 
 {{% /section %}}
+
+
+
+==========
+
+# Azure App Service
+
+---
+
+# App Service
+
+1. [shibayan/AppServiceProxy.SiteExtension: Site Extension-based Reverse Proxy compatible with Azure Functions Proxies (github.com)](https://github.com/shibayan/AppServiceProxy.SiteExtension)
+
+
+1. Deploy it
+2. [Configure it](https://app-ttdemo01a-bomg.scm.azurewebsites.net/dev/wwwroot/proxies.json)
+
+---
+# Lets look at the config
+
+Demo 4
+
+
+
+
+---
+# Configuration of App Service
+
+```JSON
+{
+  "$schema": "http://json.schemastore.org/proxies",
+  "proxies": {
+    "Demo01": {
+      "matchCondition": {
+        "methods": [ "GET" ],
+        "route": "/Demo01/{*path}"
+      },
+      "backendUri": "https://prod-15.uksouth.logic.azure.com:443/workflows/7a854d30969e4158bac2b17ac15d1ad7/triggers/manual/paths/{path}"
+    }
+  }
+} 
+```
+
