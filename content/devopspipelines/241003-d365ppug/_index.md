@@ -10,11 +10,12 @@ margin = 0.2
 highlight_theme = "github"
 transition = "convex"
 transition_speed = "default"
-slide_number = true
-controlsTutorial = true
+slide_number = false
+controlsTutorial = false
+controls = false
 center = false
 touch = true
-draft = true
+draft = false
 [logo]
 # https://reveal-hugo.dzello.com/logo-example/#/3
 # src = "/techTweedie_150x150.png"
@@ -26,8 +27,9 @@ draft = true
 +++
 
 ## Talk 2: Are you backing up your build?
+PP/D365 Virtual User Group 
 3rd October 2024
-19:05 - 19:55 (50 min)
+
 
 ---
 
@@ -37,6 +39,7 @@ draft = true
 
 
 ---
+
 {{< slide transition="zoom" >}}
 
 
@@ -45,7 +48,9 @@ draft = true
 - What about if you spot a problem days later?
 
 
----{{< slide transition="zoom" >}}
+---
+
+{{< slide transition="zoom" >}}
 
 
 - Do you all share one development enviroument? 
@@ -60,6 +65,349 @@ draft = true
 
 
 
+---
+
+## High Level View
+
+mermaid diagram
+
+
+---
+
+
+## Pre-requisit 
+- Dataverse System Admin
+- DevOps Project Administrator
+
+---
+
+{{< slide background-image="../msBuildTools.gif" >}}
+
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+## Install Dataverse Build Tools
+
+</div>
+
+---
+
+<section data-background-video="../msedge_EbORBUpsTl.mp4" data-background-video-muted>
+</section>
+
+---
+
+{{< slide background-image="brave_pUuYqm9d3z.png" >}}
+
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+## App Regestration
+
+**Client ID:** 
+**Tenant ID:** 
+**Secret:** 
+
+</div>
+
+
+---
+
+<section data-background-video="brave_ODu5vMfo0o.mp4" data-background-video-muted>
+</section>
+
+---
+
+{{< slide background-image="msedge_1ofQsOS12a.png" >}}
+
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+## Give Permission
+
+</div>
+
+---
+
+<section data-background-video="msedge_eHL4W9sQv0.mp4" data-background-video-muted>
+</section>
+
+---
+
+
+{{< slide background-image="image-1.png" >}}
+
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+## Create service connection
+
+
+</div>
+
+---
+
+<section data-background-video="msedge_sZ1PzZV0rU.mp4" data-background-video-muted>
+</section>
+
+---
+
+{{< slide background-image="msedge_npQM2NGwB4.png" >}}
+
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+**Client ID:** 
+
+**Tenant ID:** 
+
+**Secret:** 
+
+**Server URL:**
+
+</div>
+
+---
+
+<section data-background-video="msedge_Xe9SvGfBKl.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_pD2wxdy2fZ.mp4" data-background-video-muted>
+</section>
+
+---
+
+
+{{< slide background-image="image-1.png" >}}
+
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+## Almost ready to go
+
+
+</div>
+
+---
+
+<section data-background-video="../msedge_9mWYFGXubQ.mp4" data-background-video-muted>
+
+</section>
+
+---
+
+<section data-background-video="../msedge_hHqXmiCb4i.mp4" data-background-video-muted>
+
+</section>
+
+
+---
+
+<section data-background-video="../msedge_JIT24VboQm.mp4" data-background-video-muted>
+
+</section>
+
+---
+
+<section data-background-video="../msedge_BlsWA591UT.mp4" data-background-video-muted>
+
+</section>
+
+---
+
+<section data-background-video="../msedge_I0OyKYAnmJ.mp4" data-background-video-muted>
+
+</section>
+
+---
+
+<section data-background-video="msedge_HcPwHJ3Jl2.mp4" data-background-video-muted>
+
+</section>
+
+
+---
+
+{{< slide background-image="msedge_Q9M1vlyShk.png" >}}
+
+
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+## We need to grab some more information
+</div>
 
 
 
+
+---
+
+<section data-background-video="msedge_roryj0x4UE.mp4" data-background-video-muted>
+
+</section>
+
+---
+
+<section data-background-video="msedge_5lVBUbV1eX.mp4" data-background-video-muted>
+
+</section>
+
+---
+{{< slide background-image="msedge_cOoygVqsiJ.png" >}}
+
+
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+## Powershell
+
+```powershell
+echo commit all changes
+git config user.email "$(Build.RequestedForEmail)"
+git config user.name "$(Build.RequestedFor)"
+git checkout -b main
+git add --all
+git commit -m "Latest solution changes."
+echo push code to new repo
+git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push origin main      
+```
+</div>
+
+---
+
+
+<section data-background-video="msedge_tkGoo5YKFh.mp4" data-background-video-muted>
+
+</section>
+
+
+---
+
+
+<section data-background-video="msedge_4XHoszBuKm.mp4" data-background-video-muted>
+
+</section>
+
+
+---
+{{< slide background-image="msedge_AKfZ1wCSnn.png" >}}
+
+
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+## What error did we get
+
+```CMD
+You need the Git 'GenericContribute' permission to perform this action.
+```
+
+</div>
+
+---
+
+<section data-background-video="msedge_2YV6qxtrCc.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_kb0A45fFQH.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_9aHWdBDUYK.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_vUV2wXSN24.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_GQPGHdkLZy.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_A42h9JBHx2.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_EficgKeOrc.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_rDPbVsqvt7.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_UTkgQeXaaI.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_7xEESPsvQT.mp4" data-background-video-muted>
+</section>
+
+
+---
+
+{{< slide background-image="msedge_smTMgOfKOa.png" >}}
+
+<div style="background-color: #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+![alt text](image.png)
+
+for **Data Model Enhanced** use Version **2**
+
+</div>
+
+---
+
+<section data-background-video="msedge_lCGpcjkr1O.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_dELkUAQUCp.mp4" data-background-video-muted>
+</section>
+
+---
+
+---
+
+{{< slide  background="F0FFF0" >}}
+# Questions
+
+
+
+--- 
+
+{{< slide background="F0FFF0" >}}
+
+# Ian Tweedie
+<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container">
+  <div class="col" stype="justify-content: center; align-items: center;">
+    <div>
+    Keep in touch
+    </div>
+    <div>
+    <img src="/qr.jpg" alt="Image" style="height:250px; box-shadow: none;">
+    </div>
+  </div>
+  <div class="col" stype="justify-content: center; align-items: center;">
+    <div>Feedback</div>
+    <div><img src="/feedback.png" alt="Image" style="height:250px; box-shadow: none;"></div>
+  </div>
+    <div class="col" stype="justify-content: center; align-items: center;">
+    <div>Presentation</div>
+    <div><img src="image-2.png" alt="Image" style="height:250px; box-shadow: none;"></div>
+  </div>
+</div>
