@@ -44,7 +44,11 @@ PP/D365 Virtual User Group
 
 
 - Ever wondered what would happen if you lost your development environment?
+
+
 - How do you feel about having to do all of that work again?
+
+
 - What about if you spot a problem days later?
 
 
@@ -54,7 +58,11 @@ PP/D365 Virtual User Group
 
 
 - Do you all share one development enviroument? 
+
+
 - Are you only pushing managed solutions up your pipeline?
+
+
 - When was the last time you exported an unmanaged solution from your enviroument? 
 
 
@@ -87,7 +95,7 @@ PP/D365 Virtual User Group
   <ul>
     <li>Power Platform Technical Consultant, Capgemini</li>
     <li>Trustee for Digital Transformation for a chain alternative provision acadmey trust</li>
-    <li>Chair of a Non for Profit Nursary</li>
+  
   </ul>
 </div>
 
@@ -191,16 +199,23 @@ PP/D365 Virtual User Group
 
 ---
 
-## A Solution
+{{< slide background="#FFF8DC" transition="zoom"   >}}
+
+![azure DevOps](image-5.png)
+
+---
+
+## How
+- Lower code version
 
 
 
 ---
 
 
-## Pre-requisit 
+## Pre-requisites 
 - Dataverse System Admin
-- DevOps Project Administrator
+- DevOps Project Administrator with a basic license 
 - [Azure DevOps Parallelism Request](https://aka.ms/azpipelines-parallelism-request)
 
 ---
@@ -227,8 +242,11 @@ PP/D365 Virtual User Group
 ## App Regestration
 
 **Client ID:** 
+
 **Tenant ID:** 
+
 **Secret:** 
+
 
 </div>
 
@@ -495,6 +513,45 @@ for **Data Model Enhanced** use Version **2**
 </section>
 
 ---
+
+
+{{< slide background-image="msedge_nvpQ4P9eRD.png" >}}
+
+---
+
+<section data-background-video="msedge_8dTXKp8lIL.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_79KwWMZ88m.mp4" data-background-video-muted>
+</section>
+
+
+---
+
+<section data-background-video="msedge_Joacqsdd06.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_0shF1TK3oX.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_5O4ZQhMsdp.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_XT3hywYvmT.mp4" data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="msedge_GQR0oKKjw1.mp4" data-background-video-muted>
+</section>
 
 ---
 
