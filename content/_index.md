@@ -25,4 +25,7 @@ touch = true
 ## Presentations
 - [240917-m365ug](flowproxy/240917-m365ug/)
 
+- [241003](devopspipelines/241003-d365ppug/)
+
+
 
