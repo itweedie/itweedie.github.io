@@ -58,18 +58,141 @@ PP/D365 Virtual User Group
 - When was the last time you exported an unmanaged solution from your enviroument? 
 
 
----
-
-## Problem
-
-
-
 
 ---
 
-## High Level View
+{{< slide background="#fdfdfd" >}}
 
-mermaid diagram
+# Ian Tweedie
+<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container">
+
+<div class="col" style="justify-content: center; align-items: center;">
+
+  <img src="content/qr.jpg" alt="Image" style="height:250px; box-shadow: none;">
+
+</div>
+
+
+
+<div class="col">
+  <ul>
+    <li>Power Platform Technical Consultant, Capgemini</li>
+    <li>Trustee for Digital Transformation for a chain alternative provision acadmey trust</li>
+    <li>Chair of a Non for Profit Nursary</li>
+  </ul>
+</div>
+
+</div>
+
+
+---
+
+{{< slide background="#F0F8FF" >}}
+### Ian Tweedie
+##### Certifications
+![height:100px](content/image-12.png)![height:100px](content/image-13.png)![height:100px](content/image-14.png)![height:100px](content/image-15.png)![height:100px](content/image-16.png)![height:100px](content/image-17.png)![height:100px](content/image-18.png)![height:100px](content/image-19.png)![height:100px](content/image-20.png)![height:100px](content/image-21.png)![height:100px](content/image-22.png)![height:100px](content/image-23.png)![height:100px](content/image-24.png)![height:100px](content/image-25.png)![height:100px](content/image-26.png)![height:100px](content/image-27.png)![height:100px](content/image-28.png)![height:100px](content/image-29.png)![height:100px](content/image-30.png)![height:100px](content/image-31.png)![height:100px](content/image-32.png)![height:100px](content/image-33.png)![height:100px](content/image-34.png)![height:100px](content/image-35.png)![height:100px](content/image-36.png)![height:100px](content/image-37.png)![height:100px](content/image-38.png)![height:100px](content/image-39.png)![height:100px](content/image-40.png)![height:100px](content/image-41s.png)![height:100px](content/image-42s.png)![height:100px](content/image-44s.png)![height:100px](content/CyberSecurityArchitect-2s.png)![height:100px](content/sc-100exams.png)
+
+
+--- 
+
+{{< slide background="#F0F8FF" >}}
+## 2x Certified Power Automate Connectors
+<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container">
+
+<div class="col">
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="flex: 20%; text-align: center;">
+    <img src="content/image-45.png" alt="Image" style="height:50px; box-shadow: none;">
+  </div>
+  <div style="flex: 80%; text-align: left;">
+    <img src="content/mightora-io-logo3.png" alt="Image" style="height:30px; box-shadow: none;">
+  </div>
+</div>
+
+<ul>
+  <li>Calculate working day</li>
+  <li>Email domain checker</li>
+</ul>
+</div>
+
+<div class="col">
+<img src="content/image-46.png" alt="Image" style="height:400px;">
+</div>
+
+</div>
+
+![Traffic](image-3.png)
+
+---
+{{< slide background="#F0F8FF"  >}}
+## Community Content
+
+<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container">
+
+<div class="col" >
+
+  <img src="/techTweedie_150x150.png" alt="Image" style="box-shadow: none;">
+
+</div>
+
+
+
+<div class="col" >
+  <ul>
+    <li>techtweedie.github.io </li>
+    <li>github.com/itweedie</li>
+    <li>youtube.com/@techtweedie</li>
+  </ul>
+</div>
+
+</div>
+
+---
+{{< slide background="#FFF8DC" transition="zoom"   >}}
+## Problem 
+
+---
+{{< slide background="#FFF8DC" background-image="image-4.png"    >}}
+
+
+---
+
+<section data-background-video="msedge_SKmWfLSaPu.mp4" data-background-video-muted>
+
+</section>
+
+---
+
+## A Solution
+
 
 
 ---
@@ -78,6 +201,7 @@ mermaid diagram
 ## Pre-requisit 
 - Dataverse System Admin
 - DevOps Project Administrator
+- [Azure DevOps Parallelism Request](https://aka.ms/azpipelines-parallelism-request)
 
 ---
 
