@@ -735,13 +735,31 @@ Password: TechTweedie1!
 ---
 
 {{< slide  background="#FAEBD7" >}}
+# As a flow chart
+<div style="transform: scale(1.3);  margin-top: 100px;">
+{{< mermaid >}}
+flowchart TD
+    A[techtwed_settlement] -->|Link: to techtwed_customer| B[contact]
+    B -->|Link: to contactid| C[adx_externalidentity]
+
+    %% Attributes and Filters
+    A -->|Attribute| A1[techtwed_name]
+    A -->|Attribute| A2[techtwed_settlementid]
+    A -->|Filter: techtwed_name = SET-1001-T8B5| A3[techtwed_name = SET-1001-T8B5]
+
+    C -->|Filter: adx_username = 1ebcd192-5366-48eb-9028-04610ae1704d| C1[adx_username = 1ebcd192-5366-48eb-9028-04610ae1704d]
+{{< /mermaid >}}
+</div>
+
+---
+
+{{< slide  background="#FAEBD7" >}}
 # High Level Solution
 
 <div style="transform: scale(1.3);  margin-top: 100px;">
 {{< mermaid >}}
-graph LR
-
-    A[User] --> R[Reverse Proxy] --> B[Flow] --> C[Dataverse]
+graph TD
+ A[User] --> R[Reverse Proxy] --> B[Flow] --> C[Dataverse]
 {{< /mermaid >}}
 </div>
 
@@ -794,16 +812,24 @@ sequenceDiagram
     Keep in touch
     </div>
     <div>
-    <img src="content/qr.jpg" alt="Image" style="height:250px; box-shadow: none;">
+    <img src="content/qr.jpg" alt="Image" style="height:200px; box-shadow: none;">
     </div>
   </div>
   <div class="col" stype="justify-content: center; align-items: center;">
     <div>Feedback</div>
-    <div><img src="image.png" alt="Image" style="height:250px; box-shadow: none;"></div>
+    <div><img src="image.png" alt="Image" style="height:200px; box-shadow: none;"></div>
   </div>
     <div class="col" stype="justify-content: center; align-items: center;">
     <div>Presentation</div>
-    <div><img src="image-2.png" alt="Image" style="height:250px; box-shadow: none;"></div>
+    <div><img src="image-10.png" alt="Image" style="height:200px; box-shadow: none;"></div>
+  </div>
+      <div class="col" stype="justify-content: center; align-items: center;">
+    <div>Github Repo</div>
+    <div><img src="image-9.png" alt="Image" style="height:200px; box-shadow: none;"></div>
+  </div>      
+  <div class="col" stype="justify-content: center; align-items: center;">
+    <div>UNICEF Donate</div>
+    <div><img src="image-12.png" alt="Image" style="height:200px; box-shadow: none;"></div>
   </div>
 </div>
 
