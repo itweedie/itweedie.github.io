@@ -631,6 +631,6 @@ for **Data Model Enhanced** use Version **2**
   </div>
     <div class="col" stype="justify-content: center; align-items: center;">
     <div>Presentation</div>
-    <div><img src="image-2.png" alt="Image" style="height:250px; box-shadow: none;"></div>
+    <div><img src="image-6.png" alt="Image" style="height:250px; box-shadow: none;"></div>
   </div>
 </div>
