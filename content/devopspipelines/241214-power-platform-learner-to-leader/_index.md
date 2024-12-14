@@ -154,6 +154,9 @@ background-image = "content/slide/slide2.png"
   <li>Calculate working day</li>
   <li>Email domain checker</li>
 </ul>
+
+![alt text](image-7.png)
+
 </div>
 
 <div class="col">
@@ -163,6 +166,7 @@ background-image = "content/slide/slide2.png"
 </div>
 
 ![Traffic](image-3.png)
+
 
 ---
 
@@ -599,14 +603,12 @@ for **Data Model Enhanced** use Version **2**
 # Questions
 
 
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="100px" width="100px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+</svg>
 
---- 
+<p></p>
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
-</section>
-
-
-# Ian Tweedie
 <style>
 .container{
     display: flex;
