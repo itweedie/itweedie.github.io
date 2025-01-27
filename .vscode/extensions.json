@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "mhutchie.git-graph",
+        "esbenp.prettier-vscode",
+        "tamasfe.even-better-toml",
+        "budparr.language-hugo-vscode",
+        "streetsidesoftware.code-spell-checker"
+    ]
+}

@@ -127,7 +127,7 @@ width = "100px" # Size of the file.
   <ul>
     <li>Power Platform Technical Consultant, Capgemini</li>
     <li>Trustee for Digital Transformation for a £22 million non for profit</li>
-    <li>Chair of an £750,000 million non for profit</li>
+    <li>Chair of an £750,000 non for profit</li>
   </ul>
 </div>
 
