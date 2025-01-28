@@ -124,9 +124,9 @@ width = "100px" # Size of the file.
 
 <div class="col aboutMe">
   <ul>
-    <li>Power Platform Technical Consultant, Capgemini</li>
-    <li>Trustee for Digital Transformation for a £22 million non for profit</li>
-    <li>Chair of an £750k non for profit</li>
+    <li class="fragment">Power Platform Technical Consultant, Capgemini</li>
+    <li class="fragment">Trustee for Digital Transformation for a £22 million non for profit</li>
+    <li class="fragment">Chair of an £750k non for profit</li>
   </ul>
 </div>
 
@@ -240,14 +240,7 @@ Demo 1
 ## Problems
 
 <div class="container">
-
-  <div class="col">
-    <img src="image-4.png" alt="Image" style="box-shadow: none;">
-  </div>  
   
-  <div class="col">
-    <iframe src="https://wall.sli.do/event/dCUyWCtVk2wgYmFxpxQ7sm?section=1df7fccc-5d79-4c87-a161-5d99234319ee" height="100%" width="100%" frameBorder="0" style="min-height: 560px;" allow="clipboard-write" title="Slido"></iframe>
-  </div>
 
   <div class="col">
     <p class="fragment">Slow</p>
@@ -279,14 +272,14 @@ Demo 1
 
 ---
 
-{{< slide  background="#FAEBD7" transition="zoom" >}}
+{{< slide  id="demo-2-splash" background="#FAEBD7" transition="zoom" >}}
 {{% section %}}
 # Lets give it a go
 Demo 2
 
 ---
 
-{{< slide  background="#FAEBD7" >}}
+{{< slide  background="#FAEBD7" id="demo-2-links" >}}
 ## Live Demo 2
 1. [Web Page Flow](https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/25b74e7e-6734-4e38-9847-dc230c444aeb/view)
 2. [Try it out](https://prod-16.uksouth.logic.azure.com/workflows/c59c21c2e87b4267a3f51327e8b0a9c6/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4o_YOe9rzXb6InvBIeOh3pM9GLXVfQOuR1GWuI81bVs)
@@ -295,7 +288,7 @@ Demo 2
 
 ---
 
-<section data-background-size="contain"  data-background-video="flowProxy-demo2-screen1.mp4" data-background-video-muted>
+<section data-background-size="contain"  data-background-video="flowProxy-demo2-screen1.mp4" id="demo-2-video-a" data-background-video-muted>
 </section>
 
 ---
@@ -352,14 +345,14 @@ content-type : text/html
 
 ---
 
-{{< slide  transition="zoom" background="#FAEBD7" >}}
+{{< slide id="demo-3-splash" transition="zoom" background="#FAEBD7" >}}
 {{% section %}}
 # Lets give it a go
 Demo 3
 
 ---
 
-{{< slide background="#FAEBD7" >}}
+{{< slide background="#FAEBD7" id="demo-3-links" >}}
 ## Live Demo 3
 1. [PDF Flow](https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/53909a74-b04d-4ffd-9983-9b73d095e10c/view)
 2. [Try it out](https://prod-21.uksouth.logic.azure.com/workflows/5ba0def50b7e43498b887e8aac99bfae/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=wt-FxeMbuDM_UwFENGNdX-BGwFYX-u7hWtIqjw4Z5xQ)
@@ -368,7 +361,7 @@ Demo 3
 
 ---
 
-<section data-background-size="contain"  data-background-video="flowProxy-demo3-screen1.mp4" data-background-video-muted>
+<section id="demo-3-video-screen1" data-background-size="contain"  data-background-video="flowProxy-demo3-screen1.mp4" data-background-video-muted>
 </section>
 
 ---
