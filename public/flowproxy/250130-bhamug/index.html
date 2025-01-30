@@ -334,6 +334,7 @@
 <li>Flow with HTTP Request trigger</li>
 <li>Response Headers</li>
 </ul>
+<p><strong>content-type : text/html</strong></p>
 <pre><code class="language-json">content-type : text/html
 </code></pre>
 <ul>
@@ -382,12 +383,13 @@
   
 <h2 id="key-component-1">Key component</h2>
 <h3 id="pdf">PDF</h3>
-<ul>
-<li>Response Headers</li>
-</ul>
+<p>Response Headers</p>
+<p><strong>Content-Type: application/pdf</strong></p>
 <pre><code class="language-json">Content-Type: application/pdf
 </code></pre>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">Common MIME types - HTTP | MDN (mozilla.org)</a></p>
+<p><strong>Content-Disposition: inline</strong></p>
+<p><strong>Content-Disposition: attachment; filename=&ldquo;filename.pdf&rdquo;</strong></p>
 <pre><code class="language-json">Content-Disposition: inline
 Content-Disposition: attachment; filename=&quot;filename.pdf&quot;
 </code></pre>
@@ -435,6 +437,7 @@ Content-Disposition: attachment; filename=&quot;filename.pdf&quot;
       data-background="#F0F8FF">
   
 <h2 id="key-component-2">Key component</h2>
+<p><strong>@{triggerOutputs()[&lsquo;queries&rsquo;]}</strong></p>
 <pre><code class="language-csharp">@{triggerOutputs()['queries']}
 </code></pre>
 </section>
@@ -669,6 +672,7 @@ FLOW_KEY=ABC123
   
 <h1 id="key-component-3">Key component</h1>
 <h2 id="inbound-header">Inbound Header</h2>
+<p><strong>X-MS-CLIENT-PRINCIPAL-ID</strong></p>
 <pre><code class="language-JSON">  &quot;X-MS-CLIENT-PRINCIPAL-ID&quot;: &quot;1ebcd192-5366-48eb-9028-04610ae1704d&quot;
 </code></pre>
 </section>

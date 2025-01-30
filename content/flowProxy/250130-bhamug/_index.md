@@ -350,11 +350,14 @@ Demo 2
 - Flow with HTTP Request trigger
 - Response Headers 
 
+**content-type : text/html**
+
 ```json
 content-type : text/html
 ```
 
 - Full list can be found [Common MIME types - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+
 
 ---
 
@@ -409,12 +412,20 @@ Demo 3
 ## Key component
 
 ### PDF
-- Response Headers 
+
+Response Headers 
+
+**Content-Type: application/pdf**
+
 ```json
 Content-Type: application/pdf
 ```
 [Common MIME types - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
 
+
+**Content-Disposition: inline**
+
+**Content-Disposition: attachment; filename="filename.pdf"**
 
 ```json
 Content-Disposition: inline
@@ -472,6 +483,8 @@ Demo 4
 
 {{< slide background="#F0F8FF" >}}
 ## Key component
+
+**@{triggerOutputs()['queries']}**
 
 ```csharp
 @{triggerOutputs()['queries']}
@@ -718,6 +731,8 @@ Demo 5
 # Key component
 
 ## Inbound Header
+
+**X-MS-CLIENT-PRINCIPAL-ID**
 
 ```JSON
   "X-MS-CLIENT-PRINCIPAL-ID": "1ebcd192-5366-48eb-9028-04610ae1704d"
