@@ -798,6 +798,18 @@ sequenceDiagram
 
 
 {{< slide  background="F0FFF0" >}}
+# Where have I used this Pattern
+
+- Document Generation
+- WiFi Network Login
+- Register Interest 
+- Login to a legacy systems
+- Door code generation 
+
+---
+
+
+{{< slide  background="F0FFF0" >}}
 # Questions
 
 
