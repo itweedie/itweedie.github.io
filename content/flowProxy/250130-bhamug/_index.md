@@ -83,6 +83,19 @@ width = "100px" # Size of the file.
   margin-bottom: 10px;
   width: 130%; /* Adjust the width as needed */
 }
+
+.bulletTwo ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bulletTwo li {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%; /* Adjust the width as needed */
+}
 </style>
 
 
@@ -101,9 +114,14 @@ width = "100px" # Size of the file.
 {{< slide transition="zoom"  background="#F0F8FF" >}}
 
 ## Introduction
-- Use Power Automate to generate a custom report
-- Based on Dataverse data
-- Share it with our client securely via a link
+
+<div class="col bulletTwo">
+  <ul>
+    <li class="fragment">Use Power Automate to generate a custom report</li>
+    <li class="fragment">Based on Dataverse data</li>
+    <li class="fragment">Share it with our client securely via a link</li>
+  </ul>
+</div>
 
 ---
 
@@ -266,7 +284,9 @@ Demo 1
 
 {{< slide background="#FFF8DC" >}}
 ## Can we
+
 - Get power automate to make a web page for us
+
 - Can that web page present a PDF document 
 
 
@@ -295,7 +315,7 @@ Demo 2
 
 ## Test it together
 
-![alt text](image-5.png)
+<img src="image-5.png" alt="alt text" style="width: 500px; height: auto;">
 
 <a href="https://prod-16.uksouth.logic.azure.com/workflows/c59c21c2e87b4267a3f51327e8b0a9c6/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4o_YOe9rzXb6InvBIeOh3pM9GLXVfQOuR1GWuI81bVs" target="_blank">Try it out</a>
 
@@ -368,7 +388,8 @@ Demo 3
 
 ## Test it together
 
-![alt text](image-6.png)
+<img src="image-6.png" alt="alt text" style="width: 500px; height: auto;">
+
 
 <a href="https://prod-21.uksouth.logic.azure.com/workflows/5ba0def50b7e43498b887e8aac99bfae/triggers/manual/paths/invoke?api-version=2016-06-01&sp=/triggers/manual/run&sv=1.0&sig=wt-FxeMbuDM_UwFENGNdX-BGwFYX-u7hWtIqjw4Z5xQ" target="_blank">Try it out</a>
 
@@ -435,7 +456,7 @@ Demo 4
 
 ## Test it together
 
-![alt text](image-7.png)
+<img src="image-7.png" alt="alt text" style="width: 500px; height: auto;">
 
 <a href="https://prod-07.uksouth.logic.azure.com/workflows/c9d2fb07972942a097d16a9ce324097d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=BAtG0IUyjXSVsMyeXTpq3GI7Zj4SGP6-ztUD4Rj_v58&row=SET-1000-R2R2" target="_blank">Try it out</a>
 
@@ -539,6 +560,7 @@ sequenceDiagram
 ### Solution requirements
 
 - Authenticate by Azure B2C
+
 - Reverse Proxy function
 
 ---
@@ -675,7 +697,8 @@ Demo 5
 
 ## Try it out
 <a href="https://flowproxy1.azurewebsites.net/api/proxy/?row=SET-1000-R2R2" target="_blank">
-    <img src="image-8.png" alt="alt text">
+    <img src="image-8.png" alt="alt text" style="width: 500px; height: auto;">
+
 </a>
 
 ```
@@ -788,11 +811,6 @@ sequenceDiagram
 
 
 
---- 
-
-{{< slide background="F0FFF0" >}}
-
-# Ian Tweedie
 <style>
 .container{
     display: flex;
@@ -817,7 +835,7 @@ sequenceDiagram
   </div>
     <div class="col" stype="justify-content: center; align-items: center;">
     <div>Presentation</div>
-    <div><img src="image-10.png" alt="Image" style="height:200px; box-shadow: none;"></div>
+    <div><img src="image-13.png" alt="Image" style="height:200px; box-shadow: none;"></div>
   </div>
       <div class="col" stype="justify-content: center; align-items: center;">
     <div>Github Repo</div>
