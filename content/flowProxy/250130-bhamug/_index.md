@@ -117,6 +117,8 @@ width = "100px" # Size of the file.
 
 <div class="col bulletTwo">
   <ul>
+    <li class="fragment">Share two Architecture Patterns today</li>
+    <li class="fragment">In this example:</li>
     <li class="fragment">Use Power Automate to generate a custom report</li>
     <li class="fragment">Based on Dataverse data</li>
     <li class="fragment">Share it with our client securely via a link</li>
@@ -789,19 +791,19 @@ graph TD
 
 {{< mermaid >}}
 sequenceDiagram
-    autonumber
-    actor User
-    
-    User->>Reverse-Proxy: Click Link
-    Reverse-Proxy->>Reverse-Proxy: Authentication
-    Reverse-Proxy->>Flow: Forwards request
-    Flow->>Dataverse: Requests data
-    Dataverse-->>Flow: Data returned
-    Flow->>SharePoint: Requests template
-    SharePoint-->>Flow: Template returned
-    Flow-->Flow: Merge data in to template
-    Flow->>Reverse-Proxy: Returns PDF
-    Reverse-Proxy->>User: Returns PDF
+    autonumber
+    actor User
+
+    User->>Reverse-Proxy: Click Link
+    Reverse-Proxy->>Reverse-Proxy: Authentication
+    Reverse-Proxy->>Flow: Forwards request
+    Flow->>Dataverse: Requests data
+    Dataverse-->>Flow: Data returned
+    Flow->>SharePoint: Requests template
+    SharePoint-->>Flow: Template returned
+    Flow-->Flow: Merge data in to template
+    Flow->>Reverse-Proxy: Returns PDF
+    Reverse-Proxy->>User: Returns PDF
 {{< /mermaid >}}
 
 ---
