@@ -646,12 +646,19 @@ FLOW_KEY=ABC123
 <p><a href="https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&pagetype=entityrecord&etn=techtwed_settlement&id=3272841e-6c32-ef11-8e4e-6045bd0d261b&formid=4225fbe1-7174-ef11-a670-000d3a0d2d37" target="_blank">View the form</a></p>
 </section><section>
 <h2 id="try-it-out">Try it out</h2>
-<a href="https://flowproxy1.azurewebsites.net/api/proxy/?row=SET-1000-R2R2" target="_blank">
-    <img src="image-8.png" alt="alt text" style="width: 500px; height: auto;">
-</a>
-<pre><code>Username: demo@tweed.technology
-Password: TechTweedie1!
-</code></pre>
+<div style="display: flex; align-items: center;">
+  <div style="flex: 1;">
+    <a href="https://flowproxy1.azurewebsites.net/api/proxy/?row=SET-1000-R2R2" target="_blank">
+      <img src="image-8.png" alt="alt text" style="width: 500px; height: auto;">
+    </a>
+  </div>
+  <div style="flex: 1; padding-left: 20px;">
+    <p><strong>Username:</strong></p>
+    <p>demo@tweed.technology</p>
+    <p><strong>Password:</strong></p>
+    <p>TechTweedie1!</p>
+  </div>
+</div>
 </section><section>
 <h2 id="view-the-flow-1">View the flow</h2>
 <p><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/db720441-2e33-ef11-8e4e-6045bd0d261b/view" target="_blank">View the flow</a></p>
@@ -688,44 +695,9 @@ Password: TechTweedie1!
   &lt;/entity&gt;
 &lt;/fetch&gt;
 </code></pre>
-</section>
-
-<section data-noprocess data-shortcode-slide
-      data-background="#FAEBD7">
-  
-<h1 id="as-a-flow-chart">As a flow chart</h1>
-<div style="transform: scale(1.3);  margin-top: 100px;">
-<div class="mermaid">
-flowchart TD
-    A[techtwed_settlement] -->|Link: to techtwed_customer| B[contact]
-    B -->|Link: to contactid| C[adx_externalidentity]
-
-    %% Attributes and Filters
-    A -->|Attribute| A1[techtwed_name]
-    A -->|Attribute| A2[techtwed_settlementid]
-    A -->|Filter: techtwed_name = SET-1001-T8B5| A3[techtwed_name = SET-1001-T8B5]
-
-    C -->|Filter: adx_username = 1ebcd192-5366-48eb-9028-04610ae1704d| C1[adx_username = 1ebcd192-5366-48eb-9028-04610ae1704d]
-
-</div>
-
-
-</div>
-</section>
-
-<section data-noprocess data-shortcode-slide
-      data-background="#FAEBD7">
-  
+</section><section>
 <h1 id="high-level-solution">High Level Solution</h1>
-<div style="transform: scale(1.3);  margin-top: 100px;">
-<div class="mermaid">
-graph TD
- A[User] --> R[Reverse Proxy] --> B[Flow] --> C[Dataverse]
-
-</div>
-
-
-</div>
+<img src="https://www.plantuml.com/plantuml/png/NOtD2i8m40RlUOebzxo2j23YCOVU98VLBbLCJ4WsrX_wxX9R9FQuiyCtJMACd9qL8k3fYWE1R5yvaeIt03Zih1z1H_zu6Z5LZlOZHMX3IBDOt8LbzWwPp4nxP3nY8f1RPBnJJClqzpkLqNtNQL3nCfnPRVwJzL4fwz8QW2hMBsY4QEZMPsS_" alt="Image" style="height:500px; box-shadow: none;">
 </section>
 
 <section data-noprocess data-shortcode-slide

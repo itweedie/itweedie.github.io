@@ -688,15 +688,20 @@ Demo 5
 ---
 
 ## Try it out
-<a href="https://flowproxy1.azurewebsites.net/api/proxy/?row=SET-1000-R2R2" target="_blank">
-    <img src="image-8.png" alt="alt text" style="width: 500px; height: auto;">
 
-</a>
-
-```
-Username: demo@tweed.technology
-Password: TechTweedie1!
-```
+<div style="display: flex; align-items: center;">
+  <div style="flex: 1;">
+    <a href="https://flowproxy1.azurewebsites.net/api/proxy/?row=SET-1000-R2R2" target="_blank">
+      <img src="image-8.png" alt="alt text" style="width: 500px; height: auto;">
+    </a>
+  </div>
+  <div style="flex: 1; padding-left: 20px;">
+    <p><strong>Username:</strong></p>
+    <p>demo@tweed.technology</p>
+    <p><strong>Password:</strong></p>
+    <p>TechTweedie1!</p>
+  </div>
+</div>
 
 ---
 
@@ -745,34 +750,11 @@ Password: TechTweedie1!
 
 ---
 
-{{< slide  background="#FAEBD7" >}}
-# As a flow chart
-<div style="transform: scale(1.3);  margin-top: 100px;">
-{{< mermaid >}}
-flowchart TD
-    A[techtwed_settlement] -->|Link: to techtwed_customer| B[contact]
-    B -->|Link: to contactid| C[adx_externalidentity]
 
-    %% Attributes and Filters
-    A -->|Attribute| A1[techtwed_name]
-    A -->|Attribute| A2[techtwed_settlementid]
-    A -->|Filter: techtwed_name = SET-1001-T8B5| A3[techtwed_name = SET-1001-T8B5]
 
-    C -->|Filter: adx_username = 1ebcd192-5366-48eb-9028-04610ae1704d| C1[adx_username = 1ebcd192-5366-48eb-9028-04610ae1704d]
-{{< /mermaid >}}
-</div>
-
----
-
-{{< slide  background="#FAEBD7" >}}
 # High Level Solution
 
-<div style="transform: scale(1.3);  margin-top: 100px;">
-{{< mermaid >}}
-graph TD
- A[User] --> R[Reverse Proxy] --> B[Flow] --> C[Dataverse]
-{{< /mermaid >}}
-</div>
+<img src="https://www.plantuml.com/plantuml/png/NOtD2i8m40RlUOebzxo2j23YCOVU98VLBbLCJ4WsrX_wxX9R9FQuiyCtJMACd9qL8k3fYWE1R5yvaeIt03Zih1z1H_zu6Z5LZlOZHMX3IBDOt8LbzWwPp4nxP3nY8f1RPBnJJClqzpkLqNtNQL3nCfnPRVwJzL4fwz8QW2hMBsY4QEZMPsS_" alt="Image" style="height:500px; box-shadow: none;">
 
 ---
 
