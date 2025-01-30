@@ -119,7 +119,7 @@
 <h2 id="introduction">Introduction</h2>
 <div class="col bulletTwo">
   <ul>
-    <li class="fragment">Share two Architecture Patterns today</li>
+    <li class="fragment">Share an Architecture Patterns today</li>
     <li class="fragment">In this example:</li>
     <li class="fragment">Use Power Automate to generate a custom report</li>
     <li class="fragment">Based on Dataverse data</li>
@@ -446,7 +446,7 @@ Content-Disposition: attachment; filename=&quot;filename.pdf&quot;
 <div style="margin: 20px 0; transform: scale(2); margin-top: 150px;">
 <div class="mermaid">
 graph LR
-    A(User) --> B(Flow) --> C(Dataverse)
+    A(User) --> B(Flow) --> C(Dataverse)
 
 </div>
 
@@ -461,15 +461,15 @@ graph LR
 <div style="margin: 20px 0; transform: scale(1.2); margin-top: 50px;">
 <div class="mermaid">
 sequenceDiagram
-    autonumber
-    actor User
-    User->>Flow: Clicks link HTTP
-    Flow->>Dataverse: Requests data
-    Dataverse-->>Flow: Data returned
-    Flow->>SharePoint: Requests template
-    SharePoint-->>Flow: Template returned
-    Flow-->Flow: Merge data in to template
-    Flow-->>User: Returns PDF
+    autonumber
+    actor User
+    User->>Flow: Clicks link HTTP
+    Flow->>Dataverse: Requests data
+    Dataverse-->>Flow: Data returned
+    Flow->>SharePoint: Requests template
+    SharePoint-->>Flow: Template returned
+    Flow-->Flow: Merge data in to template
+    Flow-->>User: Returns PDF
 
 </div>
 
@@ -508,13 +508,13 @@ sequenceDiagram
 <div style="transform: scale(1.3);  margin-top: 100px;">
 <div class="mermaid">
 sequenceDiagram
-    autonumber
-    actor User
-    User->>Reverse-Proxy: Clicks link
-    Reverse-Proxy-->>Reverse-Proxy: Authentication
-    Reverse-Proxy->Flow: Forwards Request
-    Flow-->>Reverse-Proxy: Returns PDF
-    Reverse-Proxy-->>User: Returns PDF
+    autonumber
+    actor User
+    User->>Reverse-Proxy: Clicks link
+    Reverse-Proxy-->>Reverse-Proxy: Authentication
+    Reverse-Proxy->Flow: Forwards Request
+    Flow-->>Reverse-Proxy: Returns PDF
+    Reverse-Proxy-->>User: Returns PDF
 
 </div>
 
@@ -566,7 +566,7 @@ sequenceDiagram
 <ul>
 <li>Forwards all headers received from the incoming request.</li>
 <li>Adds custom header Flow-Key (from environment variables).</li>
-<li>Handles GET method.</li>
+<li>Handles GET, POST, OPTIONS method.</li>
 <li>Appends query parameters from the incoming request to the external URL.</li>
 </ul>
 </div>
@@ -583,34 +583,27 @@ FLOW_KEY=your-flow-key-value
   
 <h3 id="lets-deploy-it">Lets deploy it</h3>
 <ol>
-<li>Fork it</li>
+<li>Access the Repo</li>
+<li>Press Deploy</li>
+<li>Follow the on screen instructions</li>
 </ol>
-</section><section>
-<section data-background-size="contain"  data-background-video="flowProxy-azureFunction-screen1.mp4" data-background-video-muted>
-</section>
-</section>
-
-<section data-noprocess data-shortcode-slide
-      data-transition="zoom">
-  
-<h3 id="lets-deploy-it-1">Lets deploy it</h3>
-<ol>
-<li>Fork it</li>
-<li>Deploy it</li>
-</ol>
-</section><section>
-<section data-background-size="contain"  data-background-video="flowProxy-azureFunction-screen2.mp4" data-background-video-muted>
-</section>
+<div>
+  <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fitweedie%2FAzureFunction-PowerAutomateProxy%2Frefs%2Fheads%2Fmain%2Fazuredeploy.json" target="_blank">
+    <img src="https://aka.ms/deploytoazurebutton" />
+  </a>
+</div>
+<div><img src="image-9.png" alt="Image" style="height:200px; box-shadow: none;"></div>
 </section>
 
 <section data-noprocess data-shortcode-slide
       data-background="#F0F8FF"
       data-transition="zoom">
   
-<h3 id="lets-deploy-it-2">Lets deploy it</h3>
+<h3 id="lets-deploy-it-1">Lets deploy it</h3>
 <ol>
-<li>Fork it</li>
-<li>Deploy it</li>
+<li>Access the Repo</li>
+<li>Press Deploy</li>
+<li>Follow the on screen instructions</li>
 <li>Add Environment variables</li>
 </ol>
 <pre><code>
@@ -619,19 +612,17 @@ FLOW_URL=https://prod-15.uksouth.logic.azure.com/workflows/7a854d30969e4158bac2b
 FLOW_KEY=ABC123
 
 </code></pre>
-</section><section>
-<section data-background-size="contain"  data-background-video="flowProxy-azureFunction-screen3.mp4" data-background-video-muted>
-</section>
 </section>
 
 <section data-noprocess data-shortcode-slide
       data-background="#F0F8FF"
       data-transition="zoom">
   
-<h3 id="lets-deploy-it-3">Lets deploy it</h3>
+<h3 id="lets-deploy-it-2">Lets deploy it</h3>
 <ol>
-<li>Fork it</li>
-<li>Deploy it</li>
+<li>Access the Repo</li>
+<li>Press Deploy</li>
+<li>Follow the on screen instructions</li>
 <li>Add Environment variables</li>
 <li>Setup Azure B2C</li>
 </ol>

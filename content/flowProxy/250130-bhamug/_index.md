@@ -117,7 +117,7 @@ width = "100px" # Size of the file.
 
 <div class="col bulletTwo">
   <ul>
-    <li class="fragment">Share two Architecture Patterns today</li>
+    <li class="fragment">Share an Architecture Patterns today</li>
     <li class="fragment">In this example:</li>
     <li class="fragment">Use Power Automate to generate a custom report</li>
     <li class="fragment">Based on Dataverse data</li>
@@ -486,7 +486,7 @@ Demo 4
 
 {{< mermaid >}}
 graph LR
-    A(User) --> B(Flow) --> C(Dataverse)
+    A(User) --> B(Flow) --> C(Dataverse)
 {{< /mermaid >}}
 
 </div>
@@ -500,15 +500,15 @@ graph LR
 
 {{< mermaid >}}
 sequenceDiagram
-    autonumber
-    actor User
-    User->>Flow: Clicks link HTTP
-    Flow->>Dataverse: Requests data
-    Dataverse-->>Flow: Data returned
-    Flow->>SharePoint: Requests template
-    SharePoint-->>Flow: Template returned
-    Flow-->Flow: Merge data in to template
-    Flow-->>User: Returns PDF
+    autonumber
+    actor User
+    User->>Flow: Clicks link HTTP
+    Flow->>Dataverse: Requests data
+    Dataverse-->>Flow: Data returned
+    Flow->>SharePoint: Requests template
+    SharePoint-->>Flow: Template returned
+    Flow-->Flow: Merge data in to template
+    Flow-->>User: Returns PDF
 {{< /mermaid >}}
 
 </div>
@@ -546,13 +546,13 @@ sequenceDiagram
 <div style="transform: scale(1.3);  margin-top: 100px;">
 {{< mermaid >}}
 sequenceDiagram
-    autonumber
-    actor User
-    User->>Reverse-Proxy: Clicks link
-    Reverse-Proxy-->>Reverse-Proxy: Authentication
-    Reverse-Proxy->Flow: Forwards Request
-    Flow-->>Reverse-Proxy: Returns PDF
-    Reverse-Proxy-->>User: Returns PDF
+    autonumber
+    actor User
+    User->>Reverse-Proxy: Clicks link
+    Reverse-Proxy-->>Reverse-Proxy: Authentication
+    Reverse-Proxy->Flow: Forwards Request
+    Flow-->>Reverse-Proxy: Returns PDF
+    Reverse-Proxy-->>User: Returns PDF
 {{< /mermaid >}}
 </div>
 
@@ -606,7 +606,7 @@ sequenceDiagram
 ### Azure function
 - Forwards all headers received from the incoming request.
 - Adds custom header Flow-Key (from environment variables).
-- Handles GET method.
+- Handles GET, POST, OPTIONS method.
 - Appends query parameters from the incoming request to the external URL.
 
 </div>
@@ -624,26 +624,18 @@ FLOW_KEY=your-flow-key-value
 
 ### Lets deploy it
 
-1. Fork it
+1. Access the Repo
+2. Press Deploy 
+3. Follow the on screen instructions
 
----
+<div>
+  <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fitweedie%2FAzureFunction-PowerAutomateProxy%2Frefs%2Fheads%2Fmain%2Fazuredeploy.json" target="_blank">
+    <img src="https://aka.ms/deploytoazurebutton" />
+  </a>
+</div>
 
-<section data-background-size="contain"  data-background-video="flowProxy-azureFunction-screen1.mp4" data-background-video-muted>
-</section>
+<div><img src="image-9.png" alt="Image" style="height:200px; box-shadow: none;"></div>
 
----
-
-{{< slide  transition="zoom" >}}
-
-### Lets deploy it
-
-1. Fork it
-2. Deploy it
-
----
-
-<section data-background-size="contain"  data-background-video="flowProxy-azureFunction-screen2.mp4" data-background-video-muted>
-</section>
 
 ---
 
@@ -651,9 +643,10 @@ FLOW_KEY=your-flow-key-value
 
 ### Lets deploy it
 
-1. Fork it
-2. Deploy it
-3. Add Environment variables
+1. Access the Repo
+2. Press Deploy 
+3. Follow the on screen instructions
+4. Add Environment variables
 
 ```
 
@@ -665,18 +658,15 @@ FLOW_KEY=ABC123
 
 ---
 
-<section data-background-size="contain"  data-background-video="flowProxy-azureFunction-screen3.mp4" data-background-video-muted>
-</section>
-
----
 
 {{< slide  transition="zoom"  background="#F0F8FF" >}}
 ### Lets deploy it
 
-1. Fork it
-2. Deploy it
-3. Add Environment variables
-4. Setup Azure B2C
+1. Access the Repo
+2. Press Deploy 
+3. Follow the on screen instructions
+4. Add Environment variables
+5. Setup Azure B2C
 
 ---
 
@@ -806,7 +796,9 @@ sequenceDiagram
     Reverse-Proxy->>User: Returns PDF
 {{< /mermaid >}}
 
+
 ---
+
 
 {{< slide  background="F0FFF0" >}}
 # Questions
