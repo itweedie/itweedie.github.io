@@ -117,7 +117,7 @@ width = "100px" # Size of the file.
 
 <div class="col bulletTwo">
   <ul>
-    <li class="fragment">Share an Architecture Pattern today</li>
+    <li class="fragment">Share an Architecture pattern today</li>
     <li class="fragment">In this example:</li>
     <li class="fragment">Use Power Automate to generate a custom report</li>
     <li class="fragment">Based on Dataverse data</li>
