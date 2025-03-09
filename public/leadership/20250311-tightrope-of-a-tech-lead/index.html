@@ -2,58 +2,97 @@
 <html lang="en">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
-<title>Custom theme example presentation</title>
-
+<title>Tightrope of a Tech Lead</title>
+<meta name="description" content="Tightrope of a Tech Lead">
 <meta name="author" content="Ian Tweedie">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/reveal-js/dist/reset.css">
-<link rel="stylesheet" href="/reveal-js/dist/reveal.css">
-  <link rel="stylesheet" href="/_.min.1951b0ffb5f58d00b49767745364a971cf9c3fad5b006ae3a97b8731faabb38f.css" id="theme"><link rel="stylesheet" href="/highlight-js/zenburn.min.css">
+<link rel="stylesheet" href="/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/css/techTweedieLight.css" id="theme"><link rel="stylesheet" href="/highlight-js/github.min.css">
   </head>
   <body>
+    
+    <style>
+      #logo {
+        position: absolute;
+        top: 1%;
+        left: 1%;
+        width: 100px;
+      }
+    </style>
+    <img id="logo" src="/techTweedie_150x150.png" alt="techTweedie.github.io">
     
     <div class="reveal">
       <div class="slides">
   
 
-    <section><h2 id="-">🖌 ️</h2>
-<h2 id="custom-themes">Custom Themes</h2>
-<p><em>with Hugo Pipes</em></p>
+    <section><h1 id="tightrope-of-a-tech-lead">Tightrope of a Tech Lead</h1>
 </section><section>
-<p>This presentation uses a custom Reveal.js theme written in SCSS that is compiled by Hugo, using <a href="https://gohugo.io/hugo-pipes/">Hugo pipes</a>.</p>
+<h2 id="balancing-involvement-as-a-tech-lead">Balancing Involvement as a Tech Lead</h2>
+<h3 id="how-much-direction-should-you-give">How much direction should you give?</h3>
 </section><section>
-<p>Hugo pipes compiles the source code of the theme, located in <code>assets/custom-theme.scss</code>, into CSS.</p>
+<h2 id="who-am-i">Who am I?</h2>
+<ul>
+<li>Ian Tweedie</li>
+<li>Developer, Chair, Consultant, Trustee, Architect, Lead</li>
+<li>Senior Technical Consultant at Capgemini</li>
+</ul>
 </section><section>
-<h2 id="heading">😄</h2>
-<p>No separate build process is required, which means you can iterate on your theme and your content at the same time.</p>
+<h2 id="the-leadership-spectrum">The Leadership Spectrum</h2>
+<ul>
+<li><strong>Facilitator:</strong> Oversees but not deeply involved</li>
+<li><strong>Strict Control:</strong> Dictates every action</li>
+<li>Finding balance is key</li>
+</ul>
 </section><section>
-<p>To set a custom theme and use Hugo to compile it:</p>
-<pre><code class="language-toml">[reveal_hugo]
-custom_theme = &quot;custom-theme.scss&quot;
-custom_theme_compile = true
-</code></pre>
-<p><code>custom-theme.scss</code> must live in the <code>assets</code> folder.</p>
+<h2 id="what-influences-the-right-level-of-direction">What Influences the Right Level of Direction?</h2>
+<ul>
+<li><strong>Team size</strong></li>
+<li><strong>Team experience</strong></li>
+<li><strong>Project complexity</strong></li>
+<li><strong>Scope and timeline</strong></li>
+<li><strong>Regulatory constraints</strong></li>
+</ul>
 </section><section>
-<p>To pass compilation options, use the <code>custom_theme_options</code> param:</p>
-<pre><code class="language-toml">[reveal_hugo.custom_theme_options]
-targetPath = &quot;css/custom-theme.css&quot;
-enableSourceMap = true
-</code></pre>
-<p>See all the <a href="https://gohugo.io/hugo-pipes/scss-sass/#options">available options</a>.</p>
+<h2 id="bottlenecks---the-biggest-challenge">Bottlenecks - The Biggest Challenge</h2>
+<ul>
+<li>When a single person holds too much knowledge</li>
+<li>Progress slows when that person is unavailable</li>
+<li>Teams become reliant instead of self-sufficient</li>
+</ul>
 </section><section>
-<p>Note: to use a custom theme that doesn&rsquo;t need compilation, put it in the <code>static</code> directory and do not set the <code>custom_theme_compile</code> parameter. It will be served to the browser directly.</p>
+<h2 id="breaking-the-bottleneck">Breaking the Bottleneck</h2>
+<ul>
+<li>Identify and <strong>act quickly</strong></li>
+<li>Encourage <strong>knowledge sharing</strong></li>
+<li>Create <strong>backup expertise</strong></li>
+</ul>
 </section><section>
-<p>Write a custom Reveal.js theme in four steps:</p>
-<pre><code class="language-text">1. Import `mixins` and `settings` from the templates directory
-2. Override variables and functions for colors, fonts and sizes
-3. Import `theme` from the templates directory
-4. Add any additional selectors to override the built CSS
-</code></pre>
+<h2 id="how-to-grow-your-team">How to Grow Your Team</h2>
+<ul>
+<li>Push people <strong>out of their comfort zone</strong></li>
+<li>Allow controlled <strong>escalation</strong> to break reliance</li>
+<li>Use <strong>drivers and instructors</strong> for guided learning</li>
+</ul>
 </section><section>
-<p>See the <a href="https://github.com/hakimel/reveal.js/blob/master/css/theme/README.md">Reveal.js theme docs</a> to learn what overrides are possible.</p>
+<h2 id="leadership--empowerment">Leadership = Empowerment</h2>
+<ul>
+<li>It’s not about making every decision</li>
+<li>It’s about <strong>empowering others to make the right ones</strong></li>
+</ul>
 </section><section>
-<p>See <code>assets/custom-theme.scss</code> or any file in <code>assets/reveal-js/dist/theme/source</code> for an example.</p>
+<h2 id="why-balance-matters">Why Balance Matters</h2>
+<ul>
+<li><strong>Too much control?</strong> Teams feel suffocated</li>
+<li><strong>Too little direction?</strong> Teams feel lost</li>
+<li>The right balance = high-performing teams</li>
+</ul>
+</section><section>
+<h2 id="final-thought">Final Thought</h2>
+<p><strong>Good people don’t leave bad projects; they leave bad leadership.</strong></p>
+</section><section>
+<h2 id="thank-you">Thank You!</h2>
+<p><strong>Any questions?</strong></p>
 </section>
 
   
@@ -95,7 +134,7 @@ enableSourceMap = true
 
   var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
   var revealHugoSiteParams = {"highlight_theme":"zenburn","history":true,"slide_number":true,"templates":{"grey":{"background":"#dddddd","transition":"convex"}}};
-  var revealHugoPageParams = {"custom_theme":"custom-theme.scss","custom_theme_compile":true};
+  var revealHugoPageParams = {"center":false,"controls":false,"controlstutorial":false,"custom_theme":"css/techTweedieLight.css","highlight_theme":"github","margin":0.2,"slide_number":false,"touch":true,"transition":"convex","transition_speed":"default"};
 
   var revealHugoPlugins = {
     
@@ -123,10 +162,6 @@ enableSourceMap = true
   
 
   
-    
-  
-  
-    
   
 
   
@@ -140,11 +175,7 @@ enableSourceMap = true
 
   
   
-    
-  
 
-  
-    
   
   
 
@@ -279,20 +310,6 @@ enableSourceMap = true
   </script>
 
 
-
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
-  
-
-<script type="text/javascript" id="MathJax-script" async src="/tex-svg_10887261161190234492.js"></script>
 
     
     
