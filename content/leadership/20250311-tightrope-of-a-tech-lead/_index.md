@@ -57,7 +57,6 @@ width = "100px" # Size of the file.
 
 ## Level of direction {.r-fit-text}
 
-{{% fragment %}} many factors... {{% /fragment %}}
 
 ---
 
@@ -74,10 +73,6 @@ width = "100px" # Size of the file.
 </br>
 </br>
 
-{{% fragment %}} Prevents issues like: {{% /fragment %}}
-
-</br>
-</br>
 
 {{% fragment %}} **Process loss** – Too many people working on the same thing {{% /fragment %}}
 
@@ -88,50 +83,53 @@ width = "100px" # Size of the file.
 
 </br>
 </br>
-0
+
 {{% fragment %}} **Diffusion of responsibility** – "Someone else will do it" {{% /fragment %}}
 
 ---
 
 ## Other Key Factors {.r-fit-text}
 
-{{% fragment %}} Team relationships {{% /fragment %}}
+ Team relationships
 
 </br>
-</br>
 
-{{% fragment %}} Experience level {{% /fragment %}}
 
-</br>
-</br>
+Experience level 
 
-{{% fragment %}} Complexity of the solution {{% /fragment %}}
 
 </br>
+
+Complexity of the solution 
+
 </br>
 
-{{% fragment %}} Project length {{% /fragment %}}
+Project length 
+
 
 </br>
-</br>
 
-{{% fragment %}} Regulatory constraints {{% /fragment %}}
+Regulatory constraints 
 
 ---
 
 ## The Bottleneck Problem {.r-fit-text}
 
-{{% fragment %}} Over-reliance on the tech lead {{% /fragment %}}
+ Over-reliance on the tech lead 
 
 </br>
 </br>
 
-{{% fragment %}} Progress slows down {{% /fragment %}}
+ Progress slows down 
 
 </br>
 </br>
 
-{{% fragment %}} The team becomes fragile {{% /fragment %}}
+ The team becomes fragile 
+
+---
+
+## Breaking the Bottleneck {.r-fit-text}
 
 ---
 
@@ -225,9 +223,9 @@ width = "100px" # Size of the file.
 
 ---
 
-## Thank You {.r-fit-text}
+# Thank You {.r-fit-text}
 
-{{% fragment %}} Any questions? {{% /fragment %}}
+## Any questions? 
 
 </br>
 </br>
