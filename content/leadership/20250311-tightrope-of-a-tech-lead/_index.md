@@ -27,76 +27,211 @@ width = "100px" # Size of the file.
 # use for gif data-background-size
 +++
 
-# Tightrope of a Tech Lead
+# Tightrope of a Tech Lead {.r-fit-text}
+
+<img src="img1.png" height="400px" />
 
 ---
 
-## Balancing Involvement as a Tech Lead
-### How much direction should you give?
+## Tightrope of a Tech Lead {.r-fit-text}
+
+{{% fragment %}} balance involvement? {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} enough direction while allowing the team to grow? {{% /fragment %}}
 
 ---
 
-## Who am I?
-- Ian Tweedie
-- Developer, Chair, Consultant, Trustee, Architect, Lead
-- Senior Technical Consultant at Capgemini
+## About Me {.r-fit-text}
+
+{{% fragment %}} **Ian Tweedie** {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Senior Technical Consultant at Capgemini {{% /fragment %}}
 
 ---
 
-## The Leadership Spectrum
-- **Facilitator:** Oversees but not deeply involved
-- **Strict Control:** Dictates every action
-- Finding balance is key
+## Level of direction {.r-fit-text}
+
+{{% fragment %}} many factors... {{% /fragment %}}
 
 ---
 
-## What Influences the Right Level of Direction?
-- **Team size**
-- **Team experience**
-- **Project complexity**
-- **Scope and timeline**
-- **Regulatory constraints**
+## Balancing Involvement {.r-fit-text}
+
+![alt text](image.png)
 
 ---
 
-## Bottlenecks - The Biggest Challenge
-- When a single person holds too much knowledge
-- Progress slows when that person is unavailable
-- Teams become reliant instead of self-sufficient
+## Team Size {.r-fit-text}
+
+{{% fragment %}} Larger teams need **more structure** {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Prevents issues like: {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} **Process loss** – Too many people working on the same thing {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} **Pluralistic ignorance** – No one speaks up {{% /fragment %}}
+
+</br>
+</br>
+0
+{{% fragment %}} **Diffusion of responsibility** – "Someone else will do it" {{% /fragment %}}
 
 ---
 
-## Breaking the Bottleneck
-- Identify and **act quickly**
-- Encourage **knowledge sharing**
-- Create **backup expertise**
+## Other Key Factors {.r-fit-text}
+
+{{% fragment %}} Team relationships {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Experience level {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Complexity of the solution {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Project length {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Regulatory constraints {{% /fragment %}}
 
 ---
 
-## How to Grow Your Team
-- Push people **out of their comfort zone**
-- Allow controlled **escalation** to break reliance
-- Use **drivers and instructors** for guided learning
+## The Bottleneck Problem {.r-fit-text}
+
+{{% fragment %}} Over-reliance on the tech lead {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Progress slows down {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} The team becomes fragile {{% /fragment %}}
 
 ---
 
-## Leadership = Empowerment
-- It’s not about making every decision
-- It’s about **empowering others to make the right ones**
+## Breaking the Bottleneck {.r-fit-text}
+
+{{% fragment %}} **Grow your way out of it** {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Push people outside their comfort zones {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Shift commitments & introduce new people {{% /fragment %}}
 
 ---
 
-## Why Balance Matters
-- **Too much control?** Teams feel suffocated
-- **Too little direction?** Teams feel lost
-- The right balance = high-performing teams
+## Tactical Moves {.r-fit-text}
+
+{{% fragment %}} Identify the **second-most knowledgeable person** {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Make them the go-to person {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Rotate responsibilities {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Use the **driver/instructor** model {{% /fragment %}}
 
 ---
 
-## Final Thought
-**Good people don’t leave bad projects; they leave bad leadership.**
+## Encourage Active Thinking {.r-fit-text}
+
+{{% fragment %}} Combat **pluralistic ignorance** {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Ask the quiet ones for input {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Show **visible support** for their ideas {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Leadership = Enabling others to decide {{% /fragment %}}
 
 ---
 
-## Thank You!
-**Any questions?**
+## The Impact {.r-fit-text}
+
+{{% fragment %}} Balance is **essential**, not optional {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} **Good people don’t leave bad projects** {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} They leave **bad leadership** {{% /fragment %}}
+
+---
+
+## Final Thought {.r-fit-text}
+
+{{% fragment %}} Create an environment where staying is **more rewarding** than leaving {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Balance **control** and **direction** {{% /fragment %}}
+
+</br>
+</br>
+
+{{% fragment %}} Walk the **tightrope** {{% /fragment %}}
+
+---
+
+## Thank You {.r-fit-text}
+
+{{% fragment %}} Any questions? {{% /fragment %}}
+
+</br>
+</br>
+<div style="display: flex; align-items: center; justify-content: center;">
+    <img src="image-1.png" height="300px" style="margin-right: 20px;" />
+    <img src="image-2.png" height="300px" />
+</div>
