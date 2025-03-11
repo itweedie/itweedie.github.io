@@ -103,6 +103,7 @@ width = "50px" # Size of the file.
 - determine ho much direction to give
 - facilitate
 - control
+- Where should we land
 
 </aside>
 
@@ -234,7 +235,17 @@ width = "50px" # Size of the file.
 </section>
 
 
+<aside class="notes">
 
+- 6
+- Team relationships
+  - together before, remote, just a team of individuals, do they go in to the office, just going in to sit on calls does not count
+- experence - something entirely new, boiler plate, business domain 
+- complexity 
+- project length 
+- regulations
+
+</aside>
 
 ---
 
@@ -325,6 +336,13 @@ width = "50px" # Size of the file.
 </ul>
 </section>
 
+
+<aside class="notes">
+
+- 7
+
+</aside>
+
 ---
 
 {{% section %}}
@@ -352,7 +370,12 @@ width = "50px" # Size of the file.
     </li>
   </ul>
 
+<aside class="notes">
 
+- 8
+- 9
+
+</aside>
 
 ---
 
@@ -387,7 +410,12 @@ width = "50px" # Size of the file.
   </ul>
 
 
+<aside class="notes">
 
+- 10
+- 11
+
+</aside>
 
 ---
 
@@ -420,6 +448,11 @@ width = "50px" # Size of the file.
     </li>
   </ul>
 
+<aside class="notes">
+
+- 12
+
+</aside>
 
 ---
 
@@ -445,6 +478,12 @@ width = "50px" # Size of the file.
     Leadership = Enabling others to decide
   </li>
 </ul>
+
+<aside class="notes">
+
+- 13
+
+</aside>
 
 {{% /section %}}
 
@@ -504,6 +543,12 @@ width = "50px" # Size of the file.
   </ul>
 </section>
 
+<aside class="notes">
+
+- 14
+- 15
+
+</aside>
 
 ---
 
@@ -559,6 +604,11 @@ width = "50px" # Size of the file.
   </ul>
 </section>
 
+<aside class="notes">
+
+- 16
+
+</aside>
 
 ---
 
