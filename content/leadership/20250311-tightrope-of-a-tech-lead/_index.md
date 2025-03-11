@@ -291,7 +291,7 @@ width = "50px" # Size of the file.
 
 {{% section %}}
 
-## The Bottleneck Problem {.r-fit-text}
+# The Bottleneck Problem 
 
   <ul style="list-style: none; padding-left: 0;">
     <li style="padding: 10px 0;">
@@ -318,7 +318,7 @@ width = "50px" # Size of the file.
 
 ---
 
-## Breaking the Bottleneck {.r-fit-text}
+# Breaking the Bottleneck 
 
 
   <ul style="list-style: none; padding-left: 0;">
@@ -353,7 +353,7 @@ width = "50px" # Size of the file.
 
 ---
 
-## Tactical Moves {.r-fit-text}
+# Tactical Moves 
 
   <ul style="list-style: none; padding-left: 0;">
     <li style="padding: 10px 0;">
@@ -385,7 +385,7 @@ width = "50px" # Size of the file.
 
 ---
 
-## Encourage Active Thinking {.r-fit-text}
+# Encourage Active Thinking 
 
 <ul style="list-style: none; padding-left: 0;">
   <li style="padding: 10px 0;">
@@ -412,7 +412,7 @@ width = "50px" # Size of the file.
 
 ---
 
-## The Impact {.r-fit-text}
+# The Impact 
 
 <section data-auto-animate>
 
