@@ -47,12 +47,11 @@ width = "50px" # Size of the file.
 ---
 
 ## About Me {.r-fit-text}
-
-{{% fragment %}} **Ian Tweedie** {{% /fragment %}}
-
 </br>
-</br>
+</br></br>
 
+{{% fragment %}} ### **Ian Tweedie** {{% /fragment %}}
+</br>
 {{% fragment %}} Senior Technical Consultant at Capgemini {{% /fragment %}}
 </br>
 {{% fragment %}} Technical Architect {{% /fragment %}}
