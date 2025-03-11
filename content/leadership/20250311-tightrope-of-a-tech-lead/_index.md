@@ -204,24 +204,88 @@ width = "50px" # Size of the file.
 
 
 
-{{% fragment %}} <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1" style="vertical-align: middle; margin-right: 10px; width: 100px; height: 100px;">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /> </svg> Larger teams need <strong>more structure</strong> {{% /fragment %}}
+<section data-auto-animate>
+</section>
 
-</br>
-</br>
+<section data-auto-animate>
+<ul style="list-style: none; padding-left: 0;">
+  <li style="padding: 10px 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1" style="vertical-align: middle; margin-right: 10px; width: 40px; height: 40px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+    Larger teams need <strong>more structure</strong>
+  </li>
+</ul>
+</section>
 
+<section data-auto-animate>
+<ul style="list-style: none; padding-left: 0;">
+  <li style="padding: 10px 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1" style="vertical-align: middle; margin-right: 10px; width: 40px; height: 40px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+    Larger teams need <strong>more structure</strong>
+  </li>
+  <li style="padding: 10px 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1" style="vertical-align: middle; margin-right: 10px; width: 40px; height: 40px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+    <strong>Process loss</strong> – Too many people working on the same thing
+  </li>
+</ul>
+</section>
 
-{{% fragment %}} **Process loss** – Too many people working on the same thing {{% /fragment %}}
+<section data-auto-animate>
+<ul style="list-style: none; padding-left: 0;">
+  <li style="padding: 10px 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1" style="vertical-align: middle; margin-right: 10px; width: 40px; height: 40px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+    Larger teams need <strong>more structure</strong>
+  </li>
+  <li style="padding: 10px 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1" style="vertical-align: middle; margin-right: 10px; width: 40px; height: 40px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+    <strong>Process loss</strong> – Too many people working on the same thing
+  </li>
+  <li style="padding: 10px 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1" style="vertical-align: middle; margin-right: 10px; width: 40px; height: 40px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+    <strong>Pluralistic ignorance</strong> – No one speaks up
+  </li>
+</ul>
+</section>
 
-</br>
-</br>
-
-{{% fragment %}} **Pluralistic ignorance** – No one speaks up {{% /fragment %}}
-
-</br>
-</br>
-
-{{% fragment %}} **Diffusion of responsibility** – "Someone else will do it" {{% /fragment %}}
+<section data-auto-animate>
+<ul style="list-style: none; padding-left: 0;">
+  <li style="padding: 10px 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1" style="vertical-align: middle; margin-right: 10px; width: 40px; height: 40px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+    Larger teams need <strong>more structure</strong>
+  </li>
+  <li style="padding: 10px 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1" style="vertical-align: middle; margin-right: 10px; width: 40px; height: 40px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+    <strong>Process loss</strong> – Too many people working on the same thing
+  </li>
+  <li style="padding: 10px 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1" style="vertical-align: middle; margin-right: 10px; width: 40px; height: 40px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+    <strong>Pluralistic ignorance</strong> – No one speaks up
+  </li>
+  <li style="padding: 10px 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1" style="vertical-align: middle; margin-right: 10px; width: 40px; height: 40px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+    <strong>Diffusion of responsibility</strong> – "Someone else will do it"
+  </li>
+</ul>
+</section>
 
 ---
 
