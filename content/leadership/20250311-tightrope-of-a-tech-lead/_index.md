@@ -44,6 +44,14 @@ width = "50px" # Size of the file.
 
 {{% fragment %}} ### Enough direction while allowing the team to grow? {{% /fragment %}}
 
+<aside class="notes">
+
+- As a tech lead how do you balance involvement?
+- provide enough direction while allowing the team to grow?
+- how much time to assign?
+
+</aside>
+
 ---
 
 ## About Me {.r-fit-text}
@@ -56,10 +64,31 @@ width = "50px" # Size of the file.
 </br>
 {{% fragment %}} Technical Architect {{% /fragment %}}
 
+<aside class="notes">
+
+- Technical Architect 
+- I can work across various projects
+- my level varies
+- why, how do i judge that? 
+- how do i get the balance right
+- not leave people abandoned 
+- but not become the bottleneck
+
+</aside>
+
+
 ---
 
 ## Level of {.r-fit-text}
 ## direction {.r-fit-text}
+
+<aside class="notes">
+
+- 3
+- what influences this
+- it depends
+
+</aside>
 
 ---
 
@@ -67,6 +96,15 @@ width = "50px" # Size of the file.
 ## Balancing Involvement {.r-fit-text}
 
 <img src="image.png" height="500px" />
+
+<aside class="notes">
+
+- 4 & 5
+- determine ho much direction to give
+- facilitate
+- control
+
+</aside>
 
 ---
 
