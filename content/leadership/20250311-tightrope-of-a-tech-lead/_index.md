@@ -336,10 +336,10 @@ width = "50px" # Size of the file.
 </ul>
 </section>
 
-
 <aside class="notes">
 
 - 7
+- seven
 
 </aside>
 
