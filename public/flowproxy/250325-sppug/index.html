@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<title>CustomReports</title>
+<meta name="description" content="A Hugo theme for creating Reveal.js presentations">
+<meta name="author" content="Ian Tweedie">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script data-goatcounter="https://itweedie-gh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><link rel="stylesheet" href="/reveal-js/dist/reset.css">
+<link rel="stylesheet" href="/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/css/techTweedieLight.css" id="theme"><link rel="stylesheet" href="/highlight-js/github.min.css">
+  </head>
+  <body>
+    
+    <style>
+      #logo {
+        position: absolute;
+        top: 1%;
+        left: 1%;
+        width: 100px;
+      }
+    </style>
+    <img id="logo" src="/techTweedie_150x150.png" alt="techTweedie.github.io">
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><style>
+.container {
+    display: block;
+    text-align: center; /* Center-aligns content */
+}
+.col{
+    flex: 1;
+}
+.col ul li {
+    position: relative;
+    padding-left: 30px; /* Space for SVG icon */
+    margin-bottom: 10px; /* Space between items */
+    font-size: 1.1em; /* Slightly larger text */
+    color: #333; /* Custom text color */
+}
+.cola img {
+    display: block;
+    margin: 0 auto; /* Centers image */
+    width: 400px; /* Set desired width */
+    height: auto; /* Maintains aspect ratio */
+}
+.cola ul {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0; /* Removes default padding */
+    margin-top: 15px; /* Space between image and list */
+}
+.cola ul li {
+    position: relative;
+    padding-left: 30px; /* Space for SVG icon */
+    margin-bottom: 10px; /* Space between items */
+    font-size: 1.1em; /* Slightly larger text */
+    color: #333; /* Custom text color */
+}
+.cola ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px; /* Width of SVG icon */
+    height: 24px; /* Height of SVG icon */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" /></svg>');
+    background-size: contain;
+}
+
+.aboutMe ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.aboutMe li {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 130%; /* Adjust the width as needed */
+}
+
+.bulletTwo ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bulletTwo li {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%; /* Adjust the width as needed */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid orange;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+</style>
+<aside class="notes">
+  Press the S key
+</aside>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#1d345d"
+      data-transition="zoom">
+  
+<h1 style="color: white; font-weight: bold; "> Enabling low code developers to </h1>
+<aside class="notes">
+  Enable low code developers to
+</aside>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF"
+      data-transition="zoom">
+  
+<h2 id="create-custom-client-reports-with-a-helping-hand-from-azure">Create custom client reports with a helping hand from Azure</h2>
+<aside class="notes">
+<ul>
+<li>Create custom reports</li>
+<li>with help from azure</li>
+</ul>
+</aside>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF"
+      data-transition="zoom">
+  
+<h2 id="introduction">Introduction</h2>
+<div class="col bulletTwo">
+  <ul>
+    <li class="fragment">Share an Architecture pattern today</li>
+    <li class="fragment">In this example:</li>
+    <li class="fragment">Use Power Automate to generate a custom report</li>
+    <li class="fragment">Based on Dataverse data</li>
+    <li class="fragment">Share it with our client securely via a link</li>
+  </ul>
+</div>
+<aside class="notes">
+<ul>
+<li>by 3</li>
+<li>Share Pattern</li>
+<li>Use power automate</li>
+<li>generate custom report</li>
+<li>based on dataverse</li>
+<li>share it securely</li>
+</ul>
+</aside>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#fdfdfd">
+  
+<h1 id="ian-tweedie">Ian Tweedie</h1>
+<div class="container">
+<div class="col" style="justify-content: center; align-items: center;">
+  <img src="content/qr.jpg" alt="Image" style="height:250px; box-shadow: none;">
+</div>
+<div class="col aboutMe">
+  <ul>
+    <li class="fragment">Senior Technical Consultant, Capgemini</li>
+    <li class="fragment">Trustee for Digital Transformation for a £22 million non for profit</li>
+    <li class="fragment">Chair of an £750k non for profit</li>
+  </ul>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Senior Technical Consultant</li>
+<li>Trustee</li>
+<li>Chair</li>
+</ul>
+</aside>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF">
+  
+<h3 id="ian-tweedie-1">Ian Tweedie</h3>
+<h5 id="certification-wall">Certification Wall</h5>
+<p><img src="content/image-12.png" alt="height:100px"><img src="content/image-13.png" alt="height:100px"><img src="content/image-14.png" alt="height:100px"><img src="content/image-15.png" alt="height:100px"><img src="content/image-16.png" alt="height:100px"><img src="content/image-17.png" alt="height:100px"><img src="content/image-18.png" alt="height:100px"><img src="content/image-19.png" alt="height:100px"><img src="content/image-20.png" alt="height:100px"><img src="content/image-21.png" alt="height:100px"><img src="content/image-22.png" alt="height:100px"><img src="content/image-23.png" alt="height:100px"><img src="content/image-24.png" alt="height:100px"><img src="content/image-25.png" alt="height:100px"><img src="content/image-26.png" alt="height:100px"><img src="content/image-27.png" alt="height:100px"><img src="content/image-28.png" alt="height:100px"><img src="content/image-29.png" alt="height:100px"><img src="content/image-30.png" alt="height:100px"><img src="content/image-31.png" alt="height:100px"><img src="content/image-32.png" alt="height:100px"><img src="content/image-33.png" alt="height:100px"><img src="content/image-34.png" alt="height:100px"><img src="content/image-35.png" alt="height:100px"><img src="content/image-36.png" alt="height:100px"><img src="content/image-37.png" alt="height:100px"><img src="content/image-38.png" alt="height:100px"><img src="content/image-39.png" alt="height:100px"><img src="content/image-40.png" alt="height:100px"><img src="content/image-41s.png" alt="height:100px"><img src="content/image-42s.png" alt="height:100px"><img src="content/image-44s.png" alt="height:100px"><img src="content/CyberSecurityArchitect-2s.png" alt="height:100px"><img src="content/sc-100exams.png" alt="height:100px"></p>
+<aside class="notes">
+<ul>
+<li>Senior Technical Consultant</li>
+<li>Trustee</li>
+<li>Chair</li>
+</ul>
+</aside>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF">
+  
+<h2 id="community-tools">Community Tools</h2>
+<div class="container">
+  <div class="col">
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <div style="flex: 20%; text-align: center;">
+        <img src="content/image-45.png" alt="Image" style="height:50px; box-shadow: none;">
+      </div>
+      <div style="flex: 80%; text-align: left;">
+        <img src="content/mightora-io-logo3.png" alt="Image" style="height:30px; box-shadow: none;">
+      </div>
+    </div>
+    <div class="col aboutMe">
+    <ul>
+      <li class="fragment">Calculate working day</li>
+      <li class="fragment">Email domain checker</li>
+      <li class="fragment">SharePoint Connector using SPN</li>
+      <li class="fragment">Email Connector using SPN</li>
+      <li class="fragment">Dataverse 4 Teams Local ALM Tool</li>
+      <li class="fragment">DevOps Extension: Power Apps Solution Documentation Tool</li>
+      <li class="fragment">Around 500k hits a month</li>
+    </ul>
+    </div>
+  </div>
+  <div class="col">
+  </div>
+</div>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF">
+  
+<style>
+
+
+</style>
+<div class="container">
+    <div class="cola">
+        <img src="/techTweedie_logo.png" alt="Image" style="box-shadow: none;">
+        <br>
+        <h2> Community Content </h2>
+        <ul>
+            <li><a href="https://techtweedie.github.io/"> techtweedie.github.io</a></li>
+            <li><a href="https://www.youtube.com/@techtweedie"> youtube.com/@techtweedie</a></li>
+        </ul>
+    </div>
+</div>
+<aside class="notes">
+<ul>
+<li>by 8</li>
+</ul>
+</aside>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#FFF8DC"
+      data-transition="zoom">
+  
+<h2 id="problem">Problem</h2>
+<ul>
+<li>
+<p><strong>WE ARE</strong> handling high value claims</p>
+</li>
+<li>
+<p><strong>WE NEED TO</strong> share settlement documents with our clients</p>
+</li>
+<li>
+<p><strong>WE MUST</strong> share these documents securely</p>
+</li>
+</ul>
+</section>
+
+
+<section data-shortcode-section>
+<section data-noprocess data-shortcode-slide
+      data-background="#FFF8DC"
+      id="demo-1-splash"
+      data-transition="zoom">
+<h2 id="current-solution">Current solution</h2>
+<p>Live Demo 1</p>
+<ol>
+<li><a href="https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&pagetype=entityrecord&etn=techtwed_settlement&id=3272841e-6c32-ef11-8e4e-6045bd0d261b&formid=44e105a1-df32-ef11-8e4e-6045bd0d261b" target="_blank" rel="noopener noreferrer">Settlement App</a></li>
+<li><a href="https://outlook.office365.com/mail/demo@Tweed.technology/" target="_blank" rel="noopener noreferrer">Check email</a></li>
+<li><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/25bc4d07-1da5-4c21-86bc-5ca9c7f9e994/view" target="_blank" rel="noopener noreferrer">Power automate flow</a></li>
+<li><a href="https://tech-tweedie-demo-site-1.powerappsportals.com/Settlement-App/" target="_blank" rel="noopener noreferrer">Power Pages Portal</a></li>
+<li><a href="https://tweedtech.sharepoint.com/sites/TechTweedieDemoSite1" target="_blank" rel="noopener noreferrer">SharePoint Site</a></li>
+<li><a href="https://tweedtech.sharepoint.com/:w:/r/sites/TechTweedieDemoSite1/_layouts/15/Doc.aspx?sourcedoc=%7B40B28EC8-4A09-4C95-9A79-8D1F83BEC39D%7D&file=Document.docx&action=default&mobileredirect=true" target="_blank" rel="noopener noreferrer">Document</a></li>
+</ol>
+</section><section>
+<section data-background-size="contain"  id="demo-1-video-a"  data-background-video="flowProxy-demo1-screen1.mp4" data-background-video-muted>
+</section>
+</section><section>
+<section data-background-size="contain"  id="demo-1-video-b"  data-background-video="flowProxy-demo1-screen2.mp4" data-background-video-muted>
+</section>
+
+</section>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#FFF8DC">
+  
+<h2 id="problems">Problems</h2>
+<div class="container">
+  <div class="col">
+    <p class="fragment">Slow</p>
+    <p class="fragment">Inaccessible</p>
+    <p class="fragment">Clunky</p>
+    <p class="fragment">Click and wait...</p>
+  </div>
+</div>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#FFF8DC">
+  
+<h2 id="proposed-solution">Proposed solution</h2>
+<ul>
+<li>Present it as a web link</li>
+</ul>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#FFF8DC">
+  
+<h2 id="can-we">Can we</h2>
+<ul>
+<li>
+<p>Get power automate to make a web page for us</p>
+</li>
+<li>
+<p>Can that web page present a PDF document</p>
+</li>
+</ul>
+</section>
+<p>
+<section data-noprocess data-shortcode-slide
+      data-background="#FAEBD7"
+      id="demo-2-splash"
+      data-transition="zoom">
+  
+
+
+<section data-shortcode-section>
+<h1 id="lets-give-it-a-go">Lets give it a go</h1>
+<p>Live Demo 2</p>
+<div style="display: flex; align-items: center;">
+  <div style="flex: 1;">
+    <img src="image-5.png" alt="alt text" style="width: 300px; height: auto;">
+  </div>
+  <div style="flex: 1;">
+    <ol>
+      <li><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/25b74e7e-6734-4e38-9847-dc230c444aeb/view" target="_blank">Web Page Flow</a></li>
+      <li><a href="https://prod-16.uksouth.logic.azure.com/workflows/c59c21c2e87b4267a3f51327e8b0a9c6/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4o_YOe9rzXb6InvBIeOh3pM9GLXVfQOuR1GWuI81bVs" target="_blank">Try it out</a></li>
+    </ol>
+  </div>
+</div>
+</section><section>
+<section data-background-size="contain"  data-background-video="flowProxy-demo2-screen1.mp4" id="demo-2-video-a" data-background-video-muted>
+</section>
+
+</section></p>
+</section><section>
+<h2 id="test-it-together">Test it together</h2>
+<img src="image-5.png" alt="alt text" style="width: 500px; height: auto;">
+<p><a href="https://prod-16.uksouth.logic.azure.com/workflows/c59c21c2e87b4267a3f51327e8b0a9c6/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4o_YOe9rzXb6InvBIeOh3pM9GLXVfQOuR1GWuI81bVs" target="_blank">Try it out</a></p>
+</section><section>
+
+
+<section data-shortcode-section>
+<h2 id="view-the-flow-runs">View the flow runs</h2>
+<p><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/25b74e7e-6734-4e38-9847-dc230c444aeb/view" target="_blank">View</a></p>
+</section><section>
+<section data-background-size="contain"  data-background-video="flowProxy-demo2-screen2.mp4" data-background-video-muted>
+</section>
+
+</section>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#FAEBD7">
+  
+<h2 id="key-component">Key component</h2>
+<h3 id="web-page">Web Page</h3>
+<ul>
+<li>Flow with HTTP Request trigger</li>
+<li>Response Headers</li>
+</ul>
+<p><strong>content-type : text/html</strong></p>
+<pre><code class="language-json">content-type : text/html
+</code></pre>
+<ul>
+<li>Full list can be found <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">Common MIME types - HTTP | MDN (mozilla.org)</a></li>
+</ul>
+</section><section>
+<section data-background-size="contain"  data-background-video="mime-types.mp4" data-background-video-muted>
+</section>
+</section>
+<p>
+<section data-noprocess data-shortcode-slide
+      data-background="#FAEBD7"
+      id="demo-3-splash"
+      data-transition="zoom">
+  
+
+
+<section data-shortcode-section>
+<h1 id="lets-give-it-a-go">Lets give it a go</h1>
+<p>Demo 3</p>
+</section>
+<section data-noprocess data-shortcode-slide
+      data-background="#FAEBD7"
+      id="demo-3-links">
+<h2 id="live-demo-3">Live Demo 3</h2>
+<ol>
+<li><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/53909a74-b04d-4ffd-9983-9b73d095e10c/view">PDF Flow</a></li>
+<li><a href="https://prod-21.uksouth.logic.azure.com/workflows/5ba0def50b7e43498b887e8aac99bfae/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=wt-FxeMbuDM_UwFENGNdX-BGwFYX-u7hWtIqjw4Z5xQ">Try it out</a></li>
+</ol>
+
+</section></p>
+</section><section>
+<section id="demo-3-video-screen1" data-background-size="contain"  data-background-video="flowProxy-demo3-screen1.mp4" data-background-video-muted>
+</section>
+</section><section>
+<h2 id="test-it-together-1">Test it together</h2>
+<img src="image-6.png" alt="alt text" style="width: 500px; height: auto;">
+<p><a href="https://prod-21.uksouth.logic.azure.com/workflows/5ba0def50b7e43498b887e8aac99bfae/triggers/manual/paths/invoke?api-version=2016-06-01&sp=/triggers/manual/run&sv=1.0&sig=wt-FxeMbuDM_UwFENGNdX-BGwFYX-u7hWtIqjw4Z5xQ" target="_blank">Try it out</a></p>
+</section><section>
+<h2 id="view-the-flow-run">View the flow run</h2>
+<p><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/53909a74-b04d-4ffd-9983-9b73d095e10c/view" target="_blank">View</a></p>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#FAEBD7">
+  
+<h2 id="key-component-1">Key component</h2>
+<h3 id="pdf">PDF</h3>
+<p>Response Headers</p>
+<p><strong>Content-Type: application/pdf</strong></p>
+<pre><code class="language-json">Content-Type: application/pdf
+</code></pre>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">Common MIME types - HTTP | MDN (mozilla.org)</a></p>
+<p><strong>Content-Disposition: inline</strong></p>
+<p><strong>Content-Disposition: attachment; filename=&ldquo;filename.pdf&rdquo;</strong></p>
+<pre><code class="language-json">Content-Disposition: inline
+Content-Disposition: attachment; filename=&quot;filename.pdf&quot;
+</code></pre>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition">Content-Disposition - HTTP | MDN (mozilla.org)</a></p>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="msedge_rO7rHF3uIl.gif">
+  
+</section>
+<p>
+<section data-noprocess data-shortcode-slide
+      data-transition="zoom">
+  
+
+
+<section data-shortcode-section>
+<h1 id="lets-see-that-working">Lets see that working</h1>
+<p>Demo 4</p>
+</section>
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_GPF5DnIcsA.gif">
+</section>
+<section data-noprocess data-shortcode-slide
+      data-background-image="brave_dBvaPf9yIY.gif">
+
+</section></p>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF">
+  
+<h2 id="live-demo-4">Live Demo 4</h2>
+<p><a href="https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&amp;pagetype=entityrecord&amp;etn=techtwed_settlement&amp;id=3272841e-6c32-ef11-8e4e-6045bd0d261b&amp;formid=44e105a1-df32-ef11-8e4e-6045bd0d261b">View Form</a></p>
+</section><section>
+<h2 id="test-it-together-2">Test it together</h2>
+<img src="image-7.png" alt="alt text" style="width: 500px; height: auto;">
+<p><a href="https://prod-07.uksouth.logic.azure.com/workflows/c9d2fb07972942a097d16a9ce324097d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=BAtG0IUyjXSVsMyeXTpq3GI7Zj4SGP6-ztUD4Rj_v58&row=SET-1000-R2R2" target="_blank">Try it out</a></p>
+</section><section>
+<h2 id="view-the-flow">View the Flow</h2>
+<p><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/a999aa73-d908-47b5-82c5-311a8814e270/view" target="_blank">View the flow</a></p>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF">
+  
+<h2 id="key-component-2">Key component</h2>
+<p><strong>@{triggerOutputs()[&lsquo;queries&rsquo;]}</strong></p>
+<pre><code class="language-csharp">@{triggerOutputs()['queries']}
+</code></pre>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF">
+  
+<h3 id="overview">Overview</h3>
+<div style="margin: 20px 0; transform: scale(2); margin-top: 150px;">
+<div class="mermaid">
+graph LR
+    A(User) --> B(Flow) --> C(Dataverse)
+
+</div>
+
+
+</div>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF">
+  
+<h3 id="sequence">Sequence</h3>
+<div style="margin: 20px 0; transform: scale(1.2); margin-top: 50px;">
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    actor User
+    User->>Flow: Clicks link HTTP
+    Flow->>Dataverse: Requests data
+    Dataverse-->>Flow: Data returned
+    Flow->>SharePoint: Requests template
+    SharePoint-->>Flow: Template returned
+    Flow-->Flow: Merge data in to template
+    Flow-->>User: Returns PDF
+
+</div>
+
+
+</div>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF">
+  
+<h1 id="we-still-have-a-problem">We still have a problem</h1>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF">
+  
+<h3 id="what-do-we-need">What do we need?</h3>
+  <div style="transform: scale(1.3); margin-top: 150px;">
+<div class="mermaid">
+  sequenceDiagram
+      autonumber
+      actor User
+      User->>Flow: Clicks link
+      Flow-->>User: Returns PDF
+  
+</div>
+
+
+  </div>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF">
+  
+<h3 id="reverse-proxy">Reverse Proxy</h3>
+<div style="transform: scale(1.3);  margin-top: 100px;">
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    actor User
+    User->>Reverse-Proxy: Clicks link
+    Reverse-Proxy-->>Reverse-Proxy: Authentication
+    Reverse-Proxy->Flow: Forwards Request
+    Flow-->>Reverse-Proxy: Returns PDF
+    Reverse-Proxy-->>User: Returns PDF
+
+</div>
+
+
+</div>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF">
+  
+<h3 id="solution-requirements">Solution requirements</h3>
+<ul>
+<li>
+<p>Authenticate by Azure B2C</p>
+</li>
+<li>
+<p>Reverse Proxy function</p>
+</li>
+</ul>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF">
+  
+<h3 id="where-can-i-find-this">Where can I find this</h3>
+<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+<div class="container">
+<div class="col" style="justify-content: center; align-items: center;">
+  <img src="image-1.png" alt="Image" style="height:80%; box-shadow: none;">
+</div>
+<div class="col">
+  Out of the box Authentication 
+</div>
+</div>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="msedge_TeQ2S2Q5TZ.gif">
+  
+<div style="background-color: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<h3 id="azure-function">Azure function</h3>
+<ul>
+<li>Forwards all headers received from the incoming request.</li>
+<li>Adds custom header Flow-Key (from environment variables).</li>
+<li>Handles GET, POST, OPTIONS method.</li>
+<li>Appends query parameters from the incoming request to the external URL.</li>
+</ul>
+</div>
+<pre><code>
+FLOW_URL=https://prod-21.uksouth.logic.azure.com/workflows/your-logic-app-url
+FLOW_KEY=your-flow-key-value
+
+</code></pre>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF"
+      data-transition="zoom">
+  
+<h3 id="lets-deploy-it">Lets deploy it</h3>
+<ol>
+<li>Access the Repo</li>
+<li>Press Deploy</li>
+<li>Follow the on screen instructions</li>
+</ol>
+<div>
+  <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fitweedie%2FAzureFunction-PowerAutomateProxy%2Frefs%2Fheads%2Fmain%2Fazuredeploy.json" target="_blank">
+    <img src="https://aka.ms/deploytoazurebutton" />
+  </a>
+</div>
+<div><img src="image-9.png" alt="Image" style="height:200px; box-shadow: none;"></div>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF"
+      data-transition="zoom">
+  
+<h3 id="lets-deploy-it-1">Lets deploy it</h3>
+<ol>
+<li>Access the Repo</li>
+<li>Press Deploy</li>
+<li>Follow the on screen instructions</li>
+<li>Add Environment variables</li>
+</ol>
+<pre><code>
+FLOW_URL=https://prod-15.uksouth.logic.azure.com/workflows/7a854d30969e4158bac2b17ac15d1ad7/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=FrLhWsuldO9AiPgF4ztcjuvjsSrBrJtlD5Mf17jjU_I 
+
+FLOW_KEY=ABC123
+
+</code></pre>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF"
+      data-transition="zoom">
+  
+<h3 id="lets-deploy-it-2">Lets deploy it</h3>
+<ol>
+<li>Access the Repo</li>
+<li>Press Deploy</li>
+<li>Follow the on screen instructions</li>
+<li>Add Environment variables</li>
+<li>Setup Azure B2C</li>
+</ol>
+</section><section>
+<section data-background-size="contain"  data-background-video="flowProxy-azureFunction-screen4.mp4" data-background-video-muted>
+</section>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#F0F8FF"
+      data-transition="zoom">
+  
+<h1 id="lets-see-that-working">Lets see that working</h1>
+<p>Demo 5</p>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#FAEBD7">
+  
+<h2 id="live-demo-5">Live Demo 5</h2>
+<p><a href="https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&pagetype=entityrecord&etn=techtwed_settlement&id=3272841e-6c32-ef11-8e4e-6045bd0d261b&formid=4225fbe1-7174-ef11-a670-000d3a0d2d37" target="_blank">View the form</a></p>
+</section><section>
+<h2 id="try-it-out">Try it out</h2>
+<div style="display: flex; align-items: center;">
+  <div style="flex: 1;">
+    <a href="https://flowproxy1.azurewebsites.net/api/proxy/?row=SET-1000-R2R2" target="_blank">
+      <img src="image-8.png" alt="alt text" style="width: 500px; height: auto;">
+    </a>
+  </div>
+  <div style="flex: 1; padding-left: 20px;">
+    <p><strong>Username:</strong></p>
+    <p>demo@tweed.technology</p>
+    <p><strong>Password:</strong></p>
+    <p>TechTweedie1!</p>
+  </div>
+</div>
+</section><section>
+<h2 id="view-the-flow-1">View the flow</h2>
+<p><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/db720441-2e33-ef11-8e4e-6045bd0d261b/view" target="_blank">View the flow</a></p>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#FAEBD7">
+  
+<h1 id="key-component-3">Key component</h1>
+<h2 id="inbound-header">Inbound Header</h2>
+<p><strong>X-MS-CLIENT-PRINCIPAL-ID</strong></p>
+<pre><code class="language-JSON">  &quot;X-MS-CLIENT-PRINCIPAL-ID&quot;: &quot;1ebcd192-5366-48eb-9028-04610ae1704d&quot;
+</code></pre>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#FAEBD7">
+  
+<h1 id="key-component-4">Key component</h1>
+<h2 id="fetch-xml">Fetch XML</h2>
+<pre><code class="language-XML">&lt;fetch&gt;
+  &lt;entity name=&quot;techtwed_settlement&quot;&gt;
+    &lt;attribute name=&quot;techtwed_name&quot; /&gt;
+    &lt;attribute name=&quot;techtwed_settlementid&quot; /&gt;
+    &lt;filter&gt;
+      &lt;condition attribute=&quot;techtwed_name&quot; operator=&quot;eq&quot; value=&quot;SET-1001-T8B5&quot; /&gt;
+    &lt;/filter&gt;
+    &lt;link-entity name=&quot;contact&quot; from=&quot;contactid&quot; to=&quot;techtwed_customer&quot; alias=&quot;contact&quot;&gt;
+      &lt;link-entity name=&quot;adx_externalidentity&quot; from=&quot;adx_contactid&quot; to=&quot;contactid&quot; alias=&quot;externalid&quot;&gt;
+        &lt;filter&gt;
+          &lt;condition attribute=&quot;adx_username&quot; operator=&quot;eq&quot; value=&quot;1ebcd192-5366-48eb-9028-04610ae1704d&quot; /&gt;
+        &lt;/filter&gt;
+      &lt;/link-entity&gt;
+    &lt;/link-entity&gt;
+  &lt;/entity&gt;
+&lt;/fetch&gt;
+</code></pre>
+</section><section>
+<h1 id="high-level-solution">High Level Solution</h1>
+<img src="https://www.plantuml.com/plantuml/png/NOtD2i8m40RlUOebzxo2j23YCOVU98VLBbLCJ4WsrX_wxX9R9FQuiyCtJMACd9qL8k3fYWE1R5yvaeIt03Zih1z1H_zu6Z5LZlOZHMX3IBDOt8LbzWwPp4nxP3nY8f1RPBnJJClqzpkLqNtNQL3nCfnPRVwJzL4fwz8QW2hMBsY4QEZMPsS_" alt="Image" style="height:500px; box-shadow: none;">
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="#FAEBD7">
+  
+<h1 id="sequence-diagram">Sequence Diagram</h1>
+<div class="mermaid">
+sequenceDiagram
+    autonumber
+    actor User
+
+    User->>Reverse-Proxy: Click Link
+    Reverse-Proxy->>Reverse-Proxy: Authentication
+    Reverse-Proxy->>Flow: Forwards request
+    Flow->>Dataverse: Requests data
+    Dataverse-->>Flow: Data returned
+    Flow->>SharePoint: Requests template
+    SharePoint-->>Flow: Template returned
+    Flow-->Flow: Merge data in to template
+    Flow->>Reverse-Proxy: Returns PDF
+    Reverse-Proxy->>User: Returns PDF
+
+</div>
+
+
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="F0FFF0">
+  
+<h1 id="where-have-i-used-this-pattern">Where have I used this Pattern</h1>
+<ul>
+<li>Document Generation</li>
+<li>WiFi Network Login</li>
+<li>Register Interest</li>
+<li>Login to a legacy systems</li>
+<li>Door code generation</li>
+</ul>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background="F0FFF0">
+  
+<h1 id="questions">Questions</h1>
+<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+<div class="container">
+  <div class="col" stype="justify-content: center; align-items: center;">
+    <div>
+    Keep in touch
+    </div>
+    <div>
+    <img src="content/qr.jpg" alt="Image" style="height:200px; box-shadow: none;">
+    </div>
+  </div>
+  <div class="col" stype="justify-content: center; align-items: center;">
+    <div>Feedback</div>
+    <div><img src="image.png" alt="Image" style="height:200px; box-shadow: none;"></div>
+  </div>
+    <div class="col" stype="justify-content: center; align-items: center;">
+    <div>Presentation</div>
+    <div><img src="image-13.png" alt="Image" style="height:200px; box-shadow: none;"></div>
+  </div>
+      <div class="col" stype="justify-content: center; align-items: center;">
+    <div>Github Repo</div>
+    <div><img src="image-9.png" alt="Image" style="height:200px; box-shadow: none;"></div>
+  </div>      
+</div>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/reveal-hugo/object-assign.js></script>
+
+
+<script src="/reveal-js/dist/reveal.js"></script>
+
+
+  <script type="text/javascript" src="/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/zoom/zoom.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/notes/notes.js"></script>
+  
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = {"highlight_theme":"zenburn","history":true,"slide_number":true,"templates":{"grey":{"background":"#dddddd","transition":"convex"}}};
+  var revealHugoPageParams = {"center":false,"controls":false,"controlstutorial":false,"custom_theme":"css/techTweedieLight.css","highlight_theme":"github","margin":0.2,"slide_number":false,"touch":true,"transition":"convex","transition_speed":"default"};
+
+  var revealHugoPlugins = {
+    
+    plugins: [RevealMarkdown,RevealHighlight,RevealZoom,RevealNotes]
+  };
+
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams),
+    camelize(revealHugoPlugins));
+
+  Reveal.initialize(options);
+</script>
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+    
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+  
+  
+
+  
+    
+  
+  
+
+  
+    
+  
+  
+
+  
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+  
+  <script type="text/javascript" src="/mermaid.min_6838052300336322795.js"></script>
+  <script type="text/javascript">
+    mermaid.initialize({startOnLoad: false});
+    let render = (event) => {
+      let mermaidElems = event.currentSlide.querySelectorAll('.mermaid');
+      if (!mermaidElems.length){
+          return
+      }
+      mermaidElems.forEach(mermaidElem => {
+          let processed = mermaidElem.getAttribute('data-processed');
+          if (!processed){
+              
+              mermaid.init(undefined, mermaidElem);
+          }
+      });
+    };
+    
+    render({currentSlide: Reveal.getCurrentSlide()});
+
+    Reveal.on('slidechanged', render);
+    Reveal.on('ready', render);
+  </script>
+
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+  
+
+<script type="text/javascript" id="MathJax-script" async src="/tex-svg_10887261161190234492.js"></script>
+
+    
+    
+  </body>
+</html>
