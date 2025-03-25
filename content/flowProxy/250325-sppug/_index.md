@@ -402,7 +402,6 @@ Live Demo 2
 
 ---
 
-{{% section %}}
 
 {{< slide  background="#FAEBD7" >}}
 ## Key component
@@ -427,9 +426,6 @@ content-type : text/html
 <section data-background-size="contain"  data-background-video="mime-types.mp4" data-background-video-muted>
 </section>
 
-
-
-{{% /section %}}
 
 ---
 
