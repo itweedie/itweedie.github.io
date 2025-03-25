@@ -37,7 +37,7 @@ width = "100px" # Size of the file.
 </div>
 <div class="col">
   
-  This is my presentations site, if you have a link from a presentation I have done for you please use that to access the presentation.
+  This is my presentations site, i use this site to share my presentations with the technical community, if you have a link from a presentation I have done for you please use that to access the presentation.
 
 
   Or your could check out [iantweedie.biz](https://iantweedie.biz)

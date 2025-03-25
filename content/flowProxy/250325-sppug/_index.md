@@ -382,14 +382,6 @@ Live Demo 2
 
 {{% /section %}}
 
----
-
-## Test it together
-
-<img src="image-5.png" alt="alt text" style="width: 500px; height: auto;">
-
-<a href="https://prod-16.uksouth.logic.azure.com/workflows/c59c21c2e87b4267a3f51327e8b0a9c6/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4o_YOe9rzXb6InvBIeOh3pM9GLXVfQOuR1GWuI81bVs" target="_blank">Try it out</a>
-
 
 ---
 
@@ -410,6 +402,7 @@ Live Demo 2
 
 ---
 
+{{% section %}}
 
 {{< slide  background="#FAEBD7" >}}
 ## Key component
@@ -436,36 +429,34 @@ content-type : text/html
 
 
 
+{{% /section %}}
 
 ---
 
 {{< slide id="demo-3-splash" transition="zoom" background="#FAEBD7" >}}
-{{% section %}}
+
 # Lets give it a go
-Demo 3
+Live Demo 3
 
----
+<div style="display: flex; align-items: center;">
+  <div style="flex: 1; text-align: center;">
+    <img src="image-6.png" alt="alt text" style="width: 300px; height: auto;">
+  </div>
+  <div style="flex: 1; padding-left: 20px;">
+    <ol>
+      <li><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/53909a74-b04d-4ffd-9983-9b73d095e10c/view" target="_blank" rel="noopener noreferrer">PDF Flow</a></li>
+      <li><a href="https://prod-21.uksouth.logic.azure.com/workflows/5ba0def50b7e43498b887e8aac99bfae/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=wt-FxeMbuDM_UwFENGNdX-BGwFYX-u7hWtIqjw4Z5xQ" target="_blank" rel="noopener noreferrer">Try it out</a></li>
+    </ol>
+  </div>
+</div>
 
-{{< slide background="#FAEBD7" id="demo-3-links" >}}
-## Live Demo 3
-1. [PDF Flow](https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions/d3bfeafe-1132-ef11-8e4e-6045bd0d261b/objects/cloudflows/53909a74-b04d-4ffd-9983-9b73d095e10c/view)
-2. [Try it out](https://prod-21.uksouth.logic.azure.com/workflows/5ba0def50b7e43498b887e8aac99bfae/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=wt-FxeMbuDM_UwFENGNdX-BGwFYX-u7hWtIqjw4Z5xQ)
 
-{{% /section %}}
 
 ---
 
 <section id="demo-3-video-screen1" data-background-size="contain"  data-background-video="flowProxy-demo3-screen1.mp4" data-background-video-muted>
 </section>
 
----
-
-## Test it together
-
-<img src="image-6.png" alt="alt text" style="width: 500px; height: auto;">
-
-
-<a href="https://prod-21.uksouth.logic.azure.com/workflows/5ba0def50b7e43498b887e8aac99bfae/triggers/manual/paths/invoke?api-version=2016-06-01&sp=/triggers/manual/run&sv=1.0&sig=wt-FxeMbuDM_UwFENGNdX-BGwFYX-u7hWtIqjw4Z5xQ" target="_blank">Try it out</a>
 
 ---
 
@@ -507,16 +498,36 @@ Content-Disposition: attachment; filename="filename.pdf"
 {{< slide background-image="msedge_rO7rHF3uIl.gif" >}}
 
 
+---
+
+<img src="image-14.png" alt="alt text" style="width: 100%; height: auto;">
 
 ---
 
 {{< slide  transition="zoom" >}}
 {{% section %}}
 # Lets see that working
-Demo 4
+Live Demo 4
 
+<div style="display: flex; align-items: center;">
+  <!-- Left Column: Links -->
+  <div style="flex: 1; padding-right: 20px;">
+    <ul>
+      <li><a href="https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&pagetype=entityrecord&etn=techtwed_settlement&id=3272841e-6c32-ef11-8e4e-6045bd0d261b&formid=44e105a1-df32-ef11-8e4e-6045bd0d261b" target="_blank" rel="noopener noreferrer">View Form</a></li>
+      <li><a href="https://tech-tweedie-demo-site-1.powerappsportals.com/Settlement-App/" target="_blank" rel="noopener noreferrer">Power Pages Portal</a></li>
+      <li><a href="https://prod-07.uksouth.logic.azure.com/workflows/c9d2fb07972942a097d16a9ce324097d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=BAtG0IUyjXSVsMyeXTpq3GI7Zj4SGP6-ztUD4Rj_v58&row=SET-1000-R2R2" target="_blank" rel="noopener noreferrer">Try it out</a></li>
+    </ul>
+  </div>
 
+  <!-- Right Column: Image -->
+  <div style="flex: 1; text-align: center;">
+    <img src="image-7.png" alt="alt text" style="width: 500px; height: auto;">
+  </div>
+</div>
 
+<aside class="notes">
+  go in to Queys 
+</aside>
 
 ---
 
@@ -528,19 +539,8 @@ Demo 4
 
 {{% /section %}}
 
----
 
-{{< slide background="#F0F8FF" >}}
-## Live Demo 4
-[View Form](https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&pagetype=entityrecord&etn=techtwed_settlement&id=3272841e-6c32-ef11-8e4e-6045bd0d261b&formid=44e105a1-df32-ef11-8e4e-6045bd0d261b)
 
----
-
-## Test it together
-
-<img src="image-7.png" alt="alt text" style="width: 500px; height: auto;">
-
-<a href="https://prod-07.uksouth.logic.azure.com/workflows/c9d2fb07972942a097d16a9ce324097d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=BAtG0IUyjXSVsMyeXTpq3GI7Zj4SGP6-ztUD4Rj_v58&row=SET-1000-R2R2" target="_blank">Try it out</a>
 
 ---
 
@@ -637,6 +637,10 @@ sequenceDiagram
     Reverse-Proxy-->>User: Returns PDF
 {{< /mermaid >}}
 </div>
+
+<aside class="notes">
+  easy to wrap with authentication 
+</aside>
 
 ---
 
@@ -766,6 +770,7 @@ Demo 5
 {{< slide  background="#FAEBD7" >}}
 ## Live Demo 5
 <a href="https://techtweedie.crm11.dynamics.com/main.aspx?appid=f49d2c8c-1232-ef11-8e4e-6045bd0d261b&pagetype=entityrecord&etn=techtwed_settlement&id=3272841e-6c32-ef11-8e4e-6045bd0d261b&formid=4225fbe1-7174-ef11-a670-000d3a0d2d37" target="_blank">View the form</a>
+<a href="https://tech-tweedie-demo-site-1.powerappsportals.com/Settlement-App/" target="_blank" rel="noopener noreferrer">Power Pages Portal</a>
 
 ---
 
