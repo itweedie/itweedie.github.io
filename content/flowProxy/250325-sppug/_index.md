@@ -283,6 +283,13 @@ width = "100px" # Size of the file.
 </aside>
 
 ---
+
+## Power Platform Clinic
+
+![cap](powerPlatformClinicSmallLogo2.png)
+
+---
+
 {{< slide background="#FFF8DC" transition="zoom"   >}}
 
 ## Problem 
