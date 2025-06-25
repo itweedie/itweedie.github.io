@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<title>Build Your First DevOps Pipeline for the Power Platform</title>
+<meta name="description" content="A hands-on, beginner-friendly session on building your first DevOps pipeline for the Power Platform">
+<meta name="author" content="Ian Tweedie">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script data-goatcounter="https://itweedie-gh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><link rel="stylesheet" href="/reveal-js/dist/reset.css">
+<link rel="stylesheet" href="/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/css/techTweedieLight.css" id="theme"><link rel="stylesheet" href="/highlight-js/github.min.css">
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+.highlight-box {
+    background-color: #F0F8FF;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.demo-box {
+    background-color: #E8F5E8;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left: 5px solid #28a745;
+}
+.warning-box {
+    background-color: #FFF3CD;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left: 5px solid #ffc107;
+}
+</style>
+<section data-background-image="slides/LondonUG/Slide1.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+</section>
+</section><section>
+<section data-background-image="content/slide/slide1.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+</section>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+</section>
+<h1 id="build-your-first-devops-pipeline-for-the-power-platform">Build Your First DevOps Pipeline for the Power Platform</h1>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="the-journey-starts-here">The Journey Starts Here</h2>
+<ul>
+<li>You&rsquo;ve exported a solution ✅</li>
+<li>Maybe even unpacked it ✅</li>
+<li><strong>But what&rsquo;s next?</strong> 🤔</li>
+</ul>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h1 id="ian-tweedie">Ian Tweedie</h1>
+<div class="container">
+<div class="col" style="justify-content: center; align-items: center;">
+  <img src="content/qr.jpg" alt="QR Code" style="height:250px; box-shadow: none;">
+</div>
+<div class="col">
+  <ul>
+    <li>Power Platform Senior Technical Consultant, Capgemini</li>
+    <li>Trustee for Digital Transformation</li>
+    <li>github.com/itweedie</li>
+    <li>youtube.com/@techtweedie</li>
+  </ul>
+</div>
+</div>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="ian-tweedie-1">Ian Tweedie</h3>
+<h5 id="certifications">Certifications</h5>
+<p><img src="content/image-12.png" alt="height:100px"><img src="content/image-13.png" alt="height:100px"><img src="content/image-14.png" alt="height:100px"><img src="content/image-15.png" alt="height:100px"><img src="content/image-16.png" alt="height:100px"><img src="content/image-17.png" alt="height:100px"><img src="content/image-18.png" alt="height:100px"><img src="content/image-19.png" alt="height:100px"><img src="content/image-20.png" alt="height:100px"><img src="content/image-21.png" alt="height:100px"><img src="content/image-22.png" alt="height:100px"><img src="content/image-23.png" alt="height:100px"><img src="content/image-24.png" alt="height:100px"><img src="content/image-25.png" alt="height:100px"><img src="content/image-26.png" alt="height:100px"><img src="content/image-27.png" alt="height:100px"><img src="content/image-28.png" alt="height:100px"><img src="content/image-29.png" alt="height:100px"><img src="content/image-30.png" alt="height:100px"><img src="content/image-31.png" alt="height:100px"><img src="content/image-32.png" alt="height:100px"><img src="content/image-33.png" alt="height:100px"><img src="content/image-34.png" alt="height:100px"><img src="content/image-35.png" alt="height:100px"><img src="content/image-36.png" alt="height:100px"><img src="content/image-37.png" alt="height:100px"><img src="content/image-38.png" alt="height:100px"><img src="content/image-39.png" alt="height:100px"><img src="content/image-40.png" alt="height:100px"><img src="content/image-41s.png" alt="height:100px"><img src="content/image-42s.png" alt="height:100px"><img src="content/image-44s.png" alt="height:100px"><img src="content/CyberSecurityArchitect-2s.png" alt="height:100px"><img src="content/sc-100exams.png" alt="height:100px"></p>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="housekeeping">Housekeeping</h2>
+<ul>
+<li>QR code at the end to download the presentation</li>
+<li>Hands-on session - follow along!</li>
+<li>Templates available for download</li>
+</ul>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="why-devops-matters-for-power-platform">Why DevOps Matters for Power Platform</h2>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="the-problem">The Problem</h3>
+<ul>
+<li><strong>Manual solution management</strong> 😰</li>
+<li><strong>No version control</strong> 📉</li>
+<li><strong>Inconsistent deployments</strong> 🎯</li>
+<li><strong>Lost work</strong> 💔</li>
+<li><strong>No rollback strategy</strong> ⏪</li>
+</ul>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="the-solution">The Solution</h3>
+<div class="highlight-box">
+<p><strong>DevOps Pipeline = Automated, Repeatable, Secure</strong></p>
+</div>
+<ul>
+<li>✅ Version control for your solutions</li>
+<li>✅ Automated deployments</li>
+<li>✅ Consistent environments</li>
+<li>✅ Easy rollbacks</li>
+<li>✅ Audit trail</li>
+</ul>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="what-youll-learn-today">What You&rsquo;ll Learn Today</h2>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="learning-objectives">Learning Objectives</h3>
+<ol>
+<li><strong>Why DevOps matters</strong> for Power Platform projects</li>
+<li><strong>How to structure</strong> your repo and solutions</li>
+<li><strong>Setting up your first</strong> Azure DevOps pipeline</li>
+<li><strong>How to deploy</strong> solutions automatically</li>
+<li><strong>Bonus:</strong> Automated documentation generation</li>
+</ol>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="prerequisites">Prerequisites</h2>
+<div class="warning-box">
+<p><strong>Before We Start</strong></p>
+</div>
+<ul>
+<li><strong>Dataverse System Admin</strong> privileges</li>
+<li><strong>Azure DevOps</strong> project with basic license</li>
+<li><strong>Power Platform CLI</strong> installed</li>
+<li><a href="https://aka.ms/azpipelines-parallelism-request">Azure DevOps Parallelism Request</a></li>
+</ul>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="repository-structure">Repository Structure</h2>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="recommended-folder-structure">Recommended Folder Structure</h3>
+<pre><code>MyPowerPlatformProject/
+├── Solutions/
+│   ├── src/
+│   │   └── MySolution/
+│   └── MySolution.zip
+├── Pipelines/
+│   ├── export-solution.yml
+│   ├── deploy-solution.yml
+│   └── build-solution.yml
+├── Documentation/
+└── README.md
+</code></pre>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="setting-up-azure-devops">Setting Up Azure DevOps</h2>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-background-image="../msBuildTools.gif">
+  
+<div class="highlight-box">
+<h2 id="install-power-platform-build-tools">Install Power Platform Build Tools</h2>
+</div>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="service-principal-setup">Service Principal Setup</h3>
+<div class="highlight-box">
+<h2 id="app-registration-required">App Registration Required</h2>
+<p><strong>Client ID:</strong> <code>[Your App ID]</code></p>
+<p><strong>Tenant ID:</strong> <code>[Your Tenant ID]</code></p>
+<p><strong>Secret:</strong> <code>[Your Client Secret]</code></p>
+</div>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="demo-1-creating-your-first-pipeline">Demo 1: Creating Your First Pipeline</h2>
+<div class="demo-box">
+<p><strong>Live Demo</strong>: Setting up the export pipeline in Azure DevOps</p>
+</div>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="export-pipeline-yaml">Export Pipeline YAML</h3>
+<pre><code class="language-yaml">trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- task: PowerPlatformToolInstaller@2
+  displayName: 'Install Power Platform Build Tools'
+
+- task: PowerPlatformExportSolution@2
+  displayName: 'Export Solution'
+  inputs:
+    authenticationType: 'PowerPlatformSPN'
+    PowerPlatformSPN: '$(PowerPlatformSPN)'
+    Environment: '$(SourceEnvironment)'
+    SolutionName: '$(SolutionName)'
+    SolutionOutputFile: '$(SolutionOutputFile)'
+    AsyncOperation: true
+    MaxAsyncWaitTime: '60'
+</code></pre>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="demo-2-exploring-an-unpacked-solution">Demo 2: Exploring an Unpacked Solution</h2>
+<div class="demo-box">
+<p><strong>Live Demo</strong>: Understanding the solution structure</p>
+</div>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="unpack-pipeline-step">Unpack Pipeline Step</h3>
+<pre><code class="language-yaml">- task: PowerPlatformUnpackSolution@2
+  displayName: 'Unpack Solution'
+  inputs:
+    SolutionInputFile: '$(SolutionOutputFile)'
+    SolutionTargetFolder: '$(Build.SourcesDirectory)\Solutions\src\$(SolutionName)'
+    SolutionType: 'Both'
+</code></pre>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="commit-changes">Commit Changes</h3>
+<pre><code class="language-yaml">- script: |
+    git config user.email &quot;$(Build.RequestedForEmail)&quot;
+    git config user.name &quot;$(Build.RequestedFor)&quot;
+    git add --all
+    git commit -m &quot;Automated solution update: $(SolutionName) - $(Build.BuildNumber)&quot;
+    git push origin HEAD:$(Build.SourceBranchName)
+  displayName: 'Commit Solution Changes'
+</code></pre>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="demo-3-generating-documentation">Demo 3: Generating Documentation</h2>
+<div class="demo-box">
+<p><strong>Live Demo</strong>: Automated solution documentation</p>
+</div>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="documentation-generation">Documentation Generation</h3>
+<pre><code class="language-yaml">- task: PowerShell@2
+  displayName: 'Generate Solution Documentation'
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Install required modules
+      Install-Module -Name Microsoft.PowerApps.PowerShell -Force
+      
+      # Generate documentation
+      $solutionPath = &quot;$(Build.SourcesDirectory)\Solutions\src\$(SolutionName)&quot;
+      $docPath = &quot;$(Build.SourcesDirectory)\Documentation\$(SolutionName)-$(Build.BuildNumber).md&quot;
+      
+      # Create documentation content
+      $content = Get-SolutionDocumentation -SolutionPath $solutionPath
+      $content | Out-File -FilePath $docPath -Encoding UTF8
+</code></pre>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="demo-4-scheduling-backups">Demo 4: Scheduling Backups</h2>
+<div class="demo-box">
+<p><strong>Live Demo</strong>: Setting up scheduled solution backups</p>
+</div>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="scheduled-trigger">Scheduled Trigger</h3>
+<pre><code class="language-yaml">trigger:
+- none  # Disable CI triggers
+
+schedules:
+- cron: &quot;0 2 * * 1-5&quot;  # 2 AM, Monday-Friday
+  displayName: Daily backup
+  branches:
+    include:
+    - main
+  always: true
+</code></pre>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="demo-5-deploying-to-target-environment">Demo 5: Deploying to Target Environment</h2>
+<div class="demo-box">
+<p><strong>Live Demo</strong>: Automated deployment pipeline</p>
+</div>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="pack-and-deploy">Pack and Deploy</h3>
+<pre><code class="language-yaml">- task: PowerPlatformPackSolution@2
+  displayName: 'Pack Solution'
+  inputs:
+    SolutionSourceFolder: '$(Build.SourcesDirectory)\Solutions\src\$(SolutionName)'
+    SolutionOutputFile: '$(Build.ArtifactStagingDirectory)\$(SolutionName).zip'
+    SolutionType: 'Both'
+
+- task: PowerPlatformImportSolution@2
+  displayName: 'Import Solution'
+  inputs:
+    authenticationType: 'PowerPlatformSPN'
+    PowerPlatformSPN: '$(PowerPlatformSPN)'
+    Environment: '$(TargetEnvironment)'
+    SolutionInputFile: '$(Build.ArtifactStagingDirectory)\$(SolutionName).zip'
+    AsyncOperation: true
+    MaxAsyncWaitTime: '60'
+</code></pre>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="pipeline-variables">Pipeline Variables</h2>
+<div class="highlight-box">
+<p><strong>Key Variables to Configure</strong></p>
+</div>
+<ul>
+<li><code>PowerPlatformSPN</code> - Service connection</li>
+<li><code>SourceEnvironment</code> - Development environment URL</li>
+<li><code>TargetEnvironment</code> - Target environment URL</li>
+<li><code>SolutionName</code> - Your solution unique name</li>
+<li><code>SolutionOutputFile</code> - Export path</li>
+</ul>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="best-practices">Best Practices</h2>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="pipeline-best-practices">Pipeline Best Practices</h3>
+<ul>
+<li><strong>Use unmanaged solutions</strong> for source control</li>
+<li><strong>Separate pack and deploy</strong> stages</li>
+<li><strong>Include rollback procedures</strong></li>
+<li><strong>Test in staging</strong> before production</li>
+<li><strong>Use pull requests</strong> for changes</li>
+<li><strong>Monitor pipeline</strong> health</li>
+</ul>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="solution-management">Solution Management</h3>
+<ul>
+<li><strong>One solution per repo</strong> (recommended)</li>
+<li><strong>Consistent naming</strong> conventions</li>
+<li><strong>Proper dependency</strong> management</li>
+<li><strong>Environment-specific</strong> configurations</li>
+<li><strong>Regular backups</strong></li>
+</ul>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="common-challenges--solutions">Common Challenges &amp; Solutions</h2>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="challenge-large-solutions">Challenge: Large Solutions</h3>
+<div class="warning-box">
+<p><strong>Problem</strong>: Solution export times out</p>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Use <code>AsyncOperation: true</code></li>
+<li>Increase <code>MaxAsyncWaitTime</code></li>
+<li>Split large solutions</li>
+</ul>
+</div>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="challenge-connection-references">Challenge: Connection References</h3>
+<div class="warning-box">
+<p><strong>Problem</strong>: Connections fail in target environment</p>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Use deployment settings files</li>
+<li>Parameterize connection references</li>
+<li>Update connections post-deployment</li>
+</ul>
+</div>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="challenge-environment-variables">Challenge: Environment Variables</h3>
+<div class="warning-box">
+<p><strong>Problem</strong>: Environment-specific values</p>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Use environment variables in solution</li>
+<li>Configure per environment</li>
+<li>Automate variable updates</li>
+</ul>
+</div>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="template-downloads">Template Downloads</h2>
+<div class="highlight-box">
+<p><strong>Ready-to-Use Templates</strong></p>
+</div>
+<ul>
+<li>✅ Complete pipeline YAML files</li>
+<li>✅ PowerShell scripts</li>
+<li>✅ Documentation templates</li>
+<li>✅ Best practices guide</li>
+</ul>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="next-steps">Next Steps</h2>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="your-devops-journey">Your DevOps Journey</h3>
+<ol>
+<li><strong>Start small</strong> - Single solution pipeline</li>
+<li><strong>Add complexity</strong> - Multiple environments</li>
+<li><strong>Enhance</strong> - Add testing, documentation</li>
+<li><strong>Scale</strong> - Multiple solutions, teams</li>
+<li><strong>Optimize</strong> - Performance, monitoring</li>
+</ol>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="advanced-topics-future-sessions">Advanced Topics (Future Sessions)</h3>
+<ul>
+<li><strong>Automated testing</strong> with Test Engine</li>
+<li><strong>Multi-solution</strong> management</li>
+<li><strong>Branch strategies</strong> for teams</li>
+<li><strong>Release management</strong></li>
+<li><strong>Monitoring &amp; alerting</strong></li>
+</ul>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="key-takeaways">Key Takeaways</h2>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="remember">Remember</h3>
+<div class="highlight-box">
+<p><strong>DevOps is a Journey, Not a Destination</strong></p>
+</div>
+<ul>
+<li>✅ Start with basic export/deploy</li>
+<li>✅ Add source control</li>
+<li>✅ Automate what you can</li>
+<li>✅ Iterate and improve</li>
+<li>✅ Share knowledge with team</li>
+</ul>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="qa">Q&amp;A</h2>
+<div class="container">
+<div class="col" style="justify-content: center; align-items: center;">
+  <img src="content/qr.jpg" alt="QR Code" style="height:250px; box-shadow: none;">
+</div>
+<div class="col">
+  <h3>Questions?</h3>
+  <ul>
+    <li>📧 Email questions</li>
+    <li>🐙 GitHub: github.com/itweedie</li>
+    <li>📺 YouTube: @techtweedie</li>
+    <li>💼 LinkedIn: Ian Tweedie</li>
+  </ul>
+</div>
+</div>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/power-platform/developer/cli/introduction">Power Platform CLI Documentation</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools">Azure DevOps Power Platform Tasks</a></li>
+<li><a href="https://docs.microsoft.com/en-us/power-platform/alm/">Power Platform ALM Guide</a></li>
+<li><a href="https://github.com/itweedie">Sample Templates</a></li>
+</ul>
+</section><section>
+<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h1 id="thank-you">Thank You!</h1>
+<div class="highlight-box">
+<p><strong>You now have the tools to automate your Power Platform solution lifecycle!</strong></p>
+</div>
+<div class="container">
+<div class="col" style="justify-content: center; align-items: center;">
+  <img src="content/qr.jpg" alt="QR Code" style="height:200px; box-shadow: none;">
+</div>
+<div class="col">
+  <p><strong>Download this presentation and templates:</strong></p>
+  <p>Scan the QR code or visit:<br/>
+  <small>github.com/itweedie/itweedie.github.io</small></p>
+</div>
+</div>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/reveal-hugo/object-assign.js></script>
+
+
+<script src="/reveal-js/dist/reveal.js"></script>
+
+
+  <script type="text/javascript" src="/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/zoom/zoom.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/notes/notes.js"></script>
+  
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = {"highlight_theme":"zenburn","history":true,"slide_number":true,"templates":{"grey":{"background":"#dddddd","transition":"convex"}}};
+  var revealHugoPageParams = {"background-image":"content/slide/slide2.png","center":false,"controls":false,"controlstutorial":false,"custom_theme":"css/techTweedieLight.css","draft":false,"highlight_theme":"github","margin":0.2,"slide_number":false,"touch":true,"transition":"convex","transition_speed":"default"};
+
+  var revealHugoPlugins = {
+    
+    plugins: [RevealMarkdown,RevealHighlight,RevealZoom,RevealNotes]
+  };
+
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams),
+    camelize(revealHugoPlugins));
+
+  Reveal.initialize(options);
+</script>
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+    
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+  
+  <script type="text/javascript" src="/mermaid.min_16862243754454536095.js"></script>
+  <script type="text/javascript">
+    mermaid.initialize({startOnLoad: false});
+    let render = (event) => {
+      let mermaidElems = event.currentSlide.querySelectorAll('.mermaid');
+      if (!mermaidElems.length){
+          return
+      }
+      mermaidElems.forEach(mermaidElem => {
+          let processed = mermaidElem.getAttribute('data-processed');
+          if (!processed){
+              
+              mermaid.init(undefined, mermaidElem);
+          }
+      });
+    };
+    
+    render({currentSlide: Reveal.getCurrentSlide()});
+
+    Reveal.on('slidechanged', render);
+    Reveal.on('ready', render);
+  </script>
+
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+  
+
+<script type="text/javascript" id="MathJax-script" async src="/tex-svg_7522271970123696654.js"></script>
+
+    
+    
+  </body>
+</html>
