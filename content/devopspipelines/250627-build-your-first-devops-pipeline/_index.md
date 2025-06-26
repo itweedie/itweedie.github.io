@@ -16,7 +16,7 @@ controls = true
 center = false
 touch = true
 draft = false
-background-image = "content/slide/slide2.png"
+background-image = "slides/LondonUG/Slide3.PNG"
 [logo]
 # https://reveal-hugo.dzello.com/logo-example/#/3
 # src = "/techTweedie_150x150.png"
@@ -249,7 +249,7 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 ---
 
-<section id="3-agenda" data-background-image="slides/LondonUG/Slide9.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+<section id="3-agenda" data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
 </section>
 
 # Today's Agenda
@@ -448,7 +448,7 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## The Journey Starts Here
@@ -459,7 +459,7 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 # Ian Tweedie
@@ -481,7 +481,7 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Ian Tweedie
@@ -490,7 +490,7 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Housekeeping 
@@ -500,14 +500,14 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Why DevOps Matters for Power Platform
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### The Problem
@@ -520,7 +520,7 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### The Solution
@@ -539,14 +539,14 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## What You'll Learn Today
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Learning Objectives
@@ -559,7 +559,7 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Prerequisites
@@ -577,14 +577,14 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Repository Structure
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Recommended Folder Structure
@@ -605,7 +605,7 @@ MyPowerPlatformProject/
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Setting Up Azure DevOps
@@ -622,7 +622,7 @@ MyPowerPlatformProject/
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Service Principal Setup
@@ -641,7 +641,7 @@ MyPowerPlatformProject/
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Demo 1: Creating Your First Pipeline
@@ -654,7 +654,7 @@ MyPowerPlatformProject/
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Export Pipeline YAML
@@ -684,7 +684,7 @@ steps:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Demo 2: Exploring an Unpacked Solution
@@ -697,7 +697,7 @@ steps:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Unpack Pipeline Step
@@ -713,7 +713,7 @@ steps:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Commit Changes
@@ -730,7 +730,7 @@ steps:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Demo 3: Generating Documentation
@@ -743,7 +743,7 @@ steps:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Documentation Generation
@@ -768,7 +768,7 @@ steps:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Demo 4: Scheduling Backups
@@ -781,7 +781,7 @@ steps:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Scheduled Trigger
@@ -801,7 +801,7 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Demo 5: Deploying to Target Environment
@@ -814,7 +814,7 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Pack and Deploy
@@ -840,7 +840,7 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Pipeline Variables
@@ -859,14 +859,14 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Best Practices
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Pipeline Best Practices
@@ -880,7 +880,7 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Solution Management
@@ -893,14 +893,14 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Common Challenges & Solutions
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Challenge: Large Solutions
@@ -918,7 +918,7 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Challenge: Connection References
@@ -936,7 +936,7 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Challenge: Environment Variables
@@ -954,7 +954,7 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Template Downloads
@@ -972,14 +972,14 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Next Steps
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Your DevOps Journey
@@ -992,7 +992,7 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Advanced Topics (Future Sessions)
@@ -1005,14 +1005,14 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Key Takeaways
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### Remember
@@ -1031,30 +1031,7 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
-</section>
-
-## Q&A
-
-<div class="container">
-<div class="col" style="justify-content: center; align-items: center;">
-  <img src="content/qr.jpg" alt="QR Code" style="height:250px; box-shadow: none;">
-</div>
-
-<div class="col">
-  <h3>Questions?</h3>
-  <ul>
-    <li>📧 Email questions</li>
-    <li>🐙 GitHub: github.com/itweedie</li>
-    <li>📺 YouTube: @techtweedie</li>
-    <li>💼 LinkedIn: Ian Tweedie</li>
-  </ul>
-</div>
-</div>
-
----
-
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Resources
@@ -1066,10 +1043,10 @@ schedules:
 
 ---
 
-<section data-background-image="content/slide/slide2.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
-# Thank You!
+# Questions? 
 
 <div class="highlight-box">
 
@@ -1077,33 +1054,25 @@ schedules:
 
 </div>
 
-<div class="container">
-<div class="col" style="justify-content: center; align-items: center;">
-  <img src="content/qr.jpg" alt="QR Code" style="height:200px; box-shadow: none;">
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: nowrap; min-width: 480px;">
+  <div style="text-align: center; flex: 0 0 auto;">
+    <h4>Slides</h4>
+    <a href="https://mars.mightora.io/yourls/250627" target="_blank">
+      <img src="link-to-presentation.png" alt="Link to Presentation" style="width: 320px; box-shadow: none; cursor: pointer;">
+    </a>
+  </div>
+  
+  <div style="text-align: center; flex: 0 0 auto;">
+    <h4>Connect</h4>
+    <a href="https://iantweedie.biz" target="_blank">
+    <img src="qr.jpg" alt="QR Code" style="width: 310px;">
+    </a>
+  </div>
 </div>
-
-<div class="col">
-  <p><strong>Download this presentation and templates:</strong></p>
-  <p>Scan the QR code or visit:<br/>
-  <small>mars.mightora.io/yourls/250627</small></p>
-</div>
-</div>
-
 
 ---
 
 <section data-background-image="slides/LondonUG/Slide22.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
-
-
-# Link to Supporting Blog Post
-
-- All links
-- Examples 
-- Slides
-
-<a href="https://mars.mightora.io/yourls/250627" target="_blank">
-  <img src="link-to-presentation.png" alt="Link to Presentation" style="height:250px; box-shadow: none; cursor: pointer;">
-</a>
 
 </section>
 
