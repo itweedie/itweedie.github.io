@@ -867,7 +867,10 @@ name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)
 variables:
   - name: varSolutionName
    # value: YOUR-OWN-VALUE-HERE
-    value: ProjectExpenseLogger
+    value: FirstPipeline
+  - name: varPowerPlatformSPN
+   # value: YOUR-OWN-VALUE-HERE 
+    value: Dataverse - mightora
 
 trigger: none
 
@@ -887,22 +890,15 @@ steps:
   inputs:
     SolutionSourceFolder: '$(Build.SourcesDirectory)\solutions\src\$(varSolutionName)'
     SolutionOutputFile: '$(Build.ArtifactStagingDirectory)\solutions\build\$(varSolutionName).zip'
-- task: dataverse4TeamsImport@1
+- task: PowerPlatformImportSolution@2
   inputs:
-    solutionZipPath: '$(Build.ArtifactStagingDirectory)\solutions\build\$(varSolutionName).zip'
-    environment: 'https://orgac2edac1.api.crm11.dynamics.com/'
-    solutionSettingsPath: '$(Build.SourcesDirectory)\solutions\$(varSolutionName)-D4T.json'
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo commit all changes
-      git config user.email "$(Build.RequestedForEmail)"
-      git config user.name "$(Build.RequestedFor)"
-      git checkout -b main
-      git add --all
-      git commit -m "Latest solution changes."
-      echo push code to new repo
-      git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push origin main
+    authenticationType: 'PowerPlatformSPN'
+    PowerPlatformSPN: 'Dataverse - Backup'
+    Environment: 'https://mightora.crm11.dynamics.com/'
+    SolutionInputFile: '$(Build.ArtifactStagingDirectory)\solutions\build\$(varSolutionName).zip'
+    AsyncOperation: true
+    MaxAsyncWaitTime: '60'
+
 ```
 
 ---
