@@ -626,7 +626,7 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 <div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
 
-## App Regestration
+## App Registration
 
 **Client ID:** 
 
