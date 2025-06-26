@@ -165,6 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+<section>
 <h1 id="how-to-navigate-this-presentation">How to Navigate This Presentation</h1>
 <div class="highlight-box">
 <h3>🎮 Controls</h3>
@@ -209,14 +210,152 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 </div>
 </div>
 </div>
-</section><section>
-<section data-background-image="slides/LondonUG/Slide1.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+<aside class="notes">
+  Instructions for users navigating later
+</aside>
 </section>
 </section><section>
-<section data-background-image="slides/LondonUG/Slide9.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+<section id="2-welcome" data-background-image="slides/LondonUG/Slide1.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
 </section>
+<aside class="notes">
+  Welcome slide
+</aside>
 </section><section>
-<section data-background-image="slides/LondonUG/Slide6.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+<section id="3-agenda" data-background-image="slides/LondonUG/Slide9.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+</section>
+<h1 id="todays-agenda">Today&rsquo;s Agenda</h1>
+<div class="highlight-box">
+<h2 id="-what-well-cover">🚀 What We&rsquo;ll Cover</h2>
+<p><strong>5 Key Areas Over 40 Minutes</strong></p>
+<ol>
+<li><strong>🎯 Foundation</strong> - Understanding the Why <em>(5 mins)</em></li>
+<li><strong>🛠️ Hands-On Demos</strong> - Building Your First Pipeline <em>(25 mins)</em></li>
+<li><strong>📚 Best Practices</strong> - Professional Tips <em>(5 mins)</em></li>
+<li><strong>🎁 Resources</strong> - Take Home Materials <em>(3 mins)</em></li>
+<li><strong>❓ Q&amp;A</strong> - Your Questions <em>(2 mins)</em></li>
+</ol>
+</div>
+<aside class="notes">
+  Overview of the 5 main sections we'll cover today
+</aside>
+</section><section>
+<h1 id="-foundation">🎯 Foundation</h1>
+<p><em>(5 mins)</em></p>
+<div class="highlight-box">
+<div class="demo-box">
+<p><strong>Why DevOps?</strong> Manual deployments = Problems</p>
+<p><strong>Prerequisites:</strong> Azure DevOps + Power Platform CLI</p>
+<p><strong>Repository:</strong> Organized folders = Success</p>
+</div>
+</div>
+<aside class="notes">
+  Foundation section - essential concepts only
+</aside>
+</section><section>
+<h1 id="-hands-on-demos">🛠️ Hands-On Demos</h1>
+<p><em>(25 mins)</em></p>
+<div class="highlight-box">
+<div class="demo-box">
+<p><strong>Demo 1:</strong> Setup Pipeline + Build Tools</p>
+<p><strong>Demo 2:</strong> Export &amp; Unpack Solutions</p>
+<p><strong>Demo 3:</strong> Deploy to Target Environment</p>
+</div>
+</div>
+<aside class="notes">
+  Hands-on demos - the core practical content
+</aside>
+</section><section>
+<h1 id="-best-practices">📚 Best Practices</h1>
+<p><em>(5 mins)</em></p>
+<div class="highlight-box">
+<div class="demo-box">
+<p><strong>Security:</strong> Use service connections, never hardcode credentials</p>
+<p><strong>Troubleshooting:</strong> Check logs, validate permissions</p>
+<p><strong>Success:</strong> Consistent naming + proper environment setup</p>
+</div>
+</div>
+<aside class="notes">
+  SECURITY ESSENTIALS:
+  - Always use Azure DevOps service connections for authentication
+  - Never hardcode usernames, passwords, or tenant IDs in pipelines
+  - Use Azure Key Vault for storing sensitive configuration values
+  - Implement least privilege access - only grant necessary permissions
+  - Use managed identities where possible
+  - Rotate service principal secrets regularly
+<p>COMMON PITFALLS TO AVOID:</p>
+<ul>
+<li>Pipeline failures due to missing dependencies - always check solution dependencies first</li>
+<li>Permission errors - ensure service connection has System Administrator role in target environment</li>
+<li>Solution import failures - validate solution compatibility between environments</li>
+<li>Timeout errors - increase timeout values for large solutions</li>
+<li>Connection string issues - use environment-specific variables</li>
+<li>Missing components - always export as managed solution for production deployments</li>
+</ul>
+<p>KEY SUCCESS FACTORS:</p>
+<ul>
+<li>Naming conventions: Use consistent prefixes for all components (e.g., company_solutionname_)</li>
+<li>Environment setup: Ensure proper connection between DEV and target environments</li>
+<li>Documentation: Keep README.md updated with setup instructions and requirements</li>
+<li>Testing: Include solution checker validation in your pipeline</li>
+<li>Rollback plan: Always have a rollback strategy and test it</li>
+<li>Monitoring: Set up alerts for pipeline failures and deployment issues</li>
+</ul>
+</aside>
+</section><section>
+<h1 id="-resources--next-steps">🎁 Resources &amp; Next Steps</h1>
+<p><em>(5 mins)</em></p>
+<div class="highlight-box">
+<div class="demo-box">
+<p><strong>Templates:</strong> Download ready-to-use pipeline YAML files</p>
+<p><strong>Takeaways:</strong> Start simple, automate gradually, secure always</p>
+<p><strong>Link to slides:</strong> QR code at the end</p>
+<p><strong>Questions:</strong> Ask now or connect later for follow-up</p>
+</div>
+</div>
+<aside class="notes">
+  TEMPLATE DOWNLOADS AVAILABLE:
+  - Basic solution export pipeline (YAML template)
+  - Solution import/deployment pipeline (YAML template)
+  - Service connection setup guide (step-by-step PDF)
+  - Repository folder structure template
+  - Sample azure-pipelines.yml with comments
+  - PowerShell scripts for local testing
+  - Connection string configuration examples
+  - Environment variable templates
+<p>KEY TAKEAWAYS TO EMPHASIZE:</p>
+<ul>
+<li>Start simple: Begin with one environment, one solution</li>
+<li>Automate gradually: Don&rsquo;t try to do everything at once</li>
+<li>Security first: Never hardcode credentials, always use service connections</li>
+<li>Test locally: Use Power Platform CLI to test before committing to pipeline</li>
+<li>Document everything: Future you will thank present you</li>
+<li>Version control: Every change should be tracked and reversible</li>
+<li>Monitor and alert: Know when things break before users do</li>
+</ul>
+<p>NEXT STEPS FOR ATTENDEES:</p>
+<ol>
+<li>Set up Azure DevOps project (free tier available)</li>
+<li>Install Power Platform CLI on local machine</li>
+<li>Create service connection to development environment</li>
+<li>Download and customize pipeline templates</li>
+<li>Start with simple export pipeline</li>
+<li>Join Power Platform Community for ongoing support</li>
+</ol>
+<p>FOLLOW-UP RESOURCES:</p>
+<ul>
+<li>GitHub repository with all templates and examples</li>
+<li>Power Platform Community forums</li>
+<li>Microsoft Learn modules on Power Platform DevOps</li>
+<li>Monthly community calls and webinars</li>
+<li>Contact information for further questions</li>
+<li>Link to presentation recording and slides</li>
+</ul>
+</aside>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide5.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+<aside class="notes">
+  Thanks to sponsors
+</aside>
 </section>
 </section><section>
 <section data-background-image="slides/LondonUG/Slide7.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
@@ -685,11 +824,20 @@ schedules:
 <div class="col">
   <p><strong>Download this presentation and templates:</strong></p>
   <p>Scan the QR code or visit:<br/>
-  <small>github.com/itweedie/itweedie.github.io</small></p>
+  <small>mars.mightora.io/yourls/250627</small></p>
 </div>
 </div>
 </section><section>
 <section data-background-image="slides/LondonUG/Slide22.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+<h1 id="link-to-supporting-blog-post">Link to Supporting Blog Post</h1>
+<ul>
+<li>All links</li>
+<li>Examples</li>
+<li>Slides</li>
+</ul>
+<a href="https://mars.mightora.io/yourls/250627" target="_blank">
+  <img src="link-to-presentation.png" alt="Link to Presentation" style="height:250px; box-shadow: none; cursor: pointer;">
+</a>
 </section>
 </section><section>
 <section data-background-image="slides/LondonUG/Slide24.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">

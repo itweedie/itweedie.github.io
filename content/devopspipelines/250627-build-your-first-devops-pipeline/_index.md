@@ -177,6 +177,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+
+<section>
+
 # How to Navigate This Presentation
 
 <div class="highlight-box">
@@ -229,20 +232,210 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 </div>
 
----
+<aside class="notes">
+  Instructions for users navigating later
+</aside>
 
-<section data-background-image="slides/LondonUG/Slide1.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
 </section>
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide9.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+<section id="2-welcome" data-background-image="slides/LondonUG/Slide1.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
 </section>
+
+<aside class="notes">
+  Welcome slide
+</aside>
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide6.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+<section id="3-agenda" data-background-image="slides/LondonUG/Slide9.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
 </section>
+
+# Today's Agenda
+
+<div class="highlight-box">
+
+## 🚀 What We'll Cover
+
+**5 Key Areas Over 40 Minutes**
+
+1. **🎯 Foundation** - Understanding the Why *(5 mins)*
+2. **🛠️ Hands-On Demos** - Building Your First Pipeline *(25 mins)*  
+3. **📚 Best Practices** - Professional Tips *(5 mins)*
+4. **🎁 Resources** - Take Home Materials *(3 mins)*
+5. **❓ Q&A** - Your Questions *(2 mins)*
+
+</div>
+
+<aside class="notes">
+  Overview of the 5 main sections we'll cover today
+</aside>
+
+---
+
+# 🎯 Foundation
+*(5 mins)*
+
+<div class="highlight-box">
+
+<div class="demo-box">
+
+**Why DevOps?** Manual deployments = Problems  
+
+**Prerequisites:** Azure DevOps + Power Platform CLI  
+
+**Repository:** Organized folders = Success  
+
+</div>
+
+</div>
+
+<aside class="notes">
+  Foundation section - essential concepts only
+</aside>
+
+---
+
+# 🛠️ Hands-On Demos 
+
+*(25 mins)*
+
+<div class="highlight-box">
+
+<div class="demo-box">
+
+**Demo 1:** Setup Pipeline + Build Tools 
+
+**Demo 2:** Export & Unpack Solutions   
+
+**Demo 3:** Deploy to Target Environment  
+
+</div>
+
+</div>
+
+<aside class="notes">
+  Hands-on demos - the core practical content
+</aside>
+
+---
+
+# 📚 Best Practices 
+
+*(5 mins)*
+
+<div class="highlight-box">
+
+<div class="demo-box">
+
+**Security:** Use service connections, never hardcode credentials  
+
+**Troubleshooting:** Check logs, validate permissions
+
+**Success:** Consistent naming + proper environment setup 
+
+</div>
+
+</div>
+
+<aside class="notes">
+  SECURITY ESSENTIALS:
+  - Always use Azure DevOps service connections for authentication
+  - Never hardcode usernames, passwords, or tenant IDs in pipelines
+  - Use Azure Key Vault for storing sensitive configuration values
+  - Implement least privilege access - only grant necessary permissions
+  - Use managed identities where possible
+  - Rotate service principal secrets regularly
+  
+  COMMON PITFALLS TO AVOID:
+  - Pipeline failures due to missing dependencies - always check solution dependencies first
+  - Permission errors - ensure service connection has System Administrator role in target environment
+  - Solution import failures - validate solution compatibility between environments
+  - Timeout errors - increase timeout values for large solutions
+  - Connection string issues - use environment-specific variables
+  - Missing components - always export as managed solution for production deployments
+  
+  KEY SUCCESS FACTORS:
+  - Naming conventions: Use consistent prefixes for all components (e.g., company_solutionname_)
+  - Environment setup: Ensure proper connection between DEV and target environments
+  - Documentation: Keep README.md updated with setup instructions and requirements
+  - Testing: Include solution checker validation in your pipeline
+  - Rollback plan: Always have a rollback strategy and test it
+  - Monitoring: Set up alerts for pipeline failures and deployment issues
+</aside>
+
+---
+
+# 🎁 Resources & Next Steps 
+
+*(5 mins)*
+
+<div class="highlight-box">
+
+<div class="demo-box">
+
+**Templates:** Download ready-to-use pipeline YAML files  
+
+**Takeaways:** Start simple, automate gradually, secure always 
+
+**Link to slides:** QR code at the end
+
+**Questions:** Ask now or connect later for follow-up  
+
+</div>
+
+</div>
+
+<aside class="notes">
+  TEMPLATE DOWNLOADS AVAILABLE:
+  - Basic solution export pipeline (YAML template)
+  - Solution import/deployment pipeline (YAML template)
+  - Service connection setup guide (step-by-step PDF)
+  - Repository folder structure template
+  - Sample azure-pipelines.yml with comments
+  - PowerShell scripts for local testing
+  - Connection string configuration examples
+  - Environment variable templates
+  
+  KEY TAKEAWAYS TO EMPHASIZE:
+  - Start simple: Begin with one environment, one solution
+  - Automate gradually: Don't try to do everything at once
+  - Security first: Never hardcode credentials, always use service connections
+  - Test locally: Use Power Platform CLI to test before committing to pipeline
+  - Document everything: Future you will thank present you
+  - Version control: Every change should be tracked and reversible
+  - Monitor and alert: Know when things break before users do
+  
+  NEXT STEPS FOR ATTENDEES:
+  1. Set up Azure DevOps project (free tier available)
+  2. Install Power Platform CLI on local machine
+  3. Create service connection to development environment
+  4. Download and customize pipeline templates
+  5. Start with simple export pipeline
+  6. Join Power Platform Community for ongoing support
+  
+  FOLLOW-UP RESOURCES:
+  - GitHub repository with all templates and examples
+  - Power Platform Community forums
+  - Microsoft Learn modules on Power Platform DevOps
+  - Monthly community calls and webinars
+  - Contact information for further questions
+  - Link to presentation recording and slides
+</aside>
+
+---
+
+<section data-background-image="slides/LondonUG/Slide5.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+
+
+<aside class="notes">
+  Thanks to sponsors
+</aside>
+
+</section>
+
+
 
 ---
 
@@ -892,7 +1085,7 @@ schedules:
 <div class="col">
   <p><strong>Download this presentation and templates:</strong></p>
   <p>Scan the QR code or visit:<br/>
-  <small>github.com/itweedie/itweedie.github.io</small></p>
+  <small>mars.mightora.io/yourls/250627</small></p>
 </div>
 </div>
 
@@ -900,6 +1093,18 @@ schedules:
 ---
 
 <section data-background-image="slides/LondonUG/Slide22.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+
+
+# Link to Supporting Blog Post
+
+- All links
+- Examples 
+- Slides
+
+<a href="https://mars.mightora.io/yourls/250627" target="_blank">
+  <img src="link-to-presentation.png" alt="Link to Presentation" style="height:250px; box-shadow: none; cursor: pointer;">
+</a>
+
 </section>
 
 ---
