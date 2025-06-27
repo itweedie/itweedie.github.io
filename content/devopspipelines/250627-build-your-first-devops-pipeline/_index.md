@@ -417,43 +417,6 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 </section>
 
----
-
-<section  data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
-
-
-# Ian Tweedie
-
-
-<div class="container">
-
-<div class="col" style="justify-content: center; align-items: center;">
-
-  <img src="content/qr.jpg" alt="Image" style="height:250px; box-shadow: none;">
-
-</div>
-
-
-
-<div class="col aboutMe">
-  <ul>
-    <li class="fragment">Senior Technical Consultant, Capgemini</li>
-    <li class="fragment">Trustee for Digital Transformation for a £22 million non for profit</li>
-    <li class="fragment">Chair of an £750k non for profit</li>
-  </ul>
-</div>
-
-</div>
-
-<aside class="notes">
-
-- Senior Technical Consultant
-- Trustee
-- Chair
-
-</aside>
-
-</section>
 
 ---
 
