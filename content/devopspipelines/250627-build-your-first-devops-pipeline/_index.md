@@ -404,8 +404,6 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 </section>
 
-
-
 ---
 
 <section data-background-image="slides/LondonUG/Slide7.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
@@ -947,13 +945,13 @@ Environment-specific values
 ---
 
 <section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
-</section>
+</section>  
 
 ## What next
 
 - **Automated testing** with Test Engine
 - **Multi-solution** management
-- **Branch strategies** for teams
+- **Branch strategies** for teams  
 - **Release management**
 - **Monitoring & alerting**
 
