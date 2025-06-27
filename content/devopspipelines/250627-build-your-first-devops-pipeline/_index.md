@@ -850,7 +850,6 @@ steps:
 
 **Live Demo**: Deploy the solution
 
-- D4T: https://make.powerapps.com/environments/5fc7b0a0-dc6e-e682-8886-bad6dac246a7/solutions
 
 </div>
 
@@ -1012,6 +1011,13 @@ steps:
 - [Azure DevOps Power Platform Tasks](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools)
 - [Power Platform ALM Guide](https://docs.microsoft.com/en-us/power-platform/alm/)
 - [Sample Templates](https://github.com/itweedie)
+
+
+---
+
+<section data-background-iframe="https://techtweedie.github.io/posts/250627-d365ppugnational/" data-background-interactive="true" data-transition="zoom">
+
+</section>
 
 ---
 
