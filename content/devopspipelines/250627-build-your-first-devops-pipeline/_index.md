@@ -516,6 +516,19 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 </section>
 
+
+
+---
+
+<section data-background-image="image-9.png"  data-background-position="center" data-background-repeat="no-repeat">
+</section>
+
+![alt text](image-8.png)
+
+# North East
+
+</section>
+
 ---
 
 <section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
