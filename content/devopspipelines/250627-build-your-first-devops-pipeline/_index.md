@@ -916,9 +916,12 @@ steps:
 
 <div class="warning-box">
 
-**Problem**: Solution export times out
+**Problem**: 
+
+Solution export times out
 
 **Solution**: 
+
 - Use `AsyncOperation: true`
 - Increase `MaxAsyncWaitTime`
 - Split large solutions
@@ -934,9 +937,12 @@ steps:
 
 <div class="warning-box">
 
-**Problem**: Connections fail in target environment
+**Problem**: 
+
+Connections fail in target environment
 
 **Solution**: 
+
 - Use deployment settings files
 - Parameterize connection references
 - Update connections post-deployment
@@ -952,9 +958,12 @@ steps:
 
 <div class="warning-box">
 
-**Problem**: Environment-specific values
+**Problem**: 
+
+Environment-specific values
 
 **Solution**: 
+
 - Use environment variables in solution
 - Configure per environment
 - Automate variable updates
@@ -966,7 +975,7 @@ steps:
 <section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
-### Advanced Topics (Future Sessions)
+## What next
 
 - **Automated testing** with Test Engine
 - **Multi-solution** management
@@ -986,7 +995,7 @@ steps:
 <section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
-### Remember
+## Remember
 
 <div class="highlight-box">
 
