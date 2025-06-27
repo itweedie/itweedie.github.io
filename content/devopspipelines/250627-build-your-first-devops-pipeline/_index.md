@@ -487,7 +487,7 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
       <li class="fragment">Email domain checker</li>
       <li class="fragment">SharePoint Connector using SPN</li>
       <li class="fragment">Email Connector using SPN</li>
-      <li class="fragment">Dataverse 4 Teams Local ALM Tool</li>
+
       <li class="fragment">DevOps Extension: Power Apps Solution Documentation Tool</li>
       <li class="fragment">Around 500k hits a month</li>
 
@@ -586,8 +586,6 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 ## Why use DevOps
 
 **🚀 No Managed Environments Required**
-
-**🤝 Dataverse for Teams Compatible**
 
 **🔍 Source Code Visibility**
 
