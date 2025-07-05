@@ -9,8 +9,8 @@ slide_number = true
 
 # Multiplex configuration for the MASTER presentation
 [reveal_hugo.multiplex]
-secret = "YOUR_SECRET_HERE"  # Replace with your actual secret from https://reveal-multiplex.glitch.me/token
-id = "YOUR_ID_HERE"         # Replace with your actual ID from https://reveal-multiplex.glitch.me/token
+secret = "1751711897271988955"
+id = "a1b44278da16272f"
 url = "https://reveal-multiplex.glitch.me/"
 
 # Load socket.io from CDN and multiplex plugins

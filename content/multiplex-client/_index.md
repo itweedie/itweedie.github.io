@@ -10,7 +10,7 @@ slide_number = true
 # Multiplex configuration for the CLIENT presentation
 [reveal_hugo.multiplex]
 secret = ""  # Empty for clients - they don't control the presentation
-id = "YOUR_ID_HERE"         # Replace with the SAME ID from your master presentation
+id = "a1b44278da16272f"
 url = "https://reveal-multiplex.glitch.me/"
 
 # Load socket.io from CDN and multiplex plugins
