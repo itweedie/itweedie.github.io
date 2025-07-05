@@ -2,27 +2,19 @@
 title = "Multiplex Master Presentation"
 description = "Master presentation with multiplex control"
 outputs = ["Reveal"]
-
 [reveal_hugo]
 theme = "black"
 slide_number = true
+transition = "slide"
 
-# Multiplex configuration for the MASTER presentation
 [reveal_hugo.multiplex]
 secret = "1751711897271988955"
 id = "a1b44278da16272f"
 url = "https://reveal-multiplex.glitch.me/"
 
-# Load socket.io from CDN and multiplex plugins
 [[reveal_hugo.plugins]]
-name = "SocketIO"
-source = "https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"
-verbatim = true
-
-[[reveal_hugo.plugins]]
-name = "RevealMultiplexMaster"
-source = "https://reveal-multiplex.glitch.me/master.js"
-verbatim = true
+name = "MultiplexMaster"
+source = "plugin/multiplex/master-combined.js"
 
 +++
 

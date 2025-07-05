@@ -2,17 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>plugin-example</title>
-<meta name="description" content="Shows how a Reveal.js plugin can be added and used">
+<title>Simple Test Presentation</title>
+
 <meta name="author" content="Ian Tweedie">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <script data-goatcounter="https://itweedie-gh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><link rel="stylesheet" href="/reveal-js/dist/reset.css">
-<link rel="stylesheet" href="/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/reveal-js/dist/theme/night.css" id="theme">
+<link rel="stylesheet" href="/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/reveal-js/dist/theme/black.css" id="theme">
 <link rel="stylesheet" href="/highlight-js/zenburn.min.css">
-
-    <link rel="stylesheet" href="/plugin/gallery/gallery.css">
   </head>
   <body>
     
@@ -20,50 +18,38 @@
       <div class="slides">
   
 
-    <section><h1 id="plugin-example">plugin-example</h1>
+    <section><h1 id="simple-test-presentation">Simple Test Presentation</h1>
+<p>This is a basic reveal-hugo presentation to test that everything works.</p>
 </section><section>
-<p>This presentation demonstrates how a Reveal.js plugin can be added.</p>
+<h2 id="slide-2">Slide 2</h2>
+<p>This should show that the basic reveal-hugo setup is working correctly.</p>
 </section><section>
-<p>The plugin is called <a href="https://github.com/marcins/revealjs-simple-gallery">revealjs-simple-gallery</a>.</p>
-</section><section>
-<p>It can make any slide an image gallery. Here are a few examples.</p>
-</section><section>
-<ul class="gallery">
-  <li><img src="sample1.jpg" alt="Default settings (Photo by Oscar Fernandez Alonso on Flickr)"></li>
-  <li><img src="sample2.jpg" alt="Default settings (Photo by bullcitydogs on Flickr)"></li>
-  <li><img src="sample3.jpg" alt="Default settings (Photo by Lance McCord on Flickr)"></li>
+<h2 id="features-test">Features Test</h2>
+<ul>
+<li>Bullet points work</li>
+<li><strong>Bold text</strong> works</li>
+<li><em>Italic text</em> works</li>
 </ul>
 </section><section>
-<ul class="gallery" data-iterations="0" data-interval="1">
-  <li><img src="sample1.jpg" alt="Infinite iterations, fast transition (Photo by Oscar Fernandez Alonso on Flickr)"></li>
-  <li><img src="sample2.jpg" alt="Infinite iterations, fast transition (Photo by bullcitydogs on Flickr)"></li>
-  <li><img src="sample3.jpg" alt="Infinite iterations, fast transition (Photo by Lance McCord on Flickr)"></li>
-</ul>
+<h2 id="fragment-test">Fragment Test</h2>
+
+
+<span class='fragment ' >This appears first</span>
+
+
+
+
+<span class='fragment ' >This appears second</span>
+
+
+
+
+<span class='fragment ' >This appears third</span>
+
+
 </section><section>
-<ul class="gallery" data-iterations="2" data-interval="2" data-mode="full-screen">
-  <li><img src="sample1.jpg" alt="Full screen, two iterations, slow transition (Photo by Oscar Fernandez Alonso on Flickr)"></li>
-  <li><img src="sample2.jpg" alt="Full screen, two iterations, slow transition (Photo by bullcitydogs on Flickr)"></li>
-  <li><img src="sample3.jpg" alt="Full screen, two iterations, slow transition (Photo by Lance McCord on Flickr)"></li>
-</ul>
-</section><section>
-<p>See the <a href="https://github.com/marcins/revealjs-simple-gallery">revealjs-simple-gallery GitHub repo</a> to learn about more customization options.</p>
-</section><section>
-<p>These are the steps to use this plugin for this reveal-hugo presentation.</p>
-</section><section>
-<h3 id="1">1</h3>
-<p>Copy the plugin CSS and JavaScript into the static directory</p>
-</section><section>
-<h3 id="2">2</h3>
-<p>Add the JavaScript (and optionally css) file path to the <code>plugins</code> field in the
-front matter</p>
-<pre><code class="language-toml">[[reveal_hugo.plugins]]
-# name must match the name by which the plugin is exported
-name = &quot;Gallery&quot;
-source = &quot;plugin/gallery/gallery.plugin.js&quot;
-css = &quot;plugin/gallery/gallery.css&quot;
-</code></pre>
-</section><section>
-<h2 id="the-end">THE END</h2>
+<h2 id="the-end">The End</h2>
+<p>If you can see this presentation with navigation, reveal-hugo is working properly!</p>
 </section>
 
   
@@ -87,8 +73,6 @@ css = &quot;plugin/gallery/gallery.css&quot;
   
   <script type="text/javascript" src="/reveal-js/plugin/notes/notes.js"></script>
   
-  <script type="text/javascript" src="/plugin/gallery/gallery.plugin.js"></script>
-  
 <script type="text/javascript">
   
   
@@ -107,11 +91,11 @@ css = &quot;plugin/gallery/gallery.css&quot;
 
   var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
   var revealHugoSiteParams = {"highlight_theme":"zenburn","history":true,"slide_number":true,"templates":{"grey":{"background":"#dddddd","transition":"convex"}}};
-  var revealHugoPageParams = {"margin":0.2,"theme":"night"};
+  var revealHugoPageParams = {"slide_number":true,"theme":"black","transition":"slide"};
 
   var revealHugoPlugins = {
     
-    plugins: [RevealMarkdown,RevealHighlight,RevealZoom,RevealNotes,Gallery]
+    plugins: [RevealMarkdown,RevealHighlight,RevealZoom,RevealNotes]
   };
 
   
@@ -182,11 +166,7 @@ css = &quot;plugin/gallery/gallery.css&quot;
   
 
   
-  
-
-  
-  
-
+    
   
   
 
@@ -209,11 +189,27 @@ css = &quot;plugin/gallery/gallery.css&quot;
   
 
   
+    
+  
   
 
   
+    
+  
   
 
+  
+    
+  
+  
+
+  
+    
+  
+  
+
+  
+    
   
   
 

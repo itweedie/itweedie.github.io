@@ -2,17 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>plugin-example</title>
-<meta name="description" content="Shows how a Reveal.js plugin can be added and used">
+<title>Multiplex Master Presentation</title>
+<meta name="description" content="Master presentation with multiplex control">
 <meta name="author" content="Ian Tweedie">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <script data-goatcounter="https://itweedie-gh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><link rel="stylesheet" href="/reveal-js/dist/reset.css">
-<link rel="stylesheet" href="/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/reveal-js/dist/theme/night.css" id="theme">
+<link rel="stylesheet" href="/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/reveal-js/dist/theme/black.css" id="theme">
 <link rel="stylesheet" href="/highlight-js/zenburn.min.css">
-
-    <link rel="stylesheet" href="/plugin/gallery/gallery.css">
   </head>
   <body>
     
@@ -20,50 +18,43 @@
       <div class="slides">
   
 
-    <section><h1 id="plugin-example">plugin-example</h1>
+    <section><h1 id="multiplex-master-presentation">Multiplex Master Presentation</h1>
+<p>This is the presentation you control as the presenter.</p>
 </section><section>
-<p>This presentation demonstrates how a Reveal.js plugin can be added.</p>
+<h2 id="how-it-works">How it works</h2>
+<ol>
+<li>You navigate slides on this master presentation</li>
+<li>Your audience follows along on their devices</li>
+<li>Everyone stays synchronized automatically</li>
+</ol>
 </section><section>
-<p>The plugin is called <a href="https://github.com/marcins/revealjs-simple-gallery">revealjs-simple-gallery</a>.</p>
+<h2 id="setting-up-your-audience">Setting up your audience</h2>
+<ol>
+<li>Give your audience this URL: <code>https://yourdomain.com/multiplex-client/</code></li>
+<li>They will see the same slides you do</li>
+<li>When you change slides, they follow automatically</li>
+</ol>
 </section><section>
-<p>It can make any slide an image gallery. Here are a few examples.</p>
+<h2 id="fragment-support">Fragment Support</h2>
+<p>This works with fragments too:</p>
+
+
+<span class='fragment ' >First fragment</span>
+
+
+
+
+<span class='fragment ' >Second fragment</span>
+
+
+
+
+<span class='fragment ' >Third fragment</span>
+
+
 </section><section>
-<ul class="gallery">
-  <li><img src="sample1.jpg" alt="Default settings (Photo by Oscar Fernandez Alonso on Flickr)"></li>
-  <li><img src="sample2.jpg" alt="Default settings (Photo by bullcitydogs on Flickr)"></li>
-  <li><img src="sample3.jpg" alt="Default settings (Photo by Lance McCord on Flickr)"></li>
-</ul>
-</section><section>
-<ul class="gallery" data-iterations="0" data-interval="1">
-  <li><img src="sample1.jpg" alt="Infinite iterations, fast transition (Photo by Oscar Fernandez Alonso on Flickr)"></li>
-  <li><img src="sample2.jpg" alt="Infinite iterations, fast transition (Photo by bullcitydogs on Flickr)"></li>
-  <li><img src="sample3.jpg" alt="Infinite iterations, fast transition (Photo by Lance McCord on Flickr)"></li>
-</ul>
-</section><section>
-<ul class="gallery" data-iterations="2" data-interval="2" data-mode="full-screen">
-  <li><img src="sample1.jpg" alt="Full screen, two iterations, slow transition (Photo by Oscar Fernandez Alonso on Flickr)"></li>
-  <li><img src="sample2.jpg" alt="Full screen, two iterations, slow transition (Photo by bullcitydogs on Flickr)"></li>
-  <li><img src="sample3.jpg" alt="Full screen, two iterations, slow transition (Photo by Lance McCord on Flickr)"></li>
-</ul>
-</section><section>
-<p>See the <a href="https://github.com/marcins/revealjs-simple-gallery">revealjs-simple-gallery GitHub repo</a> to learn about more customization options.</p>
-</section><section>
-<p>These are the steps to use this plugin for this reveal-hugo presentation.</p>
-</section><section>
-<h3 id="1">1</h3>
-<p>Copy the plugin CSS and JavaScript into the static directory</p>
-</section><section>
-<h3 id="2">2</h3>
-<p>Add the JavaScript (and optionally css) file path to the <code>plugins</code> field in the
-front matter</p>
-<pre><code class="language-toml">[[reveal_hugo.plugins]]
-# name must match the name by which the plugin is exported
-name = &quot;Gallery&quot;
-source = &quot;plugin/gallery/gallery.plugin.js&quot;
-css = &quot;plugin/gallery/gallery.css&quot;
-</code></pre>
-</section><section>
-<h2 id="the-end">THE END</h2>
+<h2 id="questions">Questions?</h2>
+<p>Your audience can follow along in real-time!</p>
 </section>
 
   
@@ -87,7 +78,7 @@ css = &quot;plugin/gallery/gallery.css&quot;
   
   <script type="text/javascript" src="/reveal-js/plugin/notes/notes.js"></script>
   
-  <script type="text/javascript" src="/plugin/gallery/gallery.plugin.js"></script>
+  <script type="text/javascript" src="/plugin/multiplex/master-combined.js"></script>
   
 <script type="text/javascript">
   
@@ -107,11 +98,11 @@ css = &quot;plugin/gallery/gallery.css&quot;
 
   var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
   var revealHugoSiteParams = {"highlight_theme":"zenburn","history":true,"slide_number":true,"templates":{"grey":{"background":"#dddddd","transition":"convex"}}};
-  var revealHugoPageParams = {"margin":0.2,"theme":"night"};
+  var revealHugoPageParams = {"multiplex":{"id":"a1b44278da16272f","secret":"1751711897271988955","url":"https://reveal-multiplex.glitch.me/"},"slide_number":true,"theme":"black","transition":"slide"};
 
   var revealHugoPlugins = {
     
-    plugins: [RevealMarkdown,RevealHighlight,RevealZoom,RevealNotes,Gallery]
+    plugins: [RevealMarkdown,RevealHighlight,RevealZoom,RevealNotes,MultiplexMaster]
   };
 
   
@@ -203,17 +194,27 @@ css = &quot;plugin/gallery/gallery.css&quot;
   
 
   
-  
-
-  
-  
-
+    
   
   
 
   
+    
+  
   
 
+  
+    
+  
+  
+
+  
+    
+  
+  
+
+  
+    
   
   
 
