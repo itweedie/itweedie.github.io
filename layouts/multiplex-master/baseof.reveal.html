@@ -1,0 +1,29 @@
+{{ define "reveal-hugo-head" }}
+<script src="https://reveal-multiplex.glitch.me/socket.io/socket.io.js"></script>
+{{ end }}
+
+{{ define "reveal-hugo-body" }}
+<script src="https://reveal-multiplex.glitch.me/master.js"></script>
+<script>
+console.log('Multiplex master script loaded');
+console.log('io available:', typeof io !== 'undefined');
+console.log('Reveal available:', typeof Reveal !== 'undefined');
+
+// Simple direct initialization
+setTimeout(function() {
+  if (typeof Reveal !== 'undefined' && typeof io !== 'undefined') {
+    console.log('Initializing multiplex master...');
+    Reveal.configure({
+      multiplex: {
+        secret: '1751711897271988955',
+        id: 'a1b44278da16272f',
+        url: 'https://reveal-multiplex.glitch.me/'
+      }
+    });
+    console.log('Multiplex configuration applied');
+  } else {
+    console.error('Missing dependencies - io:', typeof io, 'Reveal:', typeof Reveal);
+  }
+}, 1000);
+</script>
+{{ end }}
