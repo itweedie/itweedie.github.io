@@ -1,0 +1,1691 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<title>Playwright for Makers – Bringing One-Click UI Tests to Model-Driven Apps &amp; Power Pages</title>
+<meta name="description" content="A 40-minute, demo-heavy walkthrough that adds the missing &#39;test&#39; step to your low-code CI/CD story">
+<meta name="author" content="Ian Tweedie">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script data-goatcounter="https://itweedie-gh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><link rel="stylesheet" href="/reveal-js/dist/reset.css">
+<link rel="stylesheet" href="/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/css/techTweedieLight.css" id="theme"><link rel="stylesheet" href="/highlight-js/github.min.css">
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <style>
+:root {
+  --primary-color: #4B514F;
+  --secondary-color: #3666FF;
+  --accent-color: #742774;
+  --success-color: #0D7F41;
+  --info-color: #243A5E;
+  --warning-color:rgb(0, 0, 0);
+  --r-link-color: #3666FF;
+  --r-link-color-hover: #742774;
+  --r-selection-background-color: rgba(54, 102, 255, 0.3);
+}
+
+.reveal {
+  font-family: "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Segoe UI Historic", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Segoe UI Historic", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Segoe UI Historic", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--secondary-color);
+}
+
+.reveal h1, .reveal h2 {
+  font-family: "Segoe UI Semibold", "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Segoe UI Historic", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+.reveal h1 {
+  color: var(--accent-color);
+}
+
+/* Alternating word colors for H1 and H2 */
+.reveal h1 .info-word,
+.reveal h2 .info-word {
+  color: var(--info-color);
+}
+
+.reveal h1 .accent-word,
+.reveal h2 .accent-word {
+  color: var(--accent-color);
+}
+
+.reveal a {
+  color: var(--secondary-color);
+}
+
+.reveal a:hover {
+  color: var(--accent-color);
+}
+
+.reveal strong, .reveal b {
+  color: var(--warning-color);
+}
+
+.reveal em, .reveal i {
+  color: var(--accent-color);
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+.highlight-box {
+    background-color: rgba(54, 102, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--secondary-color);
+}
+.demo-box {
+    background-color: rgba(13, 127, 65, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left: 5px solid var(--success-color);
+}
+.warning-box {
+    background-color: #FFF3CD;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left: 5px solid #ffc107;
+}
+.instruction-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: rgba(54, 102, 255, 0.05);
+    border-radius: 5px;
+}
+.instruction-item svg {
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+.instruction-text {
+    flex: 1;
+}
+.key-combo {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+</style>
+<script>
+// Automatically alternate H1 and H2 word colors
+document.addEventListener('DOMContentLoaded', function() {
+    function alternateHeadingColors() {
+        const headingElements = document.querySelectorAll('.reveal h1, .reveal h2');
+        
+        headingElements.forEach(heading => {
+            // Skip if already processed or contains HTML
+            if (heading.querySelector('.info-word, .accent-word') || heading.innerHTML.includes('<')) {
+                return;
+            }
+            
+            const text = heading.textContent;
+            const words = text.split(' ');
+            
+            const coloredWords = words.map((word, index) => {
+                const className = index % 2 === 0 ? 'info-word' : 'accent-word';
+                return `<span class="${className}">${word}</span>`;
+            });
+            
+            heading.innerHTML = coloredWords.join(' ');
+        });
+    }
+    
+    // Run initially
+    alternateHeadingColors();
+    
+    // Re-run when slides change (for dynamically loaded content)
+    if (window.Reveal) {
+        Reveal.addEventListener('slidechanged', alternateHeadingColors);
+        Reveal.addEventListener('ready', alternateHeadingColors);
+    }
+});
+</script>
+
+  
+<section data-noprocess data-shortcode-slide>
+  <section>
+<h1 id="how-to-navigate-this-presentation">How to Navigate This Presentation</h1>
+<div class="highlight-box">
+<h3>🎮 Controls</h3>
+<div class="instruction-item">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="var(--secondary-color)"/>
+</svg>
+<div class="instruction-text">
+Use <span class="key-combo">←</span> <span class="key-combo">→</span> <span class="key-combo">↑</span> <span class="key-combo">↓</span> arrow keys to navigate
+</div>
+</div>
+<div class="instruction-item">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="var(--success-color)" stroke-width="2" fill="none"/>
+</svg>
+<div class="instruction-text">
+Press <span class="key-combo">Space</span> or <span class="key-combo">Enter</span> to go to next slide
+</div>
+</div>
+<div class="instruction-item">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+</svg>
+<div class="instruction-text">
+Press <span class="key-combo">Esc</span> to see slide overview
+</div>
+</div>
+<div class="instruction-item">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke="var(--info-color)" stroke-width="2" fill="none"/>
+</svg>
+<div class="instruction-text">
+Press <span class="key-combo">F</span> for fullscreen mode
+</div>
+</div>
+<div class="instruction-item">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1-1 1.5-1 2.5V15m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="var(--warning-color)" stroke-width="2" fill="none"/>
+</svg>
+<div class="instruction-text">
+Press <span class="key-combo">?</span> to see all keyboard shortcuts
+</div>
+</div>
+</div>
+<aside class="notes">
+  Instructions for users navigating later
+</aside>
+</section>
+
+</section><section>
+<section id="2-welcome" data-background-image="slides/LondonUG/Slide1.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+</section>
+<aside class="notes">
+  Welcome slide
+</aside>
+<blockquote>
+<p>TODO: Welcome Slide - roatating GIF</p>
+</blockquote>
+</section><section>
+<h2 id="the-problem-were-solving">The Problem We&rsquo;re Solving</h2>
+<div class="highlight-box">
+<p><strong>Making Playwright Available for Makers</strong></p>
+<ul>
+<li>✅ We want to <strong>reduce the size of the hill to climb</strong></li>
+<li>✅ We&rsquo;re working with <strong>DevOps pipelines</strong></li>
+<li>✅ We want to perform <strong>UI tests</strong></li>
+</ul>
+</div>
+</section><section>
+<h2 id="meet-jessica-the-modern-maker">Meet Jessica: The Modern Maker</h2>
+<div class="demo-box">
+<p><strong>Jessica&rsquo;s Journey</strong></p>
+<p>She&rsquo;s a low-code developer who has been increasingly successful with Power Platform solutions.</p>
+<p>She&rsquo;s followed TechTweedie YouTube videos and has created YAML pipelines&hellip;</p>
+<p><strong>But there&rsquo;s a gap:</strong> <em>How can she add testing? She&rsquo;s not a programmer - is there a light-touch approach?</em></p>
+</div>
+<aside class="notes">
+  Introduce Jessica as our persona representing makers who want to add automated testing
+</aside> 
+</section><section>
+<section  data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+<h1 id="todays-agenda">Today&rsquo;s Agenda</h1>
+<div class="highlight-box">
+<h2 id="-what-well-cover">🚀 What We&rsquo;ll Cover</h2>
+<p><strong>8 Key Steps Over 40 Minutes</strong></p>
+<ol>
+<li><strong>🔧 Create First Test</strong> - Fork repo &amp; use CodeGen <em>(10 mins)</em></li>
+<li><strong>📦 Install Extension</strong> - FREE Playwright Extension <em>(5 mins)</em></li>
+<li><strong>⚡ Execute Pipeline</strong> - See tests run in DevOps <em>(15 mins)</em></li>
+<li><strong>📊 View Results</strong> - Rich HTML reports <em>(5 mins)</em></li>
+<li><strong>🎁 Resources</strong> - Take Home Materials <em>(3 mins)</em></li>
+<li><strong>❓ Q&amp;A</strong> - Your Questions <em>(2 mins)</em></li>
+</ol>
+</div>
+<aside class="notes">
+  Overview of our hands-on journey from problem to solution
+</aside>
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide5.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+<aside class="notes">
+  Thanks to sponsors
+</aside>
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide7.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+<aside class="notes">
+  iNTRO 1
+</aside>
+</section>
+</section>
+
+  
+<section data-noprocess data-shortcode-slide>
+  <h3 id="ian-tweedie">Ian Tweedie</h3>
+<h5 id="certification-wall">Certification Wall</h5>
+<p><img src="/about-iantweedie/image-12.png" alt="height:100px"><img src="/about-iantweedie/image-13.png" alt="height:100px"><img src="/about-iantweedie/image-14.png" alt="height:100px"><img src="/about-iantweedie/image-15.png" alt="height:100px"><img src="/about-iantweedie/image-16.png" alt="height:100px"><img src="/about-iantweedie/image-17.png" alt="height:100px"><img src="/about-iantweedie/image-18.png" alt="height:100px"><img src="/about-iantweedie/image-19.png" alt="height:100px"><img src="/about-iantweedie/image-20.png" alt="height:100px"><img src="/about-iantweedie/image-21.png" alt="height:100px"><img src="/about-iantweedie/image-22.png" alt="height:100px"><img src="/about-iantweedie/image-23.png" alt="height:100px"><img src="/about-iantweedie/image-24.png" alt="height:100px"><img src="/about-iantweedie/image-25.png" alt="height:100px"><img src="/about-iantweedie/image-26.png" alt="height:100px"><img src="/about-iantweedie/image-27.png" alt="height:100px"><img src="/about-iantweedie/image-28.png" alt="height:100px"><img src="/about-iantweedie/image-29.png" alt="height:100px"><img src="/about-iantweedie/image-30.png" alt="height:100px"><img src="/about-iantweedie/image-31.png" alt="height:100px"><img src="/about-iantweedie/image-32.png" alt="height:100px"><img src="/about-iantweedie/image-33.png" alt="height:100px"><img src="/about-iantweedie/image-34.png" alt="height:100px"><img src="/about-iantweedie/image-35.png" alt="height:100px"><img src="/about-iantweedie/image-36.png" alt="height:100px"><img src="/about-iantweedie/image-37.png" alt="height:100px"><img src="/about-iantweedie/image-38.png" alt="height:100px"><img src="/about-iantweedie/image-39.png" alt="height:100px"><img src="/about-iantweedie/image-40.png" alt="height:100px"><img src="/about-iantweedie/image-41s.png" alt="height:100px"><img src="/about-iantweedie/image-42s.png" alt="height:100px"><img src="/about-iantweedie/image-44s.png" alt="height:100px"><img src="/about-iantweedie/CyberSecurityArchitect-2s.png" alt="height:100px"><img src="/about-iantweedie/sc-100exams.png" alt="height:100px"></p>
+<aside class="notes">
+<ul>
+<li>Senior Technical Consultant</li>
+<li>Trustee</li>
+<li>Chair</li>
+</ul>
+</aside>
+</section>
+</section>
+<section data-noprocess data-shortcode-slide>
+  
+<section data-background-iframe="https://mightora.io" data-background-interactive="true" data-transition="zoom">
+<aside class="notes">
+<pre><code>  &lt;li class=&quot;fragment&quot;&gt;Calculate working day&lt;/li&gt;
+  &lt;li class=&quot;fragment&quot;&gt;Email domain checker&lt;/li&gt;
+  &lt;li class=&quot;fragment&quot;&gt;SharePoint Connector using SPN&lt;/li&gt;
+  &lt;li class=&quot;fragment&quot;&gt;Email Connector using SPN&lt;/li&gt;
+
+  &lt;li class=&quot;fragment&quot;&gt;DevOps Extension: Power Apps Solution Documentation Tool&lt;/li&gt;
+  &lt;li class=&quot;fragment&quot;&gt;Around 500k hits a month&lt;/li&gt;
+</code></pre>
+</aside>
+</section>
+</section>
+<section data-noprocess data-shortcode-slide>
+  
+<section data-background-iframe="https://techtweedie.github.io/" data-background-interactive="true" data-transition="zoom">
+</section>
+</section>
+<section data-noprocess data-shortcode-slide>
+  
+<section  data-background-image="powerPlatformClinicLogo-Video-end.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+</br>
+</br>
+</br>
+<p><em>PowerPlatformClinic.github.io</em></p>
+</section>
+</section>
+<section data-noprocess data-shortcode-slide>
+  
+<section data-background-image="/about-iantweedie/ug-background.png"  data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<p><img src="/about-iantweedie/ug-logo.png" alt="alt text"></p>
+<h1 id="north-east">North East</h1>
+</section>
+
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<h2 id="demo-1-fork-the-repository">Demo 1: Fork the Repository</h2>
+<div class="demo-box">
+<p><strong>Demo</strong>: Forking the starter template repository</p>
+</div>
+<aside class="notes">
+  Start with a working template that has everything pre-configured
+</aside>
+</section>
+</section><section>
+<section data-background-video="/playwright-on-power-platform/clonerepo.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+</section><section>
+<section data-background-video="/playwright-on-power-platform/cloneintovscode.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<h2 id="demo-2-create-test-with-codegen">Demo 2: Create Test with CodeGen</h2>
+<div class="demo-box">
+<p><strong>Live Demo</strong>: Using Playwright CodeGen to create a Model-Driven App test</p>
+<p>TODO: <em>Placeholder for video: CodeGen creating test demo</em></p>
+</div>
+<aside class="notes">
+  Let Playwright write the test code for you by recording your actions
+</aside>
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<h2 id="demo-3-create-app-registration">Demo 3: Create App Registration</h2>
+<div class="demo-box">
+<p><strong>Live Demo</strong>: Using Playwright CodeGen to create a Model-Driven App test</p>
+<p><em>Placeholder for video: CodeGen creating test demo</em></p>
+</div>
+<aside class="notes">
+  Let Playwright write the test code for you by recording your actions
+</aside>
+</section>
+</section>
+
+  
+<section data-noprocess data-shortcode-slide>
+  <section data-background-image="/res/appreg-dataverse/entrabackground.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<h2 id="app-registration">App Registration</h2>
+<p><strong>Client ID:</strong></p>
+<p><strong>Tenant ID:</strong></p>
+<p><strong>Secret:</strong></p>
+</div>
+</section>
+<section data-noprocess data-shortcode-slide>
+  
+<section data-background-video="/res/appreg-dataverse/createappreg.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+</section>
+<section data-noprocess data-shortcode-slide>
+  
+<section data-background-image="/res/appreg-dataverse/dataverseadminhome.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<h2 id="give-permission">Give Permission</h2>
+</div>
+</section>
+<section data-noprocess data-shortcode-slide>
+  
+<section data-background-video="/res/appreg-dataverse/dataversegivepermission.mp4"  data-background-size="contain" data-background-video-muted>
+</section>
+
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<h2 id="demo-4-install-playwright-extension">Demo 4: Install Playwright Extension</h2>
+<div class="demo-box">
+<p><strong>Demo</strong>: Installing the FREE Playwright for Power Platform extension from Azure DevOps Marketplace</p>
+<p><em>Placeholder for video: Extension installation demo</em></p>
+</div>
+<aside class="notes">
+  The game-changing extension that makes UI testing accessible to makers
+</aside>
+</section>
+</section><section>
+<section data-background-image="vsmarketplace-playwright.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<h2 id="install-extension">Install Extension</h2>
+</div>
+</section><section>
+<section data-background-video="install-playwright-extension.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+</section><section>
+<section data-background-image="devops-org-home-screen.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<h2 id="create-pipeline">Create Pipeline</h2>
+</div>
+<aside class="notes">
+  Set up the pipeline that will run our tests automatically
+</aside>
+</section><section>
+<section data-background-video="create-pipeline.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+</section><section>
+<section data-background-video="run-pipeline.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+</section><section>
+<section data-background-video="playwright-test.webm" data-background-size="contain"  data-background-video-muted >
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="trace-viewer">Trace Viewer</h2>
+<h3 id="httpstraceplaywrightdev"><a href="https://trace.playwright.dev/">https://trace.playwright.dev/</a></h3>
+<aside class="notes">
+  The moment of truth - watching our tests run in the cloud
+</aside>
+</section><section>
+<section data-background-video="playwright-trace-viewer.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+</section><section>
+
+
+<section data-shortcode-section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="what-weve-accomplished">What We&rsquo;ve Accomplished</h2>
+<div class="highlight-box">
+<p><strong>The Complete Recipe: Commit → Test → Deploy</strong></p>
+<ul>
+<li>✅ <strong>Used</strong> template repository</li>
+<li>✅ <strong>Created</strong> UI test with CodeGen</li>
+<li>✅ <strong>Installed</strong> FREE Playwright extension</li>
+<li>✅ <strong>Executed</strong> automated tests in pipeline</li>
+<li>✅ <strong>Viewed</strong> reports</li>
+</ul>
+</div>
+<aside class="notes">
+  Summary of what we've accomplished in our journey
+</aside>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="recommended-project-structure">Recommended Project Structure</h2>
+<pre><code>PlaywrightForMakersProject/
+├── tests/
+│   ├── model-driven-app/
+│   │   └── basic-navigation.spec.js
+│   ├── power-pages/
+│   │   └── form-submission.spec.js
+├── (leave everything else aline - for)
+└── .env
+</code></pre>
+<aside class="notes">
+  Simple, organized structure that makes sense to makers
+</aside>
+</section><section>
+<h2 id="sample-playwright-test">Sample Playwright Test</h2>
+<div class="demo-box">
+<p><strong>What a Model-Driven App test looks like:</strong></p>
+<pre><code class="language-javascript">// Navigate to app, create record, verify result
+await page.goto(process.env.MODEL_DRIVEN_APP_URL);
+await page.click('[data-testid=&quot;create-button&quot;]');
+await page.fill('#name-field', 'Test Record');
+await page.click('[data-testid=&quot;save-button&quot;]');
+await expect(page.locator('.success-message')).toBeVisible();
+</code></pre>
+<p><em>Generated by CodeGen - no manual coding required!</em></p>
+</div>
+<div class="demo-box">
+<p><strong>Live Demo</strong>: Setting up the export pipeline in Azure DevOps</p>
+<ul>
+<li><a href="https://dev.azure.com/TechTweedie/Tutorials">https://dev.azure.com/TechTweedie/Tutorials</a></li>
+<li><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions">https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions</a></li>
+</ul>
+</div>
+</section><section>
+<h2 id="playwright-pipeline-yaml">Playwright Pipeline YAML</h2>
+<pre><code class="language-yaml">name: PlaywrightUITests
+
+trigger: 
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+- group: playwright-variables
+
+steps:
+- task: PlaywrightForPowerPlatform@1
+  inputs:
+    testDirectory: '$(Build.SourcesDirectory)/tests'
+    environmentUrl: '$(TEST_ENVIRONMENT_URL)'
+    serviceConnection: '$(POWER_PLATFORM_CONNECTION)'
+    
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/test-results.xml'
+    
+- task: PublishHtmlReport@1
+  inputs:
+    reportDir: '$(Build.SourcesDirectory)/playwright-report'
+</code></pre>
+<aside class="notes">
+  Simple, clean pipeline that makers can understand and modify
+</aside>
+</section><section>
+<h2 id="the-power-of-disposable-test-users">The Power of Disposable Test Users</h2>
+<div class="highlight-box">
+<p><strong>Created &amp; Cleaned Up Automatically</strong></p>
+<ul>
+<li>🎭 <strong>Runtime User Creation</strong>: Test users are created when tests run</li>
+<li>🔐 <strong>Automatic Permissions</strong>: Users get the exact permissions they need</li>
+<li>🗑️ <strong>Auto Cleanup</strong>: No test data pollution in your environment</li>
+<li>🔄 <strong>Consistent Results</strong>: Fresh environment every time</li>
+</ul>
+</div>
+<aside class="notes">
+  This is a key differentiator - no more managing test users manually
+</aside>
+
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="what-makes-this-different">What Makes This Different?</h2>
+<div class="highlight-box">
+<p><strong>Playwright for Makers vs Traditional Testing</strong></p>
+<ul>
+<li>❌ <strong>Traditional</strong>: Write complex code, manage test infrastructure</li>
+<li>✅ <strong>Playwright for Makers</strong>: Record actions, get code automatically</li>
+<li>❌ <strong>Traditional</strong>: Separate test management tools</li>
+<li>✅ <strong>Playwright for Makers</strong>: Tests run in your existing DevOps pipeline</li>
+<li>❌ <strong>Traditional</strong>: Manage test users and data manually</li>
+<li>✅ <strong>Playwright for Makers</strong>: Disposable users created automatically</li>
+</ul>
+</div>
+<aside class="notes">
+  Highlight the key differentiators that make this approach special for makers
+</aside>
+</section><section>
+
+
+<section data-shortcode-section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="common-questions">Common Questions</h2>
+</section><section>
+<h3 id="what-if-my-app-changes">&ldquo;What if my app changes?&rdquo;</h3>
+<div class="highlight-box">
+<p><strong>Answer</strong>:</p>
+<ul>
+<li><strong>Re-record with CodeGen</strong> - just run it again to update your tests</li>
+<li><strong>Element selectors are robust</strong> - Playwright uses smart selectors that adapt</li>
+<li><strong>Incremental updates</strong> - you don&rsquo;t have to redo everything</li>
+<li><strong>Consider taking next step</strong> - Page object model</li>
+</ul>
+</div>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="do-i-need-to-be-a-developer">&ldquo;Do I need to be a developer?&rdquo;</h3>
+<div class="highlight-box">
+<p><strong>Answer</strong>:</p>
+<ul>
+<li><strong>No coding required</strong> - CodeGen writes the tests for you</li>
+<li><strong>Point and click</strong> - just use your app normally while recording</li>
+<li><strong>Templates provided</strong> - start with working examples</li>
+<li><strong>Community support</strong> - plenty of help available</li>
+</ul>
+</div>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="what-about-test-data">&ldquo;What about test data?&rdquo;</h3>
+<div class="highlight-box">
+<p><strong>Answer</strong>:</p>
+<ul>
+<li><strong>Reusable users</strong> - permissions created fresh for each test run</li>
+<li><strong>Clean environments</strong> - no test data pollution</li>
+<li><strong>Consistent results</strong> - same starting point every time</li>
+<li><strong>Automatic cleanup</strong> - minimum maintenance required</li>
+</ul>
+</div>
+
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<div class="highlight-box">
+<p><strong>You Now Have the Complete Recipe</strong></p>
+<p><strong>Commit → Automatic UI Tests → Deploy</strong></p>
+</div>
+<ul>
+<li>🎯 <strong>Testing doesn&rsquo;t have to be hard</strong> - CodeGen writes the code for you</li>
+<li>⚡ <strong>Integration is seamless</strong> - Works with your existing DevOps pipeline</li>
+<li>🔄 <strong>Reusable users eliminate cleanup</strong> - Fresh permissions every time</li>
+<li>📊 <strong>Rich reports show exactly what happened</strong> - No guessing games</li>
+<li>🆓 <strong>It&rsquo;s completely FREE</strong> - No licensing costs for the extension</li>
+</ul>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="remember-jessica">Remember Jessica?</h2>
+<div class="demo-box">
+<p><strong>She started where you are now&hellip;</strong></p>
+<ul>
+<li>✅ Had working Power Platform solutions</li>
+<li>✅ Played with DevOps pipelines for deployment</li>
+<li>❌ But testing was still manual and time-consuming</li>
+</ul>
+<p><strong>Now she has:</strong></p>
+<ul>
+<li>🎭 <strong>One-click UI testing</strong> that runs automatically</li>
+<li>📈 <strong>Confidence in deployments</strong> with automated validation</li>
+<li>⏰ <strong>Time back in her day</strong> for building instead of testing</li>
+<li>🚀 <strong>Happy users</strong> who experience fewer bugs</li>
+</ul>
+</div>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items">Playwright for Power Platform Extension (FREE)</a></li>
+<li><a href="https://github.com/itweedie/playwright-powerplatform-template">Starter Repository Template</a></li>
+<li><a href="https://playwright.dev/docs/codegen">CodeGen Documentation</a></li>
+<li><a href="https://docs.microsoft.com/power-platform/testing">Power Platform Testing Best Practices</a></li>
+<li><a href="https://github.com/itweedie/playwright-pipelines">Azure DevOps Pipeline Examples</a></li>
+</ul>
+</section><section>
+<section data-background-iframe="https://techtweedie.github.io/posts/250627-d365ppugnational/" data-background-interactive="true" data-transition="zoom">
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h1 id="questions">Questions?</h1>
+<div class="highlight-box">
+<p><strong>You now have everything you need to bring one-click UI testing to your Power Platform apps!</strong></p>
+<p><strong>The missing piece of your CI/CD puzzle is complete: Commit → Test → Deploy</strong></p>
+</div>
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: nowrap; min-width: 480px;">
+  <div style="text-align: center; flex: 0 0 auto;">
+    <h4>Slides</h4>
+    <a href="https://mars.mightora.io/yourls/250627" target="_blank">
+      <img src="link-to-presentation.png" alt="Link to Presentation" style="width: 320px; box-shadow: none; cursor: pointer;">
+    </a>
+  </div>
+  <div style="text-align: center; flex: 0 0 auto;">
+    <h4>Connect</h4>
+    <a href="https://iantweedie.biz" target="_blank">
+    <img src="qr.jpg" alt="QR Code" style="width: 310px;">
+    </a>
+  </div>
+</div>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide22.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide24.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+</section>
+</section>
+
+  
+
+    <section><style>
+:root {
+  --primary-color: #4B514F;
+  --secondary-color: #3666FF;
+  --accent-color: #742774;
+  --success-color: #0D7F41;
+  --info-color: #243A5E;
+  --warning-color:rgb(0, 0, 0);
+  --r-link-color: #3666FF;
+  --r-link-color-hover: #742774;
+  --r-selection-background-color: rgba(54, 102, 255, 0.3);
+}
+
+.reveal {
+  font-family: "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Segoe UI Historic", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Segoe UI Historic", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Segoe UI Historic", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--secondary-color);
+}
+
+.reveal h1, .reveal h2 {
+  font-family: "Segoe UI Semibold", "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Segoe UI Historic", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+.reveal h1 {
+  color: var(--accent-color);
+}
+
+/* Alternating word colors for H1 and H2 */
+.reveal h1 .info-word,
+.reveal h2 .info-word {
+  color: var(--info-color);
+}
+
+.reveal h1 .accent-word,
+.reveal h2 .accent-word {
+  color: var(--accent-color);
+}
+
+.reveal a {
+  color: var(--secondary-color);
+}
+
+.reveal a:hover {
+  color: var(--accent-color);
+}
+
+.reveal strong, .reveal b {
+  color: var(--warning-color);
+}
+
+.reveal em, .reveal i {
+  color: var(--accent-color);
+}
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+.highlight-box {
+    background-color: rgba(54, 102, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--secondary-color);
+}
+.demo-box {
+    background-color: rgba(13, 127, 65, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left: 5px solid var(--success-color);
+}
+.warning-box {
+    background-color: #FFF3CD;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left: 5px solid #ffc107;
+}
+.instruction-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: rgba(54, 102, 255, 0.05);
+    border-radius: 5px;
+}
+.instruction-item svg {
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+.instruction-text {
+    flex: 1;
+}
+.key-combo {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+</style>
+<script>
+// Automatically alternate H1 and H2 word colors
+document.addEventListener('DOMContentLoaded', function() {
+    function alternateHeadingColors() {
+        const headingElements = document.querySelectorAll('.reveal h1, .reveal h2');
+        
+        headingElements.forEach(heading => {
+            // Skip if already processed or contains HTML
+            if (heading.querySelector('.info-word, .accent-word') || heading.innerHTML.includes('<')) {
+                return;
+            }
+            
+            const text = heading.textContent;
+            const words = text.split(' ');
+            
+            const coloredWords = words.map((word, index) => {
+                const className = index % 2 === 0 ? 'info-word' : 'accent-word';
+                return `<span class="${className}">${word}</span>`;
+            });
+            
+            heading.innerHTML = coloredWords.join(' ');
+        });
+    }
+    
+    // Run initially
+    alternateHeadingColors();
+    
+    // Re-run when slides change (for dynamically loaded content)
+    if (window.Reveal) {
+        Reveal.addEventListener('slidechanged', alternateHeadingColors);
+        Reveal.addEventListener('ready', alternateHeadingColors);
+    }
+});
+</script>
+<section>
+<h1 id="how-to-navigate-this-presentation">How to Navigate This Presentation</h1>
+<div class="highlight-box">
+<h3>🎮 Controls</h3>
+<div class="instruction-item">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="var(--secondary-color)"/>
+</svg>
+<div class="instruction-text">
+Use <span class="key-combo">←</span> <span class="key-combo">→</span> <span class="key-combo">↑</span> <span class="key-combo">↓</span> arrow keys to navigate
+</div>
+</div>
+<div class="instruction-item">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="var(--success-color)" stroke-width="2" fill="none"/>
+</svg>
+<div class="instruction-text">
+Press <span class="key-combo">Space</span> or <span class="key-combo">Enter</span> to go to next slide
+</div>
+</div>
+<div class="instruction-item">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+</svg>
+<div class="instruction-text">
+Press <span class="key-combo">Esc</span> to see slide overview
+</div>
+</div>
+<div class="instruction-item">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke="var(--info-color)" stroke-width="2" fill="none"/>
+</svg>
+<div class="instruction-text">
+Press <span class="key-combo">F</span> for fullscreen mode
+</div>
+</div>
+<div class="instruction-item">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1-1 1.5-1 2.5V15m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="var(--warning-color)" stroke-width="2" fill="none"/>
+</svg>
+<div class="instruction-text">
+Press <span class="key-combo">?</span> to see all keyboard shortcuts
+</div>
+</div>
+</div>
+<aside class="notes">
+  Instructions for users navigating later
+</aside>
+</section>
+</section><section>
+<section id="2-welcome" data-background-image="slides/LondonUG/Slide1.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+</section>
+<aside class="notes">
+  Welcome slide
+</aside>
+</section><section>
+<section  data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+<h1 id="todays-agenda">Today&rsquo;s Agenda</h1>
+<div class="highlight-box">
+<h2 id="-what-well-cover">🚀 What We&rsquo;ll Cover</h2>
+<p><strong>5 Key Areas Over 40 Minutes</strong></p>
+<ol>
+<li><strong>🎯 Foundation</strong> - Understanding the Why <em>(5 mins)</em></li>
+<li><strong>🛠️ Hands-On Demos</strong> - Building Your First Pipeline <em>(35 mins)</em></li>
+<li><strong>🎁 Resources</strong> - Take Home Materials <em>(3 mins)</em></li>
+<li><strong>❓ Q&amp;A</strong> - Your Questions <em>(2 mins)</em></li>
+</ol>
+</div>
+<aside class="notes">
+  Overview of the 5 main sections we'll cover today
+</aside>
+</section>
+</section><section>
+<section  data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+<h1 id="-foundation">🎯 Foundation</h1>
+<p><em>(5 mins)</em></p>
+<div class="highlight-box">
+<div class="demo-box">
+<p><strong>Why DevOps?</strong> Manual deployments = Problems</p>
+<p><strong>Prerequisites:</strong> Azure DevOps + Power Platform CLI</p>
+<p><strong>Repository:</strong> Organized folders = Success</p>
+</div>
+</div>
+<aside class="notes">
+  Foundation section - essential concepts only
+</aside>
+</section>
+</section><section>
+<section  data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+<h1 id="-hands-on-demos">🛠️ Hands-On Demos</h1>
+<p><em>(25 mins)</em></p>
+<div class="highlight-box">
+<div class="demo-box">
+<p><strong>Demo 1:</strong> Setup Pipeline + Build Tools</p>
+<p><strong>Demo 2:</strong> Export &amp; Unpack Solutions</p>
+<p><strong>Demo 3:</strong> Deploy to Target Environment</p>
+</div>
+</div>
+<aside class="notes">
+  Hands-on demos - the core practical content
+</aside>
+</section>
+</section><section>
+<section  data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+<h1 id="-resources--next-steps">🎁 Resources &amp; Next Steps</h1>
+<p><em>(5 mins)</em></p>
+<div class="highlight-box">
+<div class="demo-box">
+<p><strong>Templates:</strong> Download ready-to-use pipeline YAML files</p>
+<p><strong>Takeaways:</strong> Start simple, automate gradually, secure always</p>
+<p><strong>Link to slides:</strong> QR code at the end</p>
+<p><strong>Questions:</strong> Ask now or connect later for follow-up</p>
+</div>
+</div>
+<aside class="notes">
+  TEMPLATE DOWNLOADS AVAILABLE:
+  - Basic solution export pipeline (YAML template)
+  - Solution import/deployment pipeline (YAML template)
+  - Service connection setup guide (step-by-step PDF)
+  - Repository folder structure template
+  - Sample azure-pipelines.yml with comments
+  - PowerShell scripts for local testing
+  - Connection string configuration examples
+  - Environment variable templates
+<p>KEY TAKEAWAYS TO EMPHASIZE:</p>
+<ul>
+<li>Start simple: Begin with one environment, one solution</li>
+<li>Automate gradually: Don&rsquo;t try to do everything at once</li>
+<li>Security first: Never hardcode credentials, always use service connections</li>
+<li>Test locally: Use Power Platform CLI to test before committing to pipeline</li>
+<li>Document everything: Future you will thank present you</li>
+<li>Version control: Every change should be tracked and reversible</li>
+<li>Monitor and alert: Know when things break before users do</li>
+</ul>
+<p>NEXT STEPS FOR ATTENDEES:</p>
+<ol>
+<li>Set up Azure DevOps project (free tier available)</li>
+<li>Install Power Platform CLI on local machine</li>
+<li>Create service connection to development environment</li>
+<li>Download and customize pipeline templates</li>
+<li>Start with simple export pipeline</li>
+<li>Join Power Platform Community for ongoing support</li>
+</ol>
+<p>FOLLOW-UP RESOURCES:</p>
+<ul>
+<li>GitHub repository with all templates and examples</li>
+<li>Power Platform Community forums</li>
+<li>Microsoft Learn modules on Power Platform DevOps</li>
+<li>Monthly community calls and webinars</li>
+<li>Contact information for further questions</li>
+<li>Link to presentation recording and slides</li>
+</ul>
+</aside>
+</section> 
+</section><section>
+<section data-background-image="slides/LondonUG/Slide5.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+<aside class="notes">
+  Thanks to sponsors
+</aside>
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide7.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+<aside class="notes">
+  iNTRO 1
+</aside>
+</section>
+</section><section>
+<section  data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+<h3 id="ian-tweedie">Ian Tweedie</h3>
+<h5 id="certification-wall">Certification Wall</h5>
+<p><img src="content/image-12.png" alt="height:100px"><img src="content/image-13.png" alt="height:100px"><img src="content/image-14.png" alt="height:100px"><img src="content/image-15.png" alt="height:100px"><img src="content/image-16.png" alt="height:100px"><img src="content/image-17.png" alt="height:100px"><img src="content/image-18.png" alt="height:100px"><img src="content/image-19.png" alt="height:100px"><img src="content/image-20.png" alt="height:100px"><img src="content/image-21.png" alt="height:100px"><img src="content/image-22.png" alt="height:100px"><img src="content/image-23.png" alt="height:100px"><img src="content/image-24.png" alt="height:100px"><img src="content/image-25.png" alt="height:100px"><img src="content/image-26.png" alt="height:100px"><img src="content/image-27.png" alt="height:100px"><img src="content/image-28.png" alt="height:100px"><img src="content/image-29.png" alt="height:100px"><img src="content/image-30.png" alt="height:100px"><img src="content/image-31.png" alt="height:100px"><img src="content/image-32.png" alt="height:100px"><img src="content/image-33.png" alt="height:100px"><img src="content/image-34.png" alt="height:100px"><img src="content/image-35.png" alt="height:100px"><img src="content/image-36.png" alt="height:100px"><img src="content/image-37.png" alt="height:100px"><img src="content/image-38.png" alt="height:100px"><img src="content/image-39.png" alt="height:100px"><img src="content/image-40.png" alt="height:100px"><img src="content/image-41s.png" alt="height:100px"><img src="content/image-42s.png" alt="height:100px"><img src="content/image-44s.png" alt="height:100px"><img src="content/CyberSecurityArchitect-2s.png" alt="height:100px"><img src="content/sc-100exams.png" alt="height:100px"></p>
+<aside class="notes">
+<ul>
+<li>Senior Technical Consultant</li>
+<li>Trustee</li>
+<li>Chair</li>
+</ul>
+</aside>
+</section>
+</section><section>
+<section data-background-iframe="https://mightora.io" data-background-interactive="true" data-transition="zoom">
+<aside class="notes">
+<pre><code>  &lt;li class=&quot;fragment&quot;&gt;Calculate working day&lt;/li&gt;
+  &lt;li class=&quot;fragment&quot;&gt;Email domain checker&lt;/li&gt;
+  &lt;li class=&quot;fragment&quot;&gt;SharePoint Connector using SPN&lt;/li&gt;
+  &lt;li class=&quot;fragment&quot;&gt;Email Connector using SPN&lt;/li&gt;
+
+  &lt;li class=&quot;fragment&quot;&gt;DevOps Extension: Power Apps Solution Documentation Tool&lt;/li&gt;
+  &lt;li class=&quot;fragment&quot;&gt;Around 500k hits a month&lt;/li&gt;
+</code></pre>
+</aside>
+</section>
+</section><section>
+<section data-background-iframe="https://techtweedie.github.io/" data-background-interactive="true" data-transition="zoom">
+</section>
+</section><section>
+<section  data-background-image="powerPlatformClinicLogo-Video-end.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+</br>
+</br>
+</br>
+<p><em>PowerPlatformClinic.github.io</em></p>
+</section>
+</section><section>
+<section data-background-image="image-9.png"  data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<p><img src="image-8.png" alt="alt text"></p>
+<h1 id="north-east">North East</h1>
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h1 id="build-your-first-devops-pipeline-for-the-power-platform">Build Your First DevOps Pipeline for the Power Platform</h1>
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<h2 id="the-journey-starts-here">The Journey Starts Here</h2>
+<ul>
+<li>You&rsquo;ve exported a solution ✅</li>
+<li>Maybe even unpacked it ✅</li>
+<li><strong>But what&rsquo;s next?</strong> 🤔</li>
+</ul>
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<h2 id="why-devops-matters-for-power-platform">Why DevOps Matters for Power Platform</h2>
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="why-use-devops">Why use DevOps</h2>
+<p><strong>🔒 Enhanced Security &amp; Compliance</strong></p>
+<p><strong>⚡ Better Performance &amp; Scalability</strong></p>
+<p><strong>🔄 Advanced Branching Strategies</strong></p>
+<p><strong>🌐 Tenant Independent</strong></p>
+<p><strong>🧪 Expand into Automated Testing</strong></p>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="why-use-devops-1">Why use DevOps</h2>
+<p><strong>🚀 No Managed Environments Required</strong></p>
+<p><strong>🔍 Source Code Visibility</strong></p>
+<p><strong>📚 Automated Documentation</strong></p>
+<p><strong>✏️ Edit Solutions Between Environments</strong></p>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="prerequisites">Prerequisites</h2>
+<div class="warning-box">
+<p><strong>Before We Start</strong></p>
+</div>
+<ul>
+<li><strong>Dataverse System Admin</strong> privileges</li>
+<li><strong>Azure DevOps</strong> project with basic license</li>
+<li><a href="https://aka.ms/azpipelines-parallelism-request">Azure DevOps Parallelism Request</a></li>
+</ul>
+</section><section>
+<section data-background-image="../msBuildTools.gif" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<h2 id="install-dataverse-build-tools">Install Dataverse Build Tools</h2>
+</div>
+</section><section>
+<section data-background-video="../msedge_EbORBUpsTl.mp4" data-background-video-muted data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+</section><section>
+<section data-background-image="brave_pUuYqm9d3z.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<h2 id="app-registration">App Registration</h2>
+<p><strong>Client ID:</strong></p>
+<p><strong>Tenant ID:</strong></p>
+<p><strong>Secret:</strong></p>
+</div>
+</section><section>
+<section data-background-video="brave_ODu5vMfo0o.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+</section><section>
+<section data-background-image="msedge_1ofQsOS12a.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<h2 id="give-permission">Give Permission</h2>
+</div>
+</section><section>
+<section data-background-video="msedge_eHL4W9sQv0.mp4"  data-background-size="contain" data-background-video-muted>
+</section>
+</section><section>
+<section data-background-image="image-1.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<h2 id="create-service-connection">Create service connection</h2>
+</div>
+</section><section>
+<section data-background-video="msedge_sZ1PzZV0rU.mp4" data-background-video-muted data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat"> 
+</section>
+</section><section>
+<section data-background-image="msedge_npQM2NGwB4.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<p><strong>Client ID:</strong></p>
+<p><strong>Tenant ID:</strong></p>
+<p><strong>Secret:</strong></p>
+<p><strong>Server URL:</strong></p>
+</div>
+</section><section>
+<section data-background-video="msedge_Xe9SvGfBKl.mp4" data-background-size="contain"  data-background-video-muted>
+</section>
+</section><section>
+<section data-background-video="msedge_pD2wxdy2fZ.mp4" data-background-size="contain"  data-background-video-muted>
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="repository-structure">Repository Structure</h2>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="recommended-folder-structure">Recommended Folder Structure</h2>
+<pre><code>MyPowerPlatformProject/
+├── solutions/
+│   ├── src/
+│   │   └── MySolution/
+│   └── MySolution.zip
+├── pipelines/
+│   ├── export-solution.yml
+│   ├── build-and-deploy-solution.yml
+├── documentation/
+└── README.md
+</code></pre>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="demo-1-creating-your-first-pipeline">Demo 1: Creating Your First Pipeline</h2>
+<div class="demo-box">
+<p><strong>Live Demo</strong>: Setting up the export pipeline in Azure DevOps</p>
+<ul>
+<li><a href="https://dev.azure.com/TechTweedie/Tutorials">https://dev.azure.com/TechTweedie/Tutorials</a></li>
+<li><a href="https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions">https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions</a></li>
+</ul>
+</div>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="export-pipeline-yaml">Export Pipeline YAML</h3>
+<pre><code class="language-yaml">name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+variables:
+  - name: varPowerPlatformSPN
+   # value: YOUR-OWN-VALUE-HERE 
+    value: Dataverse - Backup
+  - name: varSolutionName
+   # value: YOUR-OWN-VALUE-HERE
+    value: ProjectExpenseLogger
+
+trigger: none
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- checkout: self
+  persistCredentials: true
+  clean: true
+- task: PowerPlatformToolInstaller@2
+  inputs:
+    DefaultVersion: true
+    AddToolsToPath: true
+- task: PowerPlatformSetSolutionVersion@2
+  inputs:
+    authenticationType: 'PowerPlatformSPN'
+    PowerPlatformSPN: '$(varPowerPlatformSPN)'
+    SolutionName: '$(varSolutionName)'
+    SolutionVersionNumber: '1.0.0.$(Build.BuildID)'
+- task: PowerPlatformExportSolution@2
+  inputs:
+    authenticationType: 'PowerPlatformSPN'
+    PowerPlatformSPN: '$(varPowerPlatformSPN)'
+    SolutionName: '$(varSolutionName)'
+    SolutionOutputFile: '$(Build.SourcesDirectory)\solutions\$(varSolutionName)_1.0.0.$(Build.BuildID)_managed.zip'
+    Managed: true
+    AsyncOperation: true
+    MaxAsyncWaitTime: '60'
+- task: PowerPlatformExportSolution@2
+  inputs:
+    authenticationType: 'PowerPlatformSPN'
+    PowerPlatformSPN: '$(varPowerPlatformSPN)'
+    SolutionName: '$(varSolutionName)'
+    SolutionOutputFile: '$(Build.SourcesDirectory)\solutions\$(varSolutionName)_1.0.0.$(Build.BuildID).zip'
+    Managed: false
+    AsyncOperation: true
+    MaxAsyncWaitTime: '60'
+- task: PowerPlatformUnpackSolution@2
+  inputs:
+    SolutionInputFile: '$(Build.SourcesDirectory)\solutions\$(varSolutionName)_1.0.0.$(Build.BuildID).zip'
+    SolutionTargetFolder: '$(Build.SourcesDirectory)\solutions\src\$(varSolutionName)'
+    SolutionType: 'Both'
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'pac solution create-settings --solution-zip $(Build.SourcesDirectory)\solutions\$(varSolutionName)_1.0.0.$(Build.BuildID).zip --settings-file $(Build.SourcesDirectory)\solutions\$(varSolutionName)-settings.json'
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo commit all changes
+      git config user.email &quot;$(Build.RequestedForEmail)&quot;
+      git config user.name &quot;$(Build.RequestedFor)&quot;
+      git checkout -b main
+      git add --all
+      git commit -m &quot;Latest solution changes.&quot;
+      echo push code to new repo
+      git -c http.extraheader=&quot;AUTHORIZATION: bearer $(System.AccessToken)&quot; push origin main
+</code></pre>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="demo-2-exploring-an-unpacked-solution">Demo 2: Exploring an Unpacked Solution</h2>
+<div class="demo-box">
+<p><strong>Live Demo</strong>: Understanding the solution structure</p>
+</div>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="demo-3-deploy-solution">Demo 3: Deploy Solution</h2>
+<div class="demo-box">
+<p><strong>Live Demo</strong>: Deploy the solution</p>
+</div>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="deploy-solution">Deploy Solution</h3>
+<pre><code class="language-yaml">name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+variables:
+  - name: varSolutionName
+   # value: YOUR-OWN-VALUE-HERE
+    value: FirstPipeline
+  - name: varPowerPlatformSPN
+   # value: YOUR-OWN-VALUE-HERE 
+    value: Dataverse - mightora
+
+trigger: none
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- checkout: self
+  persistCredentials: true
+  clean: true
+- task: PowerPlatformToolInstaller@2
+  inputs:
+    DefaultVersion: true
+    AddToolsToPath: true
+
+- task: PowerPlatformPackSolution@2
+  inputs:
+    SolutionSourceFolder: '$(Build.SourcesDirectory)\solutions\src\$(varSolutionName)'
+    SolutionOutputFile: '$(Build.ArtifactStagingDirectory)\solutions\build\$(varSolutionName).zip'
+- task: PowerPlatformImportSolution@2
+  inputs:
+    authenticationType: 'PowerPlatformSPN'
+    PowerPlatformSPN: 'Dataverse - Backup'
+    Environment: 'https://mightora.crm11.dynamics.com/'
+    SolutionInputFile: '$(Build.ArtifactStagingDirectory)\solutions\build\$(varSolutionName).zip'
+    AsyncOperation: true
+    MaxAsyncWaitTime: '60'
+
+</code></pre>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="common-challenges--solutions">Common Challenges &amp; Solutions</h2>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="challenge-large-solutions">Challenge: Large Solutions</h3>
+<div class="warning-box">
+<p><strong>Problem</strong>:</p>
+<p>Solution export times out</p>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Use <code>AsyncOperation: true</code></li>
+<li>Increase <code>MaxAsyncWaitTime</code></li>
+<li>Split large solutions</li>
+</ul>
+</div>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="challenge-connection-references">Challenge: Connection References</h3>
+<div class="warning-box">
+<p><strong>Problem</strong>:</p>
+<p>Connections fail in target environment</p>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Use deployment settings files</li>
+<li>Parameterize connection references</li>
+<li>Update connections post-deployment</li>
+</ul>
+</div>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h3 id="challenge-environment-variables">Challenge: Environment Variables</h3>
+<div class="warning-box">
+<p><strong>Problem</strong>:</p>
+<p>Environment-specific values</p>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Use environment variables in solution</li>
+<li>Configure per environment</li>
+<li>Automate variable updates</li>
+</ul>
+</div>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>  
+<h2 id="what-next">What next</h2>
+<ul>
+<li><strong>Automated testing</strong> with Test Engine</li>
+<li><strong>Multi-solution</strong> management</li>
+<li><strong>Branch strategies</strong> for teams</li>
+<li><strong>Release management</strong></li>
+<li><strong>Monitoring &amp; alerting</strong></li>
+</ul>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="key-takeaways">Key Takeaways</h2>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="remember">Remember</h2>
+<div class="highlight-box">
+<p><strong>DevOps is a Journey, Not a Destination</strong></p>
+</div>
+<ul>
+<li>✅ Start with basic export/deploy</li>
+<li>✅ Add source control</li>
+<li>✅ Automate what you can</li>
+<li>✅ Iterate and improve</li>
+<li>✅ Share knowledge with team</li>
+</ul>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/power-platform/developer/cli/introduction">Power Platform CLI Documentation</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools">Azure DevOps Power Platform Tasks</a></li>
+<li><a href="https://docs.microsoft.com/en-us/power-platform/alm/">Power Platform ALM Guide</a></li>
+<li><a href="https://github.com/itweedie">Sample Templates</a></li>
+</ul>
+</section><section>
+<section data-background-iframe="https://techtweedie.github.io/posts/250627-d365ppugnational/" data-background-interactive="true" data-transition="zoom">
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+<h1 id="questions">Questions?</h1>
+<div class="highlight-box">
+<p><strong>You now have the tools to automate your Power Platform solution lifecycle!</strong></p>
+</div>
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: nowrap; min-width: 480px;">
+  <div style="text-align: center; flex: 0 0 auto;">
+    <h4>Slides</h4>
+    <a href="https://mars.mightora.io/yourls/250627" target="_blank">
+      <img src="link-to-presentation.png" alt="Link to Presentation" style="width: 320px; box-shadow: none; cursor: pointer;">
+    </a>
+  </div>
+  <div style="text-align: center; flex: 0 0 auto;">
+    <h4>Connect</h4>
+    <a href="https://iantweedie.biz" target="_blank">
+    <img src="qr.jpg" alt="QR Code" style="width: 310px;">
+    </a>
+  </div>
+</div>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide22.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+</section>
+</section><section>
+<section data-background-image="slides/LondonUG/Slide24.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+</section>
+</section>
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/reveal-hugo/object-assign.js></script>
+
+
+<script src="/reveal-js/dist/reveal.js"></script>
+
+
+  <script type="text/javascript" src="/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/zoom/zoom.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/notes/notes.js"></script>
+  
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = {"highlight_theme":"zenburn","history":true,"slide_number":true,"templates":{"grey":{"background":"#dddddd","transition":"convex"}}};
+  var revealHugoPageParams = {"background-image":"slides/LondonUG/Slide3.PNG","center":false,"controls":true,"controlstutorial":true,"custom_theme":"css/techTweedieLight.css","draft":false,"highlight_theme":"github","margin":0.2,"slide_number":true,"touch":true,"transition":"convex","transition_speed":"default"};
+
+  var revealHugoPlugins = {
+    
+    plugins: [RevealMarkdown,RevealHighlight,RevealZoom,RevealNotes]
+  };
+
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams),
+    camelize(revealHugoPlugins));
+
+  Reveal.initialize(options);
+</script>
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+    
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+  
+  
+
+  
+    
+  
+  
+
+  
+    
+  
+  
+
+  
+    
+  
+  
+
+  
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+  
+  <script type="text/javascript" src="/mermaid.min_16862243754454536095.js"></script>
+  <script type="text/javascript">
+    mermaid.initialize({startOnLoad: false});
+    let render = (event) => {
+      let mermaidElems = event.currentSlide.querySelectorAll('.mermaid');
+      if (!mermaidElems.length){
+          return
+      }
+      mermaidElems.forEach(mermaidElem => {
+          let processed = mermaidElem.getAttribute('data-processed');
+          if (!processed){
+              
+              mermaid.init(undefined, mermaidElem);
+          }
+      });
+    };
+    
+    render({currentSlide: Reveal.getCurrentSlide()});
+
+    Reveal.on('slidechanged', render);
+    Reveal.on('ready', render);
+  </script>
+
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+  
+
+<script type="text/javascript" id="MathJax-script" async src="/tex-svg_7522271970123696654.js"></script>
+
+    
+    
+  </body>
+</html>

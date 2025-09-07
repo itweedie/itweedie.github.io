@@ -1,0 +1,48 @@
+connection = '''
+
+
+<section data-background-image="/res/adodataverse-connection/image-1.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+## Create service connection
+
+
+</div>
+
+---
+
+<section data-background-video="/res/adodataverse-connection/msedge_sZ1PzZV0rU.mp4" data-background-video-muted data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat"> 
+</section>
+
+---
+
+<section data-background-image="/res/adodataverse-connection/msedge_npQM2NGwB4.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+**Client ID:** 
+
+**Tenant ID:** 
+
+**Secret:** 
+
+**Server URL:**
+
+</div>
+
+---
+
+<section data-background-video="/res/adodataverse-connection/msedge_Xe9SvGfBKl.mp4" data-background-size="contain"  data-background-video-muted>
+</section>
+
+---
+
+<section data-background-video="/res/adodataverse-connection/msedge_pD2wxdy2fZ.mp4" data-background-size="contain"  data-background-video-muted>
+</section>
+
+
+
+'''

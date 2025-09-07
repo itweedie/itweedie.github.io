@@ -1,0 +1,43 @@
+dataverse = '''
+
+
+<section data-background-image="/res/appreg-dataverse/entrabackground.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+## App Registration
+
+**Client ID:** 
+
+**Tenant ID:** 
+
+**Secret:** 
+
+
+</div>
+
+
+---
+
+<section data-background-video="/res/appreg-dataverse/createappreg.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+
+---
+
+<section data-background-image="/res/appreg-dataverse/dataverseadminhome.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
+
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+## Give Permission
+
+</div>
+
+---
+
+<section data-background-video="/res/appreg-dataverse/dataversegivepermission.mp4"  data-background-size="contain" data-background-video-muted>
+</section>
+
+
+'''

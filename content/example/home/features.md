@@ -3,7 +3,7 @@ weight = 10
 +++
 {{< slide id=included >}}
 
-## What's included?
+## What's included? q
 
 - All Reveal.js HTML, CSS and JS (v4.4.0)
 - All out-of-the-box Reveal.js themes
