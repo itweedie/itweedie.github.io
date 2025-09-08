@@ -16,7 +16,7 @@ controls = true
 center = false
 touch = true
 draft = false
-background-image = "slides/LondonUG/Slide3.PNG"
+background-image = "../slides/LondonUG/Slide3.PNG"
 [logo]
 # https://reveal-hugo.dzello.com/logo-example/#/3
 # src = "/techTweedie_150x150.png"
@@ -25,6 +25,16 @@ background-image = "slides/LondonUG/Slide3.PNG"
 # Side info
 # Transition options: zoom, concave, convex, slide, fade, none
 # Speed: slow, default, fast
+
+[reveal_hugo.multiplex]
+secret = "1751711897271988955"
+id = "a1b44278da16272f"
+url = "https://reveal-multiplex.glitch.me/"
+
+[[reveal_hugo.plugins]]
+name = "MultiplexMaster"
+source = "plugin/multiplex/master-combined.js"
+
 +++
 
 <style>
@@ -182,14 +192,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-<section id="2-welcome" data-background-image="slides/LondonUG/Slide1.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+<section id="2-welcome" data-background-image="../slides/LondonUG/Slide1.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
 </section>
 
 <aside class="notes">
   Welcome slide
 </aside>
-
-> TODO: Welcome Slide - roatating GIF
 
 ---
 
@@ -204,6 +212,10 @@ document.addEventListener('DOMContentLoaded', function() {
 - ✅ We want to perform **UI tests**
 
 </div>
+
+<aside class="notes">
+  Have you ever 
+</aside> 
 
 ---
 
@@ -227,7 +239,7 @@ She's followed TechTweedie YouTube videos and has created YAML pipelines...
 
 ---
 
-<section  data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+<section  data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
 
 
 # Today's Agenda
@@ -254,7 +266,7 @@ She's followed TechTweedie YouTube videos and has created YAML pipelines...
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide5.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+<section data-background-image="../slides/LondonUG/Slide5.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
 
 
 <aside class="notes">
@@ -265,7 +277,7 @@ She's followed TechTweedie YouTube videos and has created YAML pipelines...
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide7.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+<section data-background-image="../slides/LondonUG/Slide7.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
 
 <aside class="notes">
   iNTRO 1
@@ -281,9 +293,9 @@ She's followed TechTweedie YouTube videos and has created YAML pipelines...
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 
-## Demo 1: Fork the Repository
+## Demo: Fork the Repository
 
 <div class="demo-box">
 
@@ -310,9 +322,9 @@ She's followed TechTweedie YouTube videos and has created YAML pipelines...
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 
-## Demo 2: Create Test with CodeGen
+## Demo: Create Test with CodeGen
 
 <div class="demo-box">
 
@@ -330,9 +342,9 @@ TODO: *Placeholder for video: CodeGen creating test demo*
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 
-## Demo 3: Create App Registration
+## Demo: Create App Registration
 
 <div class="demo-box">
 
@@ -356,15 +368,14 @@ TODO: *Placeholder for video: CodeGen creating test demo*
 ---
 
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 
-## Demo 4: Install Playwright Extension
+## Demo: Install Playwright Extension
 
 <div class="demo-box">
 
 **Demo**: Installing the FREE Playwright for Power Platform extension from Azure DevOps Marketplace
 
-*Placeholder for video: Extension installation demo*
 
 </div>
 
@@ -376,7 +387,7 @@ TODO: *Placeholder for video: CodeGen creating test demo*
 
 ---
 
-<section data-background-image="vsmarketplace-playwright.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../vsmarketplace-playwright.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 <div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
@@ -389,12 +400,12 @@ TODO: *Placeholder for video: CodeGen creating test demo*
 
 ---
 
-<section data-background-video="install-playwright-extension.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="../install-playwright-extension.mp4" data-background-size="contain"  data-background-video-muted >
 </section>
 
 ---
 
-<section data-background-image="devops-org-home-screen.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../devops-org-home-screen.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 <div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
@@ -409,23 +420,23 @@ TODO: *Placeholder for video: CodeGen creating test demo*
 
 ---
 
-<section data-background-video="create-pipeline.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="../create-pipeline.mp4" data-background-size="contain"  data-background-video-muted >
 </section>
 
 
 ---
 
-<section data-background-video="run-pipeline.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="../run-pipeline.mp4" data-background-size="contain"  data-background-video-muted >
 </section>
 
 ---
 
-<section data-background-video="playwright-test.webm" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="../playwright-test.webm" data-background-size="contain"  data-background-video-muted >
 </section>
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Trace Viewer
@@ -438,14 +449,14 @@ TODO: *Placeholder for video: CodeGen creating test demo*
 ---
 
 
-<section data-background-video="playwright-trace-viewer.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="../playwright-trace-viewer.mp4" data-background-size="contain"  data-background-video-muted >
 </section>
 
 
 ---
 
 {{% section %}}
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## What We've Accomplished
@@ -468,7 +479,7 @@ TODO: *Placeholder for video: CodeGen creating test demo*
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Recommended Project Structure
@@ -511,48 +522,60 @@ await expect(page.locator('.success-message')).toBeVisible();
 
 </div>
 
-<div class="demo-box">
-
-**Live Demo**: Setting up the export pipeline in Azure DevOps
-
-- https://dev.azure.com/TechTweedie/Tutorials
-- https://make.powerapps.com/environments/b50bfa1f-d077-e56f-aeaa-b9f92d3b79ad/solutions
-
-
-</div>
-
 ---
 
 
 ## Playwright Pipeline YAML
 
 ```yaml
-name: PlaywrightUITests
+name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 
-trigger: 
-- main
+trigger:
+- none
 
 pool:
-  vmImage: 'windows-latest'
-
-variables:
-- group: playwright-variables
+  vmImage: windows-latest
 
 steps:
-- task: PlaywrightForPowerPlatform@1
+- checkout: self
+
+- task: mightoria-playwrightForPowerPlatformAdvanced@1
   inputs:
-    testDirectory: '$(Build.SourcesDirectory)/tests'
-    environmentUrl: '$(TEST_ENVIRONMENT_URL)'
-    serviceConnection: '$(POWER_PLATFORM_CONNECTION)'
-    
+    testLocation: '$(System.DefaultWorkingDirectory)/tests'
+    browser: 'chromium'
+    trace: 'on'
+    outputLocation: '$(System.DefaultWorkingDirectory)'
+    appUrl: 'https://techtweedie.crm11.dynamics.com/main.aspx?appid=6653f9fc-b74b-f011-877a-6045bd0e2fc6'
+    appName: 'MDA Playwright Testing'
+    o365Username: 'playwright-test@Tweed.technology'
+    o365Password: '$(o365Password)'
+    tenantId: '63759d9f-bfca-4f52-ae98-8f2f1d7bc173'
+    dynamicsUrl: 'techtweedie.crm11.dynamics.com'
+    clientId: '6f3163d1-bd41-4f0e-8725-980f05d2a82f'
+    clientSecret: '$(ClientSecret)'
+    userRole: 'System Administrator'
+    team: 'orgbfc42920'
+    businessUnit: 'orgbfc42920'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/playwright-report'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(System.DefaultWorkingDirectory)/playwright-report/playwright-report.zip'
+    replaceExistingArchive: true
+
+
+- publish: $(System.DefaultWorkingDirectory)/playwright-report/
+  artifact: playwright-report
+  # always create the artifact, this is useful for debugging failed tests
+  condition: always()
+
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/test-results.xml'
-    
-- task: PublishHtmlReport@1
-  inputs:
-    reportDir: '$(Build.SourcesDirectory)/playwright-report'
+    testResultsFiles: '**/TEST-*.xml'
+
 ```
 
 <aside class="notes">
@@ -562,14 +585,14 @@ steps:
 ---
 
 
-## The Power of Disposable Test Users
+## The Power of Re-usable Test Users
 
 <div class="highlight-box">
 
 **Created & Cleaned Up Automatically**
 
-- 🎭 **Runtime User Creation**: Test users are created when tests run
-- 🔐 **Automatic Permissions**: Users get the exact permissions they need  
+- 🎭 **Security**: Test users get Just In Time permissions
+- 🔐 **Reusable users**: Same user account used multiple times  
 - 🗑️ **Auto Cleanup**: No test data pollution in your environment
 - 🔄 **Consistent Results**: Fresh environment every time
 
@@ -585,21 +608,21 @@ steps:
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
-## What Makes This Different?
+## Why?
 
 <div class="highlight-box">
 
-**Playwright for Makers vs Traditional Testing**
+**Playwright for Power Platform (P4PP) vs Traditional Testing**
 
 - ❌ **Traditional**: Write complex code, manage test infrastructure  
-- ✅ **Playwright for Makers**: Record actions, get code automatically
+- ✅ **P4PP**: Record actions, get code automatically
 - ❌ **Traditional**: Separate test management tools
-- ✅ **Playwright for Makers**: Tests run in your existing DevOps pipeline  
+- ✅ **P4PP**: Tests run in your existing DevOps pipeline  
 - ❌ **Traditional**: Manage test users and data manually
-- ✅ **Playwright for Makers**: Disposable users created automatically
+- ✅ **P4PP**: Disposable users created automatically
 
 </div>
 
@@ -611,7 +634,7 @@ steps:
 
 {{% section %}}
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Common Questions
@@ -633,7 +656,7 @@ steps:
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### "Do I need to be a developer?"
@@ -651,7 +674,7 @@ steps:
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ### "What about test data?"
@@ -671,7 +694,7 @@ steps:
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Key Takeaways
@@ -692,7 +715,7 @@ steps:
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 ## Remember Jessica?
@@ -715,62 +738,40 @@ steps:
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
-</section>
-
-## Resources
-
-- [Playwright for Power Platform Extension (FREE)](https://marketplace.visualstudio.com/items)
-- [Starter Repository Template](https://github.com/itweedie/playwright-powerplatform-template)
-- [CodeGen Documentation](https://playwright.dev/docs/codegen)
-- [Power Platform Testing Best Practices](https://docs.microsoft.com/power-platform/testing)
-- [Azure DevOps Pipeline Examples](https://github.com/itweedie/playwright-pipelines)
-
-
----
-
-<section data-background-iframe="https://techtweedie.github.io/posts/250627-d365ppugnational/" data-background-interactive="true" data-transition="zoom">
+<section data-background-iframe="https://techtweedie.github.io/posts/250910-d365ppugnational/" data-background-interactive="true" data-transition="zoom">
 
 </section>
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
 # Questions? 
 
-<div class="highlight-box">
-
-**You now have everything you need to bring one-click UI testing to your Power Platform apps!**
-
-**The missing piece of your CI/CD puzzle is complete: Commit → Test → Deploy**
-
-</div>
-
 <div style="display: flex; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: nowrap; min-width: 480px;">
   <div style="text-align: center; flex: 0 0 auto;">
     <h4>Slides</h4>
-    <a href="https://mars.mightora.io/yourls/250627" target="_blank">
-      <img src="link-to-presentation.png" alt="Link to Presentation" style="width: 320px; box-shadow: none; cursor: pointer;">
+    <a href="https://techtweedie.github.io/posts/250910-d365ppugnational/" target="_blank">
+      <img src="../image-1.png" alt="Link to Presentation" style="width: 320px; box-shadow: none; cursor: pointer;">
     </a>
   </div>
   
   <div style="text-align: center; flex: 0 0 auto;">
     <h4>Connect</h4>
     <a href="https://iantweedie.biz" target="_blank">
-    <img src="qr.jpg" alt="QR Code" style="width: 310px;">
+    <img src="../qr.jpg" alt="QR Code" style="width: 310px;">
     </a>
   </div>
 </div>
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide22.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+<section data-background-image="../slides/LondonUG/Slide22.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
 
 </section>
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide24.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
+<section data-background-image="../slides/LondonUG/Slide24.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
 </section>
