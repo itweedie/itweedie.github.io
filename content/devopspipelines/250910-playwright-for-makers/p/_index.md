@@ -760,7 +760,7 @@ steps:
   <div style="text-align: center; flex: 0 0 auto;">
     <h4>Connect</h4>
     <a href="https://iantweedie.biz" target="_blank">
-    <img src="../qr.jpg" alt="QR Code" style="width: 310px;">
+    <img src="/about-iantweedie/qr.jpg" alt="QR Code" style="width: 310px;">
     </a>
   </div>
 </div>
