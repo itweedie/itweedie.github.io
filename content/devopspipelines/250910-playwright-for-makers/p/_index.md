@@ -372,13 +372,6 @@ TODO: *Placeholder for video: CodeGen creating test demo*
 <section data-background-video="/playwright-on-power-platform/02.mp4" data-background-size="contain"  data-background-video-muted >
 </section>
 
-
----
-
-<section data-background-video="/playwright-on-power-platform/03.mp4" data-background-size="contain"  data-background-video-muted >
-</section>
-
-
 ---
 
 <section data-background-video="/playwright-on-power-platform/04.mp4" data-background-size="contain"  data-background-video-muted >
