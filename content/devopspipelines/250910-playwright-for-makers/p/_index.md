@@ -219,26 +219,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-## Meet Jessica: The Modern Maker
-
-<div class="demo-box">
-
-**Jessica's Journey**
-
-She's a low-code developer who has been increasingly successful with Power Platform solutions.
-
-She's followed TechTweedie YouTube videos and has created YAML pipelines...
-
-**But there's a gap:** *How can she add testing? She's not a programmer - is there a light-touch approach?*
-
-</div>
-
-<aside class="notes">
-  Introduce Jessica as our persona representing makers who want to add automated testing
-</aside> 
-
----
-
 <section  data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
 
 
@@ -771,29 +751,6 @@ steps:
 - 🔄 **Reusable users eliminate cleanup** - Fresh permissions every time
 - 📊 **Rich reports show exactly what happened** - No guessing games
 - 🆓 **It's completely FREE** - No licensing costs for the extension
-
----
-
-<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
-</section>
-
-## Remember Jessica?
-
-<div class="demo-box">
-
-**She started where you are now...**
-
-- ✅ Had working Power Platform solutions
-- ✅ Played with DevOps pipelines for deployment  
-- ❌ But testing was still manual and time-consuming
-
-**Now she has:**
-- 🎭 **One-click UI testing** that runs automatically
-- 📈 **Confidence in deployments** with automated validation
-- ⏰ **Time back in her day** for building instead of testing
-- 🚀 **Happy users** who experience fewer bugs
-
-</div>
 
 ---
 
