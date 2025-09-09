@@ -295,6 +295,28 @@ She's followed TechTweedie YouTube videos and has created YAML pipelines...
 
 <section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 
+## Pre-requisites
+
+<div class="demo-box">
+
+- GitHub Account
+- Azure DevOps with paralisum authorised 
+- Azure Devops and Github connected
+- Power Platform Environment 
+- VSCode with GIT installed
+
+</div>
+
+<aside class="notes">
+  Start with a working template that has everything pre-configured
+</aside>
+
+</section>
+
+---
+
+<section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+
 ## Demo: Fork the Repository
 
 <div class="demo-box">
@@ -338,6 +360,50 @@ TODO: *Placeholder for video: CodeGen creating test demo*
   Let Playwright write the test code for you by recording your actions
 </aside>
 
+</section>
+
+---
+
+<section data-background-video="/playwright-on-power-platform/01-boilerplatefile.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+
+---
+
+<section data-background-video="/playwright-on-power-platform/02.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+
+
+---
+
+<section data-background-video="/playwright-on-power-platform/03.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+
+
+---
+
+<section data-background-video="/playwright-on-power-platform/04.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+
+
+---
+
+<section data-background-video="/playwright-on-power-platform/05.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+
+
+---
+
+<section data-background-video="/playwright-on-power-platform/06.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+
+---
+
+<section data-background-video="/playwright-on-power-platform/07.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
+
+---
+
+<section data-background-video="/playwright-on-power-platform/08.mp4" data-background-size="contain"  data-background-video-muted >
 </section>
 
 ---

@@ -64,9 +64,14 @@ iantweedie = '''
 <section data-background-image="/about-iantweedie/ug-background.png"  data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
+
 ![alt text](/about-iantweedie/ug-logo.png)
 
+<div style="background-color:  #F0F8FF; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
 # North East
+
+</div>
 
 </section>
 
