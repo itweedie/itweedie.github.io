@@ -754,7 +754,7 @@ steps:
 <section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
-# Thankyou & Questions? 
+# Thankyou & Questions?
 
 <div style="display: flex; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: nowrap; min-width: 480px;">
   <div style="text-align: center; flex: 0 0 auto;">
