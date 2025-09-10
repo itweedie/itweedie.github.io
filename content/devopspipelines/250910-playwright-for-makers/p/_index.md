@@ -11,8 +11,8 @@ highlight_theme = "github"
 transition = "convex"
 transition_speed = "default"
 slide_number = true
-controlsTutorial = true
-controls = true
+controlsTutorial = false
+controls = false
 center = false
 touch = true
 draft = false
@@ -25,15 +25,6 @@ background-image = "../slides/LondonUG/Slide3.PNG"
 # Side info
 # Transition options: zoom, concave, convex, slide, fade, none
 # Speed: slow, default, fast
-
-[reveal_hugo.multiplex]
-secret = "1751711897271988955"
-id = "a1b44278da16272f"
-url = "https://reveal-multiplex.glitch.me/"
-
-[[reveal_hugo.plugins]]
-name = "MultiplexMaster"
-source = "plugin/multiplex/master-combined.js"
 
 +++
 
@@ -777,6 +768,18 @@ steps:
     <h4>Connect</h4>
     <a href="https://iantweedie.biz" target="_blank">
     <img src="/about-iantweedie/qr.jpg" alt="QR Code" style="width: 310px;">
+    </a>
+  </div>  
+  <div style="text-align: center; flex: 0 0 auto;">
+    <h4>Connect</h4>
+    <a href="https://iantweedie.biz" target="_blank">
+    <img src="image-1.png" alt="QR Code" style="width: 310px;">
+    </a>
+  </div>  
+  <div style="text-align: center; flex: 0 0 auto;">
+    <h4>Feedback</h4>
+    <a href="https://iantweedie.biz" target="_blank">
+    <img src="image.png" alt="QR Code" style="width: 310px;">
     </a>
   </div>
 </div>
