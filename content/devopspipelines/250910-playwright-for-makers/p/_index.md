@@ -754,7 +754,7 @@ steps:
 <section data-background-image="../slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
-# Questions? 
+# Thankyou & Questions? 
 
 <div style="display: flex; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: nowrap; min-width: 480px;">
   <div style="text-align: center; flex: 0 0 auto;">
@@ -771,7 +771,7 @@ steps:
     </a>
   </div>  
   <div style="text-align: center; flex: 0 0 auto;">
-    <h4>Connect</h4>
+    <h4>Agenda</h4>
     <a href="https://iantweedie.biz" target="_blank">
     <img src="image-1.png" alt="QR Code" style="width: 310px;">
     </a>
@@ -784,13 +784,4 @@ steps:
   </div>
 </div>
 
----
 
-<section data-background-image="../slides/LondonUG/Slide22.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
-
-</section>
-
----
-
-<section data-background-image="../slides/LondonUG/Slide24.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="convex">
-</section>
