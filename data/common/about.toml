@@ -2,7 +2,7 @@ iantweedie = '''
 
 
 <section data-auto-animate>
-<div style="text-align: left; align-items: center; ">
+<div style="text-align: left; align-items: center; font-size: 0.8em;">
 
 ### Hello, I'm Ian Tweedie!
 
@@ -11,7 +11,7 @@ iantweedie = '''
 </div>
 </section>
 <section data-auto-animate>
-<div style="text-align: left; align-items: center; ">
+<div style="text-align: left; align-items: center; font-size: 0.8em;">
 
 ### Hello, I'm Ian Tweedie!
 
@@ -24,7 +24,7 @@ iantweedie = '''
 </section>
 
 <section data-auto-animate>
-<div style="text-align: left; align-items: center; ">
+<div style="text-align: left; align-items: center; font-size: 0.8em;">
 
 ### Hello, I'm Ian Tweedie!
 
@@ -45,7 +45,7 @@ iantweedie = '''
 </div>
 </section>
 <section data-auto-animate>
-<div style="text-align: left; align-items: center; ">
+<div style="text-align: left; align-items: center; font-size: 0.8em;">
 
 ### Hello, I'm Ian Tweedie!
 
@@ -65,7 +65,7 @@ iantweedie = '''
 </br>
 
 #### Community Involvement
-- 16+ Community tools, with more than 500k monthly hits
+- 16+ Community tools, hosted at [mightora.io](https://mightora.io) with more than 500k monthly hits
 - Trustee for Digital Transformation
 - Newcastle User Group Leader
 - Mentoring Hub
