@@ -722,8 +722,6 @@ MyPowerPlatformProject/
 
 ---
 
-<section data-background-image="slides/LondonUG/Slide3.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
-</section>
 
 ### Export Pipeline YAML
 
