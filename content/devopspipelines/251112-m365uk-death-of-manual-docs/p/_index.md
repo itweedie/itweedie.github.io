@@ -349,3 +349,173 @@ We Converted our exported solution in to
 
 ![alt text](feedback.png)
 
+[https://go.iantweedie.biz/feedback](https://go.iantweedie.biz/feedback)
+
+---
+
+## Extra content - the YAML Pipeline
+
+```yaml
+
+name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+variables:
+  - name: varPowerPlatformSPN
+    value: Dataverse - Backup
+  - name: varSolutionName
+    value: ExpenseReportManager
+  - name: varWebsiteId
+    value: 98a716a8-c592-476c-bc5d-aefde10a8b5d
+  - name: varUnpackedSolution
+    value: $(Build.SourcesDirectory)\src\solutions\$(varSolutionName)
+  - name: varWikiLocation
+    value: $(Build.SourcesDirectory)\wiki\solutions\$(varSolutionName)
+  - name: varWikiOutput
+    value: $(Build.SourcesDirectory)\wiki-ouput\solutions\$(varSolutionName)
+  - name: varWord
+    value: $(Build.SourcesDirectory)\word\solutions\$(varSolutionName)
+
+trigger: none
+
+pool:
+  vmImage: 'windows-2019'
+
+steps:
+
+## Check out repo
+- checkout: self
+  persistCredentials: true
+  clean: true
+
+## Install Power Platform Tool Installer
+- task: PowerPlatformToolInstaller@2
+  inputs:
+    DefaultVersion: true
+    AddToolsToPath: true
+
+## Set Solution Version
+- task: PowerPlatformSetSolutionVersion@2
+  inputs:
+    authenticationType: 'PowerPlatformSPN'
+    PowerPlatformSPN: '$(varPowerPlatformSPN)'
+    SolutionName: '$(varSolutionName)'
+    SolutionVersionNumber: '1.0.0.$(Build.BuildID)'
+
+## Export Solution - managed
+- task: PowerPlatformExportSolution@2
+  inputs:
+    authenticationType: 'PowerPlatformSPN'
+    PowerPlatformSPN: '$(varPowerPlatformSPN)'
+    SolutionName: '$(varSolutionName)'
+    SolutionOutputFile: '$(Build.ArtifactStagingDirectory)\$(varSolutionName)_managed.zip'
+    Managed: true
+    AsyncOperation: true
+    MaxAsyncWaitTime: '60'
+
+## Export Solution - unmanaged
+- task: PowerPlatformExportSolution@2
+  inputs:
+    authenticationType: 'PowerPlatformSPN'
+    PowerPlatformSPN: '$(varPowerPlatformSPN)'
+    SolutionName: '$(varSolutionName)'
+    SolutionOutputFile: '$(Build.ArtifactStagingDirectory)\$(varSolutionName).zip'
+    Managed: false
+    AsyncOperation: true
+    MaxAsyncWaitTime: '60'
+
+## Unpack Solution
+- task: PowerPlatformUnpackSolution@2
+  inputs:
+    SolutionInputFile: '$(Build.ArtifactStagingDirectory)\$(varSolutionName).zip'
+    SolutionTargetFolder: '$(Build.SourcesDirectory)\src\solutions\$(varSolutionName)'
+    SolutionType: 'Both'
+
+## Document out our Solution
+### Option Sets
+- task: mightoraDocumentOptionSets@1
+  inputs:
+    unpackedSolutionPath: '$(varUnpackedSolution)'
+    outputLocation: '$(varWikiLocation)'
+
+### Security Roles
+- task: documentRoles@2
+  inputs:
+    locationOfUnpackedSolution: '$(varUnpackedSolution)'
+    wikiLocation: '$(varWikiLocation)'
+    useSingleFile: true
+
+### Solution Manifest
+- task: documentSolutionManifest@1
+  inputs:
+    solutionXmlPath: '$(varUnpackedSolution)/Other/Solution.xml'
+    outputLocation: '$(varWikiLocation)'
+
+### Tables
+- task: documentSolutionTables@2
+  inputs:
+    locationOfUnpackedSolution: '$(varUnpackedSolution)'
+    wikiLocation: '$(varWikiLocation)'
+    useSingleFile: true
+
+### Table Relationships
+- task: documentTableRelationships@2
+  inputs:
+    locationOfUnpackedSolution: '$(varUnpackedSolution)'
+    wikiLocation: '$(varWikiLocation)'
+    useSingleFile: true
+    createFullERD: true
+
+### Table Relationships ER Diagram
+- task: mightora-powerplatform-documentationgenerator-erdiagram@1
+  inputs:
+    locationOfUnpackedSolution: '$(varUnpackedSolution)'
+    wikiLocation: '$(varWikiLocation)'
+
+### Workflows
+- task: mightoraDocumentWorkflows@1
+  inputs:
+    solutionPath: '$(varUnpackedSolution)'
+    outputLocation: '$(varWikiLocation)'
+
+
+## Make documentation ready for export
+
+### Convert diagrams
+- task: convertConvertInlineDiagrams@1
+  inputs:
+    locationOfSourceMDFiles: '$(varWikiLocation)'
+    outputLocation: '$(varWikiOutput)'
+
+### Convert to Word
+- task: convertMarkdownToDocx@1
+  continueOnError: true
+  inputs:
+    locationOfMDFiles: '$(varWikiOutput)'
+    outputLocation: '$(varWord)'
+    includeTOC: true
+
+## Push to WiKi
+- task: mightora-UploadMDToWiki@0
+  continueOnError: true
+  inputs:
+    ADOBaseUrl: '$(System.CollectionUri)'
+    wikiSource: '$(varWikiOutput)'
+    MDRepositoryName: '$(Build.Repository.Name)'
+    MDVersion: '$(Build.BuildNumber)'
+    MDTitle: 'MD for $(Build.Repository.Name)'
+    WikiDestination: 'UploadedFromPipeline'
+    IncludePageLink: true
+    DeleteOrphanedPages: true
+  env:
+    SYSTEM_ACCESSTOKEN: $(PAT)
+    
+## Commit to Repo
+- task: mightoraCommitToRepo@2
+  inputs:
+    commitMsg: 'Latest solution changes.'
+    branchName: 'main'
+    pushStrategy: 'normal'
+
+
+
+```
