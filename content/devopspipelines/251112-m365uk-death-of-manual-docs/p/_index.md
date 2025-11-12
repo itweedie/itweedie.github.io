@@ -199,7 +199,7 @@ draft = false
 
 ## What can it do
 
-- Option sets
+- Choices
 - Security Roles
 - Solution Manifest
 - Tables
