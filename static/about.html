@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complex Grid Layout</title>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    height: 400px; /* Example height */
+  }
+  .grid-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+  .merged-column {
+    grid-row: span 2;
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item merged-column">
+    <p>This is the merged first column.</p>
+  </div>
+  <div class="grid-item">
+    <h3>Work</h3>
+    <ul>
+        <li>Senior Technical Consultant</li>
+        <li>Technical Coach</li>
+    </ul>
+  </div>
+  <div class="grid-item">
+    <p>Dummy text 2</p>
+  </div>
+  <div class="grid-item">
+    <p>Dummy text 3</p>
+  </div>
+  <div class="grid-item">
+    <p>Dummy text 4</p>
+  </div>
+</div>
+
+</body>
+</html>
