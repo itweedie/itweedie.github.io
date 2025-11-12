@@ -1,6 +1,6 @@
 +++
-title = "Playwright for Makers – Bringing One-Click UI Tests to Model-Driven Apps & Power Pages"
-description = "A 40-minute, demo-heavy walkthrough that adds the missing 'test' step to your low-code CI/CD story"
+title = "Death Of Manual Docs - A DevOps Approach to Power Platform Documentation"
+description = "A DevOps Approach to Power Platform Documentation"
 outputs = ["Reveal"]
 [reveal_hugo]
 # Theme - https://revealjs.com/themes/
