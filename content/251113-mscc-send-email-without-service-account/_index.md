@@ -1,6 +1,6 @@
 +++
-title = "Death Of Manual Docs - A DevOps Approach to Power Platform Documentation"
-description = "A DevOps Approach to Power Platform Documentation"
+title = "Bulletproof Your Email Flows - Secure, Scalable Email in Power Automate with Microsoft Graph"
+description = "Secure, Scalable Email in Power Automate with Microsoft Graph"
 outputs = ["Reveal"]
 [reveal_hugo]
 # Theme - https://revealjs.com/themes/
