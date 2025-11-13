@@ -498,7 +498,8 @@ GIF showing connector creation process
 8. Click **Create**
 
 </aside>
-mate 
+
+
 ---
 
 ## Add Your First Connection
