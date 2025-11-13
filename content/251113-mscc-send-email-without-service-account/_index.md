@@ -180,7 +180,7 @@ Overview of what we'll accomplish in this session
 
 ---
 
-## Step 1 - Log in to Entra
+## Log in to Entra
 
 <div class="instruction-item">
 
@@ -225,16 +225,13 @@ First step is accessing Entra portal
 
 ## Important Security Note
 
-<div class="warning-box">
+<aside class="notes">
+Important security warning about the broad permissions
 
 **NOTE:** This permission lets you send emails as anyone, however we will restrict this later. 
 
 **DO NOT MISUSE - IT IS POSSIBLE TO TRACK WHERE AN EMAIL CAME FROM**
 
-</div>
-
-<aside class="notes">
-Important security warning about the broad permissions
 </aside>
 
 ---
@@ -243,44 +240,11 @@ Important security warning about the broad permissions
 </section>
 
 <aside class="notes">
-GIF showing admin granting consent
-</aside>
-
----
-
-## Limiting Application Permissions in Exchange
-
-<div class="highlight-box">
-
-Our next step is to limit what permissions our application will have within Exchange.
 
 Currently `mail.send` allows sending from **any** user's email account.
 
 **This stage needs an Exchange Online Administrator.**
 
-</div>
-
-<aside class="notes">
-Now we need to restrict the broad permissions we just granted
-</aside>
-
----
-
-## Step 5 - Set up Mail Enabled Security Group
-
-<div class="demo-box">
-
-When we restrict access for an application registration, we need a **Mail-enabled Security group**.
-
-1. Go to **Microsoft 365 Admin center** (admin.microsoft.com)
-2. Open **Teams and Groups**
-3. Select **Security** from menu
-4. Click **Add new security group**
-
-</div>
-
-<aside class="notes">
-First step in restriction - create the security group
 </aside>
 
 ---
@@ -289,26 +253,14 @@ First step in restriction - create the security group
 </section>
 
 <aside class="notes">
-GIF showing security group creation
-</aside>
 
----
+When we restrict access for an application registration, we need a **Mail-enabled Security group**.
 
-## Step 2 - Access PowerShell
+1. Go to **Microsoft 365 Admin center** (admin.microsoft.com)
+2. Open **Teams and Groups**
+3. Select **Security** from menu
+4. Click **Add new security group**
 
-<div class="instruction-item">
-<div class="instruction-text">
-
-We'll use **PowerShell** from **Cloud Shell**:
-
-1. Navigate to Exchange Online (admin.cloud.microsoft/exchange)
-2. Click **Cloud Shell** button in top right corner
-
-</div>
-</div>
-
-<aside class="notes">
-Setting up PowerShell environment
 </aside>
 
 ---
@@ -317,7 +269,13 @@ Setting up PowerShell environment
 </section>
 
 <aside class="notes">
-GIF showing Cloud Shell access
+
+We'll use **PowerShell** from **Cloud Shell**:
+
+1. Navigate to Exchange Online (admin.cloud.microsoft/exchange)
+2. Click **Cloud Shell** button in top right corner
+
+
 </aside>
 
 ---
