@@ -120,11 +120,11 @@ draft = false
 
 ---
 
-## The Death of Manual Docs
+## Bulletproof Your Email Flows
 
 </br>
 
-## A DevOps Approach to Power Platform Documentation
+#### Secure, Scalable Email in Power Automate with Microsoft Graph
 
 <aside class="notes">
   Welcome slide
@@ -134,11 +134,15 @@ draft = false
 
 ## The Problem
 
-<div class="highlight-box">
+<div class="demo-box">
 
-- ✅ We have a solution
-- ✅ Keeps getting updated
-- ✅ Certainty that its correct
+Want to send emails from **Power Automate** but can't or don't want to use a service account?
+
+Tired of dealing with:
+- Conditional Access Policies
+- Password expirations  
+- Frequent logins
+- Re-confirming security information
 
 </div>
 
@@ -155,46 +159,6 @@ draft = false
 ---
 
 {{< slide content="common.about.iantweedie" >}}
-
----
-
-## Pre-requisites
-
-<div class="demo-box">
-
-- Already exporting out our solution
-- Using Azure DevOps
-- We are using a YAML pipeline
-- *(I have a presentation on how to do this - [click here](https://itweedie.github.io/devopspipelines/250627-build-your-first-devops-pipeline/#/15))*
-
-</div>
-
-<aside class="notes">
-  The pipeline I am going to use today continues on from another presentation last year, link to that is here. 
-</aside>
-
-</section>
-
-
----
-
-## Send Emails from Flow without a Service Account
-
-<div class="demo-box">
-
-Want to send emails from **Power Automate** but can't or don't want to use a service account?
-
-Tired of dealing with:
-- Conditional Access Policies
-- Password expirations  
-- Frequent logins
-- Re-confirming security information
-
-</div>
-
-<aside class="notes">
-Introduction to the problem we're solving today
-</aside>
 
 ---
 
@@ -216,24 +180,12 @@ Overview of what we'll accomplish in this session
 
 ---
 
-## Create the App Registration
-
-<div class="warning-box">
-For this section you will need the help of a **Global Administrator**
-</div>
-
-<aside class="notes">
-Starting with app registration creation - need admin help
-</aside>
-
----
-
 ## Step 1 - Log in to Entra
 
 <div class="instruction-item">
-<div class="instruction-text">
+
 By default most users will have the ability to go to **https://entra.microsoft.com** and log in with your user account.
-</div>
+
 </div>
 
 <aside class="notes">
