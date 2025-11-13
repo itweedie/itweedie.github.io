@@ -194,48 +194,16 @@ First step is accessing Entra portal
 
 ---
 
-## Step 2 - Create the App Registration
+<section data-background-video="brave_T1ciTpvWmI.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
 
-<div class="demo-box">
+<aside class="notes">
 
 1. When you are on the Entra Overview page, open up **Identity**
 2. Navigate to **Applications** → **App Registrations**
 3. Select **New Registration**
 4. Give your new app registration a name and click next
 
-</div>
-
-<aside class="notes">
-Walking through the app registration creation process
-</aside>
-
----
-
-<section data-background-video="brave_T1ciTpvWmI.mp4" data-background-size="contain"  data-background-video-muted >
-</section>
-
-<aside class="notes">
-GIF showing the app registration creation process
-</aside>
-
----
-
-## Step 3 - Add API Permission
-
-<div class="highlight-box">
-
-We need to give our App Registration permission to talk to Exchange Online:
-
-1. Click on **API Permission** in left menu
-2. Click **Add permission**
-3. Select **Application Permission**
-4. Search for **mail.send**
-5. Open **Mail** option and select **mail.send**
-
-</div>
-
-<aside class="notes">
-Adding the necessary API permissions
 </aside>
 
 ---
@@ -244,7 +212,13 @@ Adding the necessary API permissions
 </section>
 
 <aside class="notes">
-GIF showing API permission configuration
+
+1. Click on **API Permission** in left menu
+2. Click **Add permission**
+3. Select **Application Permission**
+4. Search for **mail.send**
+5. Open **Mail** option and select **mail.send**
+
 </aside>
 
 ---
@@ -261,22 +235,6 @@ GIF showing API permission configuration
 
 <aside class="notes">
 Important security warning about the broad permissions
-</aside>
-
----
-
-## Step 4 - Grant Admin Consent
-
-<div class="demo-box">
-
-1. You'll notice **Grant admin consent** is grayed out
-2. This is because we lack administrative roles
-3. **Ask a Global administrator to grant admin consent for you**
-
-</div>
-
-<aside class="notes">
-Need admin to grant consent for the permissions
 </aside>
 
 ---
