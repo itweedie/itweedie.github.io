@@ -194,7 +194,7 @@ First step is accessing Entra portal
 
 ---
 
-<section data-background-video="brave_T1ciTpvWmI.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="brave_T1ciTpvWmI.mp4" data-background-size="contain"  data-background-video-loop="false"  data-background-video-muted >
 </section>
 
 <aside class="notes">
@@ -208,7 +208,7 @@ First step is accessing Entra portal
 
 ---
 
-<section data-background-video="brave_pyTrq7A2fH.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="brave_pyTrq7A2fH.mp4" data-background-size="contain"  data-background-video-loop="false"  data-background-video-muted >
 </section>
 
 <aside class="notes">
@@ -236,7 +236,7 @@ Important security warning about the broad permissions
 
 ---
 
-<section data-background-video="msedge_b9Xouwxtt7.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="msedge_b9Xouwxtt7.mp4" data-background-size="contain"  data-background-video-loop="false"  data-background-video-muted >
 </section>
 
 <aside class="notes">
@@ -249,7 +249,7 @@ Currently `mail.send` allows sending from **any** user's email account.
 
 ---
 
-<section data-background-video="msedge_JAl1jlS395-B.mp4.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="msedge_JAl1jlS395-B.mp4.mp4" data-background-size="contain"  data-background-video-loop="false"   data-background-video-muted >
 </section>
 
 <aside class="notes">
@@ -265,7 +265,7 @@ When we restrict access for an application registration, we need a **Mail-enable
 
 ---
 
-<section data-background-video="msedge_f9urvujFXS-B.mp4.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="msedge_f9urvujFXS-B.mp4.mp4" data-background-size="contain" data-background-video-loop="false" data-background-video-muted >
 </section>
 
 <aside class="notes">
@@ -280,106 +280,34 @@ We'll use **PowerShell** from **Cloud Shell**:
 
 ---
 
-## Step 3 - Create Application Access Policy
-
-<div class="demo-box">
-
-Let's look at our PowerShell command:
-
-```powershell
-New-ApplicationAccessPolicy -AppId b9701c1e-1364-464d-93e4-01ae925e8d6c -PolicyScopeGroupId PowerAutomateTest@Tweed.technology -AccessRight RestrictAccess -Description "Restrict this app to members of PowerAutomateTest@Tweed.technology"
-```
-
-</div>
-
-<aside class="notes">
-The PowerShell command to create the restriction policy
-</aside>
-
----
-
-## Command Breakdown
-
-<div class="highlight-box">
-
-- **New-ApplicationAccessPolicy** - Creates new application access policy
-- **-AppId** - Unique identifier of the application
-- **-PolicyScopeGroupId** - Group email that policy applies to
-- **-AccessRight RestrictAccess** - Restricts access
-- **-Description** - Explanation of policy purpose
-
-</div>
-
-<aside class="notes">
-Breaking down what each parameter does
-</aside>
-
----
-
-## Step 4 - Install Exchange Module
-
-<div class="warning-box">
-
-**Problem:** Cloud Shell isn't connected to Exchange Online by default!
-
-**Solution:** Install the Exchange Online Management Module
-
-```powershell
-Install-Module -Name ExchangeOnlineManagement -Force
-```
-
-</div>
-
-<aside class="notes">
-Need to install the Exchange module first
-</aside>
-
----
 
 ## Import and Connect to Exchange
 
-<div class="demo-box">
+
 
 1. **Import the module:**
 ```powershell
 Import-Module ExchangeOnlineManagement
 ```
 
-2. **Connect to Exchange:**
+1. **Connect to Exchange:**
 ```powershell
 Connect-ExchangeOnline -Device
 ```
 
-3. **Now run our policy command:**
+1. **Now run our policy command:**
 ```powershell
-New-ApplicationAccessPolicy -AppId b9701c1e-1364-464d-93e4-01ae925e8d6c -PolicyScopeGroupId PowerAutomateTest@Tweed.technology -AccessRight RestrictAccess -Description "Restrict this app to members of PowerAutomateTest@Tweed.technology"
+New-ApplicationAccessPolicy 
+  -AppId b9701c1e-1364-464d-93e4-01ae925e8d6c 
+  -PolicyScopeGroupId PowerAutomateTest@Tweed.technology 
+  -AccessRight RestrictAccess 
+  -Description "Restrict this app to members of PowerAutomateTest@Tweed.technology"
 ```
 
-</div>
+
 
 <aside class="notes">
 Steps to properly connect and create the policy
-</aside>
-
----
-
-## Success Response
-
-```powershell
-ScopeName        : Power Automate Test
-ScopeIdentity    : Power Automate Test20250209121934
-Identity         : 63759d9f-bfca-4f52-ae98-8f2f1d7bc173\b9701c1e-1364-464d-93e4-01ae925e8d6c:S-1-5-21-3787302941-3231517822-469913106-31437838;998e9d79-817d-41c9-87d8-d9c07f27f4b2
-AppId            : b9701c1e-1364-464d-93e4-01ae925e8d6c
-ScopeIdentityRaw : S-1-5-21-3787302941-3231517822-469913106-31437838;998e9d79-817d-41c9-87d8-d9c07f27f4b2
-Description      : Restrict this app to members of PowerAutomateTest@Tweed.technology
-AccessRight      : RestrictAccess
-ShardType        : All
-IsValid          : True
-ObjectState      : Unchanged
-```
-
-<aside class="notes">
-What a successful policy creation looks like
 </aside>
 
 ---
@@ -399,14 +327,18 @@ GIF showing the PowerShell commands and success
 
 **Test allowed user:**
 ```powershell
-Test-ApplicationAccessPolicy -Identity testABC@Tweed.technology -AppId b9701c1e-1364-464d-93e4-01ae925e8d6c
+Test-ApplicationAccessPolicy 
+  -Identity testABC@Tweed.technology 
+  -AppId b9701c1e-1364-464d-93e4-01ae925e8d6c
 ```
 
 **Result:** `AccessCheckResult : Granted`
 
 **Test denied user:**
 ```powershell
-Test-ApplicationAccessPolicy -Identity demo@Tweed.technology -AppId b9701c1e-1364-464d-93e4-01ae925e8d6c
+Test-ApplicationAccessPolicy 
+  -Identity demo@Tweed.technology 
+  -AppId b9701c1e-1364-464d-93e4-01ae925e8d6c
 ```
 
 **Result:** `AccessCheckResult : Denied`
@@ -455,26 +387,6 @@ GIF showing navigation to custom connectors
 
 ---
 
-## Create New Connector
-
-<div class="highlight-box">
-
-1. Click **New custom connector**
-2. Click **Import an OpenAPI from URL**
-3. **Connector name:** `Send email using Graph`
-4. **URL:** 
-```
-https://raw.githubusercontent.com/itweedie/PowerPlatform-Send-Emails-from-Power-Automate-without-a-Service-Account/refs/heads/main/connector/shared_mightora-5fsend-20mail-20with-20graph-5fe07b0f04a8b0d4c3/apiDefinition.swagger.json
-```
-
-</div>
-
-<aside class="notes">
-Creating the custom connector from the GitHub repository
-</aside>
-
----
-
 <section data-background-video="msedge_Q2g7mnzmR9.mp4" data-background-size="contain"  data-background-video-muted >
 </section>
 
@@ -484,9 +396,10 @@ GIF showing connector creation process
 
 ---
 
-## Configure Connector Security
+<section data-background-video="msedge_aKfrGH1oIO.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
 
-<div class="demo-box">
+<aside class="notes">
 
 1. Click **Security** tab
 2. Use **OAuth 2.0**
@@ -497,19 +410,6 @@ GIF showing connector creation process
 7. Set **Resource URL** to `https://graph.microsoft.com`
 8. Click **Create**
 
-</div>
-
-<aside class="notes">
-Configuring the security settings for the connector
-</aside>
-
----
-
-<section data-background-video="msedge_aKfrGH1oIO.mp4" data-background-size="contain"  data-background-video-muted >
-</section>
-
-<aside class="notes">
-GIF showing connector security configuration
 </aside>
 
 ---
