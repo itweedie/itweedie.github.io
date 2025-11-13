@@ -417,7 +417,9 @@ GIF showing connector creation process
 ## Add C# Code for Attachments
 
 <div class="warning-box">
+
 **Optional:** Skip this if you won't send attachments
+
 </div>
 
 ```csharp
@@ -495,9 +497,10 @@ GIF showing connection creation
 
 ---
 
-## Test the Connector
+<section data-background-video="msedge_jHKMp5JkcW.mp4" data-background-size="contain"  data-background-video-muted >
+</section>
 
-<div class="highlight-box">
+<aside class="notes">
 
 **Test Parameters:**
 - **user-email:** Email from your security group
@@ -509,26 +512,14 @@ GIF showing connection creation
 
 **Expected Result:** 202 response + email received
 
-</div>
-
-<aside class="notes">
-Testing the connector with sample data
 </aside>
 
 ---
 
-<section data-background-video="msedge_jHKMp5JkcW.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="msedge_7if2t23IPS.mp4" data-background-size="contain"  data-background-video-muted >
 </section>
 
 <aside class="notes">
-GIF showing connector testing
-</aside>
-
----
-
-## Use in Power Automate Flow
-
-<div class="demo-box">
 
 1. Click **My flows**
 2. Create new flow
@@ -539,26 +530,14 @@ GIF showing connector testing
 7. Fill out connector details
 8. Test the flow
 
-</div>
-
-<aside class="notes">
-Using the connector in an actual Power Automate flow
 </aside>
 
 ---
 
-<section data-background-video="msedge_7if2t23IPS.mp4" data-background-size="contain"  data-background-video-muted >
-</section>
-
-<aside class="notes">
-GIF showing flow creation and testing
-</aside>
-
----
-
-### Feedback, 
-### Copy of Presentation, 
-### stay Connected
+### Feedback 
+### Copy of Presentation
+### Stay connected
+### Ask questions
 
 ![alt text](feedback.png)
 
