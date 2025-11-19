@@ -409,37 +409,11 @@ We Converted our exported solution in to
 
 ## Why is this important
 
-<span class="fragment fade-in">
 
 - Knowledge Transfer
-
-</span>
-
-<span class="fragment fade-in">
-
 - Enhanced Maintenance and Troubleshooting
-
-</br>
-
-</span>
-
-<span class="fragment fade-in">
-
 - Increased Collaboration and Alignment
-
-</br>
-
-</span>
-
-<span class="fragment fade-in">
-
 - Facilitated Governance and Compliance
-
-</br>
-
-
-</span>
-
 
 ---
 
