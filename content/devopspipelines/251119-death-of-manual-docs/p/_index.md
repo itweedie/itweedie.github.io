@@ -111,7 +111,97 @@ draft = false
     font-family: monospace;
     font-size: 0.9em;
 }
+
+/* Video playback speed classes */
+.speed-2x video {
+    /* This will be handled by JavaScript */
+}
+
+.speed-1-5x video {
+    /* This will be handled by JavaScript */
+}
 </style>
+
+
+<script>
+// JavaScript to handle video speed for Reveal.js background videos
+document.addEventListener('DOMContentLoaded', function() {
+    
+    function setVideoSpeed() {
+        // Target all video elements, including background videos
+        const allVideos = document.querySelectorAll('video, .reveal .backgrounds video, .slide-background video');
+        
+        allVideos.forEach(video => {
+            // Disable looping for all videos
+            video.loop = false;
+            video.removeAttribute('loop');
+            
+            // Check if this video should play at 2x speed
+            // Look for parent section with speed-2x class or video with specific filename
+            const section = video.closest('section') || document.querySelector('section.speed-2x');
+            const shouldSpeed = (section && section.classList.contains('speed-2x')) || 
+                              (video.src && video.src.includes('msedge_7if2t23IPS.mp4'));
+            
+            if (shouldSpeed) {
+                const applySpeed = () => {
+                    try {
+                        video.playbackRate = 2.0;
+                        //console.log('✅ Applied 2x speed to video:', video.src || video.currentSrc);
+                    } catch (e) {
+                        console.log('❌ Failed to set speed:', e);
+                    }
+                };
+                
+                // Apply speed multiple ways
+                applySpeed();
+                video.addEventListener('loadstart', applySpeed);
+                video.addEventListener('loadedmetadata', applySpeed);
+                video.addEventListener('canplay', applySpeed);
+                video.addEventListener('playing', applySpeed);
+                
+                // Delayed attempts
+                setTimeout(applySpeed, 50);
+                setTimeout(applySpeed, 200);
+                setTimeout(applySpeed, 1000);
+            }
+        });
+        
+        // Also check for background videos created by Reveal.js
+        const backgroundElements = document.querySelectorAll('.slide-background[data-background-video*="msedge_7if2t23IPS.mp4"] video');
+        backgroundElements.forEach(video => {
+            video.playbackRate = 2.0;
+            console.log('🎬 Set background video speed to 2x:', video.src);
+        });
+    }
+    
+    // Initial setup
+    setVideoSpeed();
+    
+    // Reveal.js integration
+    if (window.Reveal) {
+        Reveal.on('ready', () => {
+            console.log('🚀 Reveal.js ready - setting up video speeds');
+            setTimeout(setVideoSpeed, 100);
+            setTimeout(setVideoSpeed, 500);
+        });
+        
+        Reveal.on('slidechanged', (event) => {
+            console.log('📺 Slide changed - checking videos');
+            setTimeout(setVideoSpeed, 100);
+        });
+    }
+    
+    // Fallback observer for dynamically added videos
+    const observer = new MutationObserver(() => setVideoSpeed());
+    observer.observe(document.body, { childList: true, subtree: true });
+    
+    // Aggressive fallback - keep trying for first 10 seconds
+    for (let i = 1; i <= 10; i++) {
+        setTimeout(setVideoSpeed, i * 1000);
+    }
+});
+</script>
+
 
 
 
@@ -165,9 +255,13 @@ draft = false
 - Already exporting out our solution
 - Using Azure DevOps
 - We are using a YAML pipeline
-- *(I have a presentation on how to do this - [click here](https://itweedie.github.io/devopspipelines/250627-build-your-first-devops-pipeline/#/15))*
+- *(I have a video on how to do this - [click here](https://itweedie.github.io/devopspipelines/250627-build-your-first-devops-pipeline/#/15))*
 
 </div>
+
+![alt text](image-2.png)
+
+
 
 <aside class="notes">
   The pipeline I am going to use today continues on from another presentation last year, link to that is here. 
@@ -175,29 +269,53 @@ draft = false
 
 </section>
 
-
 ---
 
-## Demo 1: *Look at existing repo*
+<section data-background-video="look-at-repo.mp4" data-background-size="contain"  data-background-video-muted class="speed-2x">
 
-- [Repo](https://dev.azure.com/TechTweedie/Tutorials/_git/Dataverse%20-%20Backup)
+<aside class="notes">
 
----
+- Look at repo
+- NEXT: Install my extension 
 
-## Demo 2: *Install Extension*
+</aside>
 
----
-
-<section data-background-video="install-power-platform-documentation-extension.mp4" data-background-size="contain"  data-background-video-muted >
 </section>
+
+---
+
+<section data-auto-animate>
+  <h1>FREE</h1>
+</section>
+<section data-auto-animate>
+  <h1>FREE</h1>
+  <h1>OPEN SOURCE</h1>
+</section>
+<section data-auto-animate>
+  <h1>FREE</h1>
+  <h1>OPEN SOURCE</h1>
+  <h1>BUILT FOR THE COMMUNITY</h1>
+</section>
+
+
+---
+
+<section data-background-video="install-power-platform-documentation-extension.mp4" data-background-size="contain"  data-background-video-muted class="speed-2x">
 
 <aside class="notes">
   Video plays that installs an extension
 </aside>
 
+</section>
+
+
 ---
 
 ## What can it do
+
+
+
+<section data-auto-animate>
 
 - Choices
 - Security Roles
@@ -207,18 +325,26 @@ draft = false
 - Table Relationship ER diagram
 - Workflows (Preview)
 
+</section>
+<section data-auto-animate>
+
+- Table Relationships
+  
+</section>
+
 ---
 
-## Demo 3: *Use this extension in a pipeline*
+<section data-background-video="update-pipeline-1-with-tablerelationship.mp4" data-background-size="contain"  data-background-video-muted class="speed-2x">
 
 <aside class="notes">
-  Add some YAML Code 
-  Then run it
+  
 </aside>
+
+</section>
 
 ---
 
-<section data-background-video="run-pipeline-1.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="run-pipeline-1-wtr.mp4" data-background-size="contain"  data-background-video-muted class="speed-2x">
 </section>
 
 <aside class="notes">
@@ -227,96 +353,41 @@ draft = false
 
 ---
 
-## Demo 4: *Lets look at what we got*
-
-<aside class="notes">
-  Look over the results
-</aside>
-
----
-
-## Demo 5: *Lets add in a Word Document generator*
-
-<aside class="notes">
-  Add varables
-  Add YAML
-  Lets run the Pipeline
-</aside>
-
----
-
-<section data-background-video="run-pipeline-2.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="look-at-what-we-got-1.mp4" data-background-size="contain"  data-background-video-muted class="speed-2x">
 </section>
 
 <aside class="notes">
-  Video plays and secound pipeline runs
+  look at what we got
 </aside>
 
 ---
 
-## Demo 6: *Lets look at what we got*
-
-<aside class="notes">
-  Look over the results
-</aside>
-
----
-
-## Demo 7: *Lets Push to the Project WiKi*
-
----
-
-<section data-background-video="install-md-to-wiki-extension.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="update-pipeline-2-withdocx.mp4" data-background-size="contain"  data-background-video-muted class="speed-2x">
 </section>
 
 <aside class="notes">
-  Video plays that installs an extension
+  look at what we got
 </aside>
 
 ---
 
-<section data-background-video="create-pat-for-wiki.mp4" data-background-size="contain"  data-background-video-muted >
+<section data-background-video="run-pipeline-2-withdocx.mp4" data-background-size="contain"  data-background-video-muted >
 </section>
 
 <aside class="notes">
-  Create PAT for WiKi
+  look at what we got
 </aside>
 
 ---
 
-<section data-background-video="pat-for-wiki.mp4" data-background-size="contain"  data-background-video-muted >
+
+<section data-background-video="look-at-what-we-got-2.mp4" data-background-size="contain"  data-background-video-muted >
 </section>
 
 <aside class="notes">
-  ****Add to Pipeline
+  look at what we got
 </aside>
 
----
-
-
-## Demo 8: *Lets Add in the Task*
-
-<aside class="notes">
-  Add the Task
-  And then run the Pipeline
-</aside>
-
----
-
-<section data-background-video="run-pipeline-3.mp4" data-background-size="contain"  data-background-video-muted >
-</section>
-
-<aside class="notes">
-  Run pipeline 3
-</aside>
-
----
-
-## Demo 9: *Lets look at what we got*
-
-<aside class="notes">
-  Look over the results
-</aside>
 
 ---
 
@@ -326,7 +397,6 @@ We Converted our exported solution in to
 
 - ✅ Markdown Documents
 - ✅ Word Documents
-- ✅ Azure DevOps WiKi Pages
 
 <aside class="notes">
   We do this so however you want to use this documentation, it is allwase up to date
@@ -335,13 +405,18 @@ We Converted our exported solution in to
 
 ---
 
-## Call for action
+## Why is this important
 
-<aside class="notes">
-  What would this mean for you
-  Would this cut down your workload
-  If anyone wants to collabrate and do something simular for other parts of the microsft stack is open
-</aside>
+- Knowledge Transfer
+- Enhanced Maintenance and Troubleshooting
+- Increased Collaboration and Alignment
+- Facilitated Governance and Compliance
+
+---
+
+## Where can you download this
+
+![alt text](image-3.png)
 
 ---
 
