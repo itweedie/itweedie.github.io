@@ -123,86 +123,6 @@ draft = false
 </style>
 
 
-<script>
-// JavaScript to handle video speed for Reveal.js background videos
-document.addEventListener('DOMContentLoaded', function() {
-    
-    function setVideoSpeed() {
-        // Target all video elements, including background videos
-        const allVideos = document.querySelectorAll('video, .reveal .backgrounds video, .slide-background video');
-        
-        allVideos.forEach(video => {
-            // Disable looping for all videos
-            video.loop = false;
-            video.removeAttribute('loop');
-            
-            // Check if this video should play at 2x speed
-            // Look for parent section with speed-2x class or video with specific filename
-            const section = video.closest('section') || document.querySelector('section.speed-2x');
-            const shouldSpeed = (section && section.classList.contains('speed-2x')) || 
-                              (video.src && video.src.includes('msedge_7if2t23IPS.mp4'));
-            
-            if (shouldSpeed) {
-                const applySpeed = () => {
-                    try {
-                        video.playbackRate = 2.0;
-                        //console.log('✅ Applied 2x speed to video:', video.src || video.currentSrc);
-                    } catch (e) {
-                        console.log('❌ Failed to set speed:', e);
-                    }
-                };
-                
-                // Apply speed multiple ways
-                applySpeed();
-                video.addEventListener('loadstart', applySpeed);
-                video.addEventListener('loadedmetadata', applySpeed);
-                video.addEventListener('canplay', applySpeed);
-                video.addEventListener('playing', applySpeed);
-                
-                // Delayed attempts
-                setTimeout(applySpeed, 50);
-                setTimeout(applySpeed, 200);
-                setTimeout(applySpeed, 1000);
-            }
-        });
-        
-        // Also check for background videos created by Reveal.js
-        const backgroundElements = document.querySelectorAll('.slide-background[data-background-video*="msedge_7if2t23IPS.mp4"] video');
-        backgroundElements.forEach(video => {
-            video.playbackRate = 2.0;
-            console.log('🎬 Set background video speed to 2x:', video.src);
-        });
-    }
-    
-    // Initial setup
-    setVideoSpeed();
-    
-    // Reveal.js integration
-    if (window.Reveal) {
-        Reveal.on('ready', () => {
-            console.log('🚀 Reveal.js ready - setting up video speeds');
-            setTimeout(setVideoSpeed, 100);
-            setTimeout(setVideoSpeed, 500);
-        });
-        
-        Reveal.on('slidechanged', (event) => {
-            console.log('📺 Slide changed - checking videos');
-            setTimeout(setVideoSpeed, 100);
-        });
-    }
-    
-    // Fallback observer for dynamically added videos
-    const observer = new MutationObserver(() => setVideoSpeed());
-    observer.observe(document.body, { childList: true, subtree: true });
-    
-    // Aggressive fallback - keep trying for first 10 seconds
-    for (let i = 1; i <= 10; i++) {
-        setTimeout(setVideoSpeed, i * 1000);
-    }
-});
-</script>
-
-
 
 
 
@@ -217,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
 ## A DevOps Approach to Power Platform Documentation
 
 <aside class="notes">
-  Welcome slide
+  Time machine help, it works on harts
 </aside>
 
 ---
@@ -244,7 +164,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-{{< slide content="common.about.iantweedie" >}}
+<section id="2-welcome" data-background-image="Slide1.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+</section>
 
 ---
 
@@ -255,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
 - Already exporting out our solution
 - Using Azure DevOps
 - We are using a YAML pipeline
-- *(I have a video on how to do this - [click here](https://itweedie.github.io/devopspipelines/250627-build-your-first-devops-pipeline/#/15))*
+- *(I have a video on how to do this - [click here](https://youtu.be/OUcXHBx3wJY))*
 
 </div>
 
@@ -297,8 +218,9 @@ document.addEventListener('DOMContentLoaded', function() {
   <h1>BUILT FOR THE COMMUNITY</h1>
 </section>
 
-
 ---
+
+
 
 <section data-background-video="install-power-platform-documentation-extension.mp4" data-background-size="contain"  data-background-video-muted class="speed-2x">
 
@@ -324,13 +246,46 @@ document.addEventListener('DOMContentLoaded', function() {
 - Table Relationships
 - Table Relationship ER diagram
 - Workflows (Preview)
+- Diagram Converter
+- Word DocX Converter
 
 </section>
 <section data-auto-animate>
 
 - Table Relationships
+- Diagram Converter
+- Word DocX Converter
   
 </section>
+
+
+---
+
+## Step 1: *Add variables*
+
+```yaml
+
+  - name: varUnpackedSolution
+    value: $(Build.SourcesDirectory)\solutions\src\$(varSolutionName)
+
+  - name: varWikiLocation
+    value: $(Build.SourcesDirectory)\wiki\$(varSolutionName)
+
+```
+
+## Step 2: *Add tasks*
+
+
+```yaml
+
+- task: documentTableRelationships@2
+  inputs:
+    locationOfUnpackedSolution: '$(varUnpackedSolution)'
+    wikiLocation: '$(varWikiLocation)'
+    useSingleFile: true
+    createFullERD: true
+
+```
 
 ---
 
@@ -348,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 <aside class="notes">
-  Run pipeline with help from time machine
+  time machine
 </aside>
 
 ---
@@ -362,12 +317,59 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-<section data-background-video="update-pipeline-2-withdocx.mp4" data-background-size="contain"  data-background-video-muted class="speed-2x">
-</section>
+## Step 4: *Add more variables*
+
+```yaml
+
+  - name: varWikiOutput
+    value: $(Build.SourcesDirectory)\wiki-ouput\solutions\$(varSolutionName)
+
+  - name: varWord
+    value: $(Build.SourcesDirectory)\word\solutions\$(varSolutionName)
+
+```
+
+---
+
+## Step 5: *Add more tasks*
+
+```yaml
+
+# Convert diagrams
+- task: convertConvertInlineDiagrams@1
+  inputs:
+    locationOfSourceMDFiles: '$(varWikiLocation)'
+    outputLocation: '$(varWikiOutput)'
+
+# Convert to Word
+- task: convertMarkdownToDocx@1
+  continueOnError: true
+  inputs:
+    locationOfMDFiles: '$(varWikiOutput)'
+    outputLocation: '$(varWord)'
+    includeTOC: true
+
+
+# Convert to Word
+- task: convertMarkdownToDocx@1
+  continueOnError: true
+  inputs:
+    locationOfMDFiles: '$(varWikiOutput)'
+    outputLocation: '$(varWord)\withTemplate'
+    templateFile: '$(Build.SourcesDirectory)\TechTweedieWordTemplate.docx'
+    includeTOC: true
+
+```
+
+---
+
+<section data-background-video="update-pipeline-2-withdocx.mp4" data-background-size="contain"  data-background-video-muted>
+
 
 <aside class="notes">
-  look at what we got
+  add steps
 </aside>
+</section>
 
 ---
 
@@ -375,7 +377,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 <aside class="notes">
-  look at what we got
+    time machine
 </aside>
 
 ---
@@ -407,10 +409,37 @@ We Converted our exported solution in to
 
 ## Why is this important
 
+<span class="fragment fade-in">
+
 - Knowledge Transfer
+
+</span>
+
+<span class="fragment fade-in">
+
 - Enhanced Maintenance and Troubleshooting
+
+</br>
+
+</span>
+
+<span class="fragment fade-in">
+
 - Increased Collaboration and Alignment
+
+</br>
+
+</span>
+
+<span class="fragment fade-in">
+
 - Facilitated Governance and Compliance
+
+</br>
+
+
+</span>
+
 
 ---
 
@@ -419,6 +448,13 @@ We Converted our exported solution in to
 ![alt text](image-3.png)
 
 ---
+
+<section data-background-iframe="https://mightora.io/" data-background-interactive>
+
+</section>
+
+---
+
 
 ## Feedback and Presentation
 
