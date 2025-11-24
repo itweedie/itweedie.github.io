@@ -41,7 +41,7 @@ draft = false
 }
 
 .reveal {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: sans-serif;
 }
 
 .reveal a {
