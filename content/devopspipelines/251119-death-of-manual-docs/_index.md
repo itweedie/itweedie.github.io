@@ -18,11 +18,6 @@ Ian Tweedie
 
 ## About Me
 
-* Ian Tweedie
-* Microsoft Business Applications MVP
-* Tech Lead @ ANS Group
-* Blogger at [techtweedie.github.io](https://techtweedie.github.io)
-* Creator of the Power Platform Documentation Extension
 
 ---
 

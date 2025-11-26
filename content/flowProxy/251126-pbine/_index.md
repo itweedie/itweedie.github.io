@@ -116,6 +116,16 @@ width = "100px" # Size of the file.
 </style>
 
 
+{{< slide content="common.navigate.howto" >}}
+
+---
+
+# Key Links
+
+- GitHub Repo for proxy https://github.com/itweedie/AzureFunction-PowerAutomateProxy
+
+---
+
 {{< slide transition="zoom" >}}
 
 # Generating Documents from Power BI
@@ -161,121 +171,7 @@ width = "100px" # Size of the file.
 
 ---
 
-{{< slide background="#fdfdfd" >}}
-
-# Ian Tweedie
-
-
-<div class="container">
-
-<div class="col" style="justify-content: center; align-items: center;">
-
-  <img src="content/qr.jpg" alt="Image" style="height:250px; box-shadow: none;">
-
-</div>
-
-
-
-<div class="col aboutMe">
-  <ul>
-    <li class="fragment">Senior Technical Consultant, Capgemini</li>
-    <li class="fragment">Trustee for Digital Transformation for a £22 million non for profit</li>
-    <li class="fragment">Chair of an £750k non for profit</li>
-  </ul>
-</div>
-
-</div>
-
-<aside class="notes">
-
-- Senior Technical Consultant
-- Trustee
-- Chair
-
-</aside>
-
----
-{{< slide background="#F0F8FF" >}}
-### Ian Tweedie
-##### Certification Wall
-![height:100px](content/image-12.png)![height:100px](content/image-13.png)![height:100px](content/image-14.png)![height:100px](content/image-15.png)![height:100px](content/image-16.png)![height:100px](content/image-17.png)![height:100px](content/image-18.png)![height:100px](content/image-19.png)![height:100px](content/image-20.png)![height:100px](content/image-21.png)![height:100px](content/image-22.png)![height:100px](content/image-23.png)![height:100px](content/image-24.png)![height:100px](content/image-25.png)![height:100px](content/image-26.png)![height:100px](content/image-27.png)![height:100px](content/image-28.png)![height:100px](content/image-29.png)![height:100px](content/image-30.png)![height:100px](content/image-31.png)![height:100px](content/image-32.png)![height:100px](content/image-33.png)![height:100px](content/image-34.png)![height:100px](content/image-35.png)![height:100px](content/image-36.png)![height:100px](content/image-37.png)![height:100px](content/image-38.png)![height:100px](content/image-39.png)![height:100px](content/image-40.png)![height:100px](content/image-41s.png)![height:100px](content/image-42s.png)![height:100px](content/image-44s.png)![height:100px](content/CyberSecurityArchitect-2s.png)![height:100px](content/sc-100exams.png)
-
-
-<aside class="notes">
-
-- Senior Technical Consultant
-- Trustee
-- Chair
-
-</aside>
-
---- 
-{{< slide background="#F0F8FF" >}}
-## Community Tools
-
-
-<div class="container">
-
-  <div class="col">
-    <div style="display: flex; justify-content: center; align-items: center;">
-      <div style="flex: 20%; text-align: center;">
-        <img src="content/image-45.png" alt="Image" style="height:50px; box-shadow: none;">
-      </div>
-      <div style="flex: 80%; text-align: left;">
-        <img src="content/mightora-io-logo3.png" alt="Image" style="height:30px; box-shadow: none;">
-      </div>
-    </div>
-    <div class="col aboutMe">
-    <ul>
-      <li class="fragment">Calculate working day</li>
-      <li class="fragment">Email domain checker</li>
-      <li class="fragment">SharePoint Connector using SPN</li>
-      <li class="fragment">Email Connector using SPN</li>
-      <li class="fragment">Dataverse 4 Teams Local ALM Tool</li>
-      <li class="fragment">DevOps Extension: Power Apps Solution Documentation Tool</li>
-      <li class="fragment">Around 500k hits a month</li>
-    </ul>
-    </div>
-  </div>
-
-  <div class="col">
-  
-  </div>
-
-</div>
-
----
-{{< slide background="#F0F8FF"  >}}
-
-
-<style>
-
-
-</style>
-
-<div class="container">
-    <div class="cola">
-        <img src="/techTweedie_logo.png" alt="Image" style="box-shadow: none;">
-        <br>
-        <h2> Community Content </h2>
-        <ul>
-            <li><a href="https://techtweedie.github.io/"> techtweedie.github.io</a></li>
-            <li><a href="https://www.youtube.com/@techtweedie"> youtube.com/@techtweedie</a></li>
-        </ul>
-    </div>
-</div>
-
-<aside class="notes">
-
-- by 8
-
-</aside>
-
----
-
-## Power Platform Clinic
-
-![cap](powerPlatformClinicSmallLogo2.png)
+{{< slide content="common.about.iantweedie" >}}
 
 ---
 
@@ -907,6 +803,3 @@ sequenceDiagram
 
 
 [https://go.iantweedie.biz/feedback](https://go.iantweedie.biz/feedback)
-
-
- 
