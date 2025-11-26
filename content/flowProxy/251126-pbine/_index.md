@@ -653,15 +653,34 @@ FLOW_KEY=ABC123
 
 ---
 
+{{< slide  transition="none"  background="#F0F8FF" >}}
 
-{{< slide  transition="zoom"  background="#F0F8FF" >}}
 ### Lets deploy it
 
 1. Access the Repo
 2. Press Deploy 
 3. Follow the on screen instructions
-4. Add Environment variables
-5. Setup Azure B2C
+
+<div>
+  <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fitweedie%2FAzureFunction-PowerAutomateProxy%2Frefs%2Fheads%2Fmain%2Fazuredeploy.json" target="_blank">
+    <img src="https://aka.ms/deploytoazurebutton" />
+  </a>
+</div>
+
+<div><img src="image-9.png" alt="Image" style="height:200px; box-shadow: none;"></div>
+
+
+---
+
+<section data-background-size="contain"  data-background-video="deploy-to-azure.mp4" data-background-video-muted>
+</section>
+
+
+---
+
+
+{{< slide  transition="zoom"  background="#F0F8FF" >}}
+### Lets setup auth
 
 ---
 
@@ -674,10 +693,6 @@ FLOW_KEY=ABC123
 # Lets see that working
 Demo 5
 
----
-
-{{< slide  background="#FAEBD7" >}}
-## Live Demo 5
 
 <a href="https://app.powerbi.com/groups/b8188de8-422e-46b5-a04d-efdd8bbbb043/reports/21ce0983-cfca-429e-b0a8-681945610b83/eb9f515043ce215988be?experience=power-bi" target="_blank" rel="noopener noreferrer">Power BI</a>
 
