@@ -273,16 +273,7 @@ Calculate Working Day
 
 ## The Solution
 
-{{< mermaid >}}
-flowchart TD
-    A[Email arrives]
-    B[Work out 10 working days]
-    C[Set flag]
-
-    A --> B
-    B --> C
-{{< /mermaid >}}
-
+[![](https://mermaid.ink/img/pako:eNo9Td1OgzAYfZXmu2aEzjaUXixxzCfQxETwolk_ChHapWudk_DuVtw8V-ecnJ8Zjk4jSOhGdzn2ygfycmgtSXhsniY1jER5P3zi-f3P3Tevzn8QFwOhBbkkPlhDtLreA3XzjIF0ozLJuC2RzWZH9reBVdSQgfGDBhl8xAwm9OksSZh_Yy2EHidsQSaqsVNxDC20dkm1k7Jvzk33pnfR9CA7NZ6TiietAh4GZbya_l2PVqOvXbQBJKPrBsgZvkA-cJ6LohQVZYxtK0F5BleQvMjpllUlo2UpBBN8yeB7fS1yUfLlB55DXmw?type=png)](https://mermaid.live/edit#pako:eNo9Td1OgzAYfZXmu2aEzjaUXixxzCfQxETwolk_ChHapWudk_DuVtw8V-ecnJ8Zjk4jSOhGdzn2ygfycmgtSXhsniY1jER5P3zi-f3P3Tevzn8QFwOhBbkkPlhDtLreA3XzjIF0ozLJuC2RzWZH9reBVdSQgfGDBhl8xAwm9OksSZh_Yy2EHidsQSaqsVNxDC20dkm1k7Jvzk33pnfR9CA7NZ6TiietAh4GZbya_l2PVqOvXbQBJKPrBsgZvkA-cJ6LohQVZYxtK0F5BleQvMjpllUlo2UpBBN8yeB7fS1yUfLlB55DXmw)
 
 ---
 
@@ -397,17 +388,7 @@ Link 5: [Update message - Microsoft Graph v1.0 | Microsoft Learn](https://learn.
 
 ## The Solution
 
-{{< mermaid >}}
-flowchart TD
-    A[Record changes]
-    B[Work out date difference]
-    C[Calculate cost]
-    D[Update Table]
-
-    A --> B
-    B --> C
-    C --> D
-{{< /mermaid >}}
+[![](https://mermaid.ink/img/pako:eNo9T8tuhDAM_JXIZxbBNhEhh0pd-IJqq0qFHlJiHiokq5CoD8S_N1BanzzjmbG9QGMUgoB2NB9NL60j17LWJNRD9YiNsYoEWnc4v_7Sl-rZ2HdivCNKOiRqaFu0qBs8BEVVyLHx4zZszOwOuqyebrvhKt_GTXtsIafTPbkc2TsojpwdlBBBZwcFwlmPEUxoJ7lBWDZZDa7HCWsQoVXYSj-6Gmq9BttN6hdjpj-nNb7rQbRynAPy-zHlIDsrp382_KHQFsZrB4KyPQPEAp8g7hiLeZLxPKWUnnOehukXCJbE6ZnmGU2zjHPK2RrB9741iXnG1h-Uu2sV?type=png)](https://mermaid.live/edit#pako:eNo9T8tuhDAM_JXIZxbBNhEhh0pd-IJqq0qFHlJiHiokq5CoD8S_N1BanzzjmbG9QGMUgoB2NB9NL60j17LWJNRD9YiNsYoEWnc4v_7Sl-rZ2HdivCNKOiRqaFu0qBs8BEVVyLHx4zZszOwOuqyebrvhKt_GTXtsIafTPbkc2TsojpwdlBBBZwcFwlmPEUxoJ7lBWDZZDa7HCWsQoVXYSj-6Gmq9BttN6hdjpj-nNb7rQbRynAPy-zHlIDsrp382_KHQFsZrB4KyPQPEAp8g7hiLeZLxPKWUnnOehukXCJbE6ZnmGU2zjHPK2RrB9741iXnG1h-Uu2sV)
 
 ---
 
@@ -450,66 +431,11 @@ We have using low code being able to Calculate Working Days
 
 ---
 
-{{< mermaid >}}
-flowchart LR
-
-    subgraph Inputs
-        A[Date]
-        B[Non working days]
-        C[In X working days]
-        D[Filter bank holidays for Country]
-    end
-
-    X[Calculate Working Day]
-
-    A --> X
-    B --> X
-    C --> X
-    D --> X
-
-    subgraph Outputs
-        O1[Is input date a working day]
-        O2[Working Days]
-        O3[Working Days in Words]
-        O5[Next working day]
-        O7[Working day in x days]
-        O8[First Working day of month]
-        O9[Last working day of month]
-    end
-
-    X --> O1
-    X --> O2
-    X --> O3
-    X --> O5
-    X --> O7
-    X --> O8
-{{< /mermaid >}}
+[![](https://mermaid.ink/img/pako:eNp1klFrwjAQx79KuGcVqy1N-zBQy0AYFvYyWbqHzKa2rE0kTVAnfvclOl0iLE_93f1zd_9LT7ARJYMUqlbsNzWVCr28FrzgyJxef24l3dVoyXda9degPTOSUcU-_gJzshIc7YX8avgWlfTYO8kFWXK0_i-bkeemVUyiT8q_UC3axgpQJSRaCM2VPP6KGS9vg63JgrYb3Zoh0Ntv2Yxa4TU_Q8PhE1pfYe7CwoXsBg92c618v3lAlj1q7BbM-KYpdd04ZvIJceZxbeZTL2OK2clLTxKRFTuo_0rH9wImYe8fHleZY7NL2SvkCkWFOsFV7eoS8kJ7r9GjzF32ZUt54NHEo6lHkUexR7jgMICtbEpIldRsAB2THbUIJ6ssQNWsYwWk5rNkFdWtKqDgZ3NtR_m7EN3tphR6W0Na0bY3pHf2ZbKGmjfs7lFpjDB5-ZEgDZNLDUhPcIB0GkUjPI5xEoRhOElwEA3gCGk0HgWTMInDII4xDnF0HsD3pet4hOPo_AM5xfHN?type=png)](https://mermaid.live/edit#pako:eNp1klFrwjAQx79KuGcVqy1N-zBQy0AYFvYyWbqHzKa2rE0kTVAnfvclOl0iLE_93f1zd_9LT7ARJYMUqlbsNzWVCr28FrzgyJxef24l3dVoyXda9degPTOSUcU-_gJzshIc7YX8avgWlfTYO8kFWXK0_i-bkeemVUyiT8q_UC3axgpQJSRaCM2VPP6KGS9vg63JgrYb3Zoh0Ntv2Yxa4TU_Q8PhE1pfYe7CwoXsBg92c618v3lAlj1q7BbM-KYpdd04ZvIJceZxbeZTL2OK2clLTxKRFTuo_0rH9wImYe8fHleZY7NL2SvkCkWFOsFV7eoS8kJ7r9GjzF32ZUt54NHEo6lHkUexR7jgMICtbEpIldRsAB2THbUIJ6ssQNWsYwWk5rNkFdWtKqDgZ3NtR_m7EN3tphR6W0Na0bY3pHf2ZbKGmjfs7lFpjDB5-ZEgDZNLDUhPcIB0GkUjPI5xEoRhOElwEA3gCGk0HgWTMInDII4xDnF0HsD3pet4hOPo_AM5xfHN)
 
 ---
 
-{{< mermaid >}}
-flowchart LR
-
-    subgraph Inputs
-        A[Start Date]
-        B[End Date]
-        C[Non working days]
-    end
-
-    X[Calculate Working Day]
-
-    A --> X
-    B --> X
-    C --> X
-
-    subgraph Outputs
-        O1[Total Days]
-        O2[Working Day Count]
-    end
-
-    X --> O1
-    X --> O2
-{{< /mermaid >}}
+[![](https://mermaid.ink/img/pako:eNptUNFugjAU_ZXmPqMRhFD7sERxD0uWkWxLZkZ96GgFM2hJaeOc8d9XUDY1u0895557z7k9QK64AAKbSu3ykmmDHp-ppBK5au1HoVlTogfZWNOeyK7m2YvppEtmxPqPXmT3kt-SSfakJNop_bmVBeJs356bQvLBaJUlrMpt5SbR21m5ZPv10J-j0egOrU5gcQmSAdwkTq25jpz62asyrOr2thfx0iC7cESJstL8E7C3Sf0rFFAJHhR6y4EYbYUHtdA16yAcOiUFU4paUCDuycWG2cpQoPLoxhom35Wqh0mtbFEC2bCqdcg23H3FcsvcMfUvq10gofuEQKJpvwPIAb6ATKNojCcxnvlhGAYz7Ece7J1oMvaDcBaHfhxjHOLo6MF37zoZ4zg6_gCi1ZcI?type=png)](https://mermaid.live/edit#pako:eNptUNFugjAU_ZXmPqMRhFD7sERxD0uWkWxLZkZ96GgFM2hJaeOc8d9XUDY1u0895557z7k9QK64AAKbSu3ykmmDHp-ppBK5au1HoVlTogfZWNOeyK7m2YvppEtmxPqPXmT3kt-SSfakJNop_bmVBeJs356bQvLBaJUlrMpt5SbR21m5ZPv10J-j0egOrU5gcQmSAdwkTq25jpz62asyrOr2thfx0iC7cESJstL8E7C3Sf0rFFAJHhR6y4EYbYUHtdA16yAcOiUFU4paUCDuycWG2cpQoPLoxhom35Wqh0mtbFEC2bCqdcg23H3FcsvcMfUvq10gofuEQKJpvwPIAb6ATKNojCcxnvlhGAYz7Ece7J1oMvaDcBaHfhxjHOLo6MF37zoZ4zg6_gCi1ZcI)
 
 ---
 
