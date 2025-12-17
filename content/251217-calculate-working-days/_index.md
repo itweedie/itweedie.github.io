@@ -147,8 +147,8 @@ draft = false
 
 <aside class="notes">
 
-- look at 3 problems
-- how we can use the connector to solve them
+And how we can calculate working days in Power automate to help us solve them!
+
 
 </aside> 
 
@@ -172,6 +172,18 @@ draft = false
 </aside>
 
 </section>
+
+---
+
+# What are we going to use
+
+![alt text](image-1.png)
+
+Calculate Working Day
+
+- [Link 1 - Website](https://mightora.io/tools/power-automate-connectors/calculate-working-day/)
+- [Link 2 - Blog Post](https://techtweedie.github.io/posts/240924-calculate-working-day/)
+- [Link 3 - Microsoft Learn](https://learn.microsoft.com/en-us/connectors/calculateworkingday/)
 
 ---
 
@@ -253,7 +265,7 @@ flowchart TD
 },
 ```
 
-Link:
+Link 4:
 [followupFlag resource type - Microsoft Graph v1.0 | Microsoft Learn](https://learn.microsoft.com/en-us/graph/api/resources/followupflag?view=graph-rest-1.0)
 
 ---
@@ -268,7 +280,7 @@ Link:
 
 **PATCH** `https://graph.microsoft.com/v1.0/users/demo@tweed.technology/messages/{id}`
 
-Link: [Update message - Microsoft Graph v1.0 | Microsoft Learn](https://learn.microsoft.com/en-us/graph/api/message-update?view=graph-rest-1.0&tabs=http)
+Link 5: [Update message - Microsoft Graph v1.0 | Microsoft Learn](https://learn.microsoft.com/en-us/graph/api/message-update?view=graph-rest-1.0&tabs=http)
 
 ---
 
@@ -320,7 +332,6 @@ flowchart TD
     B --> C
     C --> D
 {{< /mermaid >}}
-
 
 ---
 
@@ -428,6 +439,7 @@ flowchart LR
 
 ## Where can you get this
 
+- [Link 1 - Website](https://mightora.io/tools/power-automate-connectors/calculate-working-day/)
 
 ---
 
