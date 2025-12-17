@@ -142,8 +142,7 @@ draft = false
 
 ---
 
-## Some Problems
-
+## Showcase how we can calculate working day
 
 <aside class="notes">
 
