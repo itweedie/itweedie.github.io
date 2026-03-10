@@ -342,8 +342,6 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 <section data-background-iframe="https://mightora.io" data-background-interactive="false" data-transition="zoom">
 
-![alt text](image-10.png)
-
 </section>
 
 ---
