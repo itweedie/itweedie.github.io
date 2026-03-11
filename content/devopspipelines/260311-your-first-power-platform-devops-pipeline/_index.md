@@ -304,6 +304,46 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 <section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
 
+![alt text](image-15.png)
+
+</section>
+
+---
+
+<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+
+<img src="image-16.png" alt="alt text" style="height: 400px;">
+
+</section>
+
+---
+
+<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+
+![alt text](image-17.png)
+
+</section>
+
+---
+
+<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+
+![alt text](image-18.png)
+
+</section>
+
+---
+
+<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+
+![alt text](image-19.png)
+
+</section>
+
+---
+
+<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+
 # Today's Agenda
 
 <div class="highlight-box">
@@ -366,7 +406,6 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 <section data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
-
 # Your First Power Platform DevOps Pipeline Isn’t as Hard as You Think
 
 </section>
@@ -374,7 +413,6 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 ---
 
 <section data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
-
 
 ## The Journey Starts Here
 
@@ -417,9 +455,6 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 <section data-background-video="../msedge_EbORBUpsTl.mp4" data-background-video-muted data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 </section>
 
-
-
-
 ---
 
 <section data-background-image="brave_pUuYqm9d3z.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
@@ -435,9 +470,7 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 **Secret:** 
 
-
 </div>
-
 
 ---
 
@@ -551,79 +584,11 @@ MyPowerPlatformProject/
 
 ---
 
-
 ### Export Pipeline YAML
 
-```yaml
-name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+*Make sure you give permission on the repo*
 
-variables:
-  - name: varPowerPlatformSPN
-   # value: YOUR-OWN-VALUE-HERE 
-    value: Dataverse - Backup
-  - name: varSolutionName
-   # value: YOUR-OWN-VALUE-HERE
-    value: ProjectExpenseLogger
-
-trigger: none
-
-pool:
-  vmImage: 'windows-latest'
-
-steps:
-- checkout: self
-  persistCredentials: true
-  clean: true
-- task: PowerPlatformToolInstaller@2
-  inputs:
-    DefaultVersion: true
-    AddToolsToPath: true
-- task: PowerPlatformSetSolutionVersion@2
-  inputs:
-    authenticationType: 'PowerPlatformSPN'
-    PowerPlatformSPN: '$(varPowerPlatformSPN)'
-    SolutionName: '$(varSolutionName)'
-    SolutionVersionNumber: '1.0.0.$(Build.BuildID)'
-- task: PowerPlatformExportSolution@2
-  inputs:
-    authenticationType: 'PowerPlatformSPN'
-    PowerPlatformSPN: '$(varPowerPlatformSPN)'
-    SolutionName: '$(varSolutionName)'
-    SolutionOutputFile: '$(Build.SourcesDirectory)\solutions\$(varSolutionName)_1.0.0.$(Build.BuildID)_managed.zip'
-    Managed: true
-    AsyncOperation: true
-    MaxAsyncWaitTime: '60'
-- task: PowerPlatformExportSolution@2
-  inputs:
-    authenticationType: 'PowerPlatformSPN'
-    PowerPlatformSPN: '$(varPowerPlatformSPN)'
-    SolutionName: '$(varSolutionName)'
-    SolutionOutputFile: '$(Build.SourcesDirectory)\solutions\$(varSolutionName)_1.0.0.$(Build.BuildID).zip'
-    Managed: false
-    AsyncOperation: true
-    MaxAsyncWaitTime: '60'
-- task: PowerPlatformUnpackSolution@2
-  inputs:
-    SolutionInputFile: '$(Build.SourcesDirectory)\solutions\$(varSolutionName)_1.0.0.$(Build.BuildID).zip'
-    SolutionTargetFolder: '$(Build.SourcesDirectory)\solutions\src\$(varSolutionName)'
-    SolutionType: 'Both'
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'pac solution create-settings --solution-zip $(Build.SourcesDirectory)\solutions\$(varSolutionName)_1.0.0.$(Build.BuildID).zip --settings-file $(Build.SourcesDirectory)\solutions\$(varSolutionName)-settings.json'
-
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo commit all changes
-      git config user.email "$(Build.RequestedForEmail)"
-      git config user.name "$(Build.RequestedFor)"
-      git checkout -b main
-      git add --all
-      git commit -m "Latest solution changes."
-      echo push code to new repo
-      git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push origin main
-```
+[![alt text](image-13.png)](https://techtweedie.github.io/pattern/power-platform-export-to-devops-simple-pipeline/)
 
 ---
 
@@ -659,45 +624,7 @@ steps:
 
 ### Deploy Solution
 
-```yaml
-name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
-
-variables:
-  - name: varSolutionName
-   # value: YOUR-OWN-VALUE-HERE
-    value: FirstPipeline
-  - name: varPowerPlatformSPN
-   # value: YOUR-OWN-VALUE-HERE 
-    value: Dataverse - mightora
-
-trigger: none
-
-pool:
-  vmImage: 'windows-latest'
-
-steps:
-- checkout: self
-  persistCredentials: true
-  clean: true
-- task: PowerPlatformToolInstaller@2
-  inputs:
-    DefaultVersion: true
-    AddToolsToPath: true
-
-- task: PowerPlatformPackSolution@2
-  inputs:
-    SolutionSourceFolder: '$(Build.SourcesDirectory)\solutions\src\$(varSolutionName)'
-    SolutionOutputFile: '$(Build.ArtifactStagingDirectory)\solutions\build\$(varSolutionName).zip'
-- task: PowerPlatformImportSolution@2
-  inputs:
-    authenticationType: 'PowerPlatformSPN'
-    PowerPlatformSPN: 'Dataverse - Backup'
-    Environment: 'https://mightora.crm11.dynamics.com/'
-    SolutionInputFile: '$(Build.ArtifactStagingDirectory)\solutions\build\$(varSolutionName).zip'
-    AsyncOperation: true
-    MaxAsyncWaitTime: '60'
-
-```
+[![alt text](image-14.png)](https://techtweedie.github.io/pattern/power-platform-import-from-devops-simple-pipeline/)
 
 ---
 
@@ -820,10 +747,14 @@ Environment-specific values
 - [Power Platform ALM Guide](https://docs.microsoft.com/en-us/power-platform/alm/)
 - [Sample Templates](https://github.com/itweedie)
 
-
 ---
 
-<section data-background-iframe="https://techtweedie.github.io/posts/250627-d365ppugnational/" data-background-interactive="true" data-transition="zoom">
+<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+  <img src="image-20.png" alt="alt text" style="height: 500px;">
+  <img src="image-21.png" alt="alt text" style="height: 500px;">
+</div>
 
 </section>
 
@@ -838,7 +769,7 @@ Environment-specific values
   <div style="text-align: center; flex: 0 0 auto;">
     <h4>Slides</h4>
     <a href="https://mars.mightora.io/yourls/250627" target="_blank">
-      <img src="link-to-presentation.png" alt="Link to Presentation" style="width: 320px; box-shadow: none; cursor: pointer;">
+      <img src="image-12.png" alt="Link to Presentation" style="width: 320px; box-shadow: none; cursor: pointer;">
     </a>
   </div>
   
@@ -850,5 +781,8 @@ Environment-specific values
   </div>
 </div>
 
-![alt text](image-11.png)
+---
 
+
+<section data-background-image="UG/Slide5.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+</section>
