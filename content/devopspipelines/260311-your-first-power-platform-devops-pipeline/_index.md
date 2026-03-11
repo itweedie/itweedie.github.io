@@ -312,38 +312,6 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 
 <section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
 
-<img src="image-16.png" alt="alt text" style="height: 400px;">
-
-</section>
-
----
-
-<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
-
-![alt text](image-17.png)
-
-</section>
-
----
-
-<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
-
-![alt text](image-18.png)
-
-</section>
-
----
-
-<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
-
-![alt text](image-19.png)
-
-</section>
-
----
-
-<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
-
 # Today's Agenda
 
 <div class="highlight-box">
@@ -421,6 +389,40 @@ Press <span class="key-combo">?</span> to see all keyboard shortcuts
 - **But what's next?** 🤔
 
 </section>
+
+
+---
+
+<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+
+<img src="image-16.png" alt="alt text" style="height: 400px;">
+
+</section>
+
+---
+
+<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+
+![alt text](image-17.png)
+
+</section>
+
+---
+
+<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+
+![alt text](image-18.png)
+
+</section>
+
+---
+
+<section  data-background-image="UG/Slide4.PNG" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-transition="zoom">
+
+![alt text](image-19.png)
+
+</section>
+
 
 ---
 
