@@ -11,9 +11,6 @@ theme = 'reveal-hugo'
 # relativeURLs = true
 # uglyURLs = true
 
-[author]
-name = "Ian Tweedie"
-
 # currently only the unsafe mode for goldmark is supported
 [markup.goldmark.renderer]
 unsafe = true
@@ -29,6 +26,9 @@ style = "tango"  # set a style for hugo highlighting
 baseName = "index"
 mediaType = "text/html"
 isHTML = true
+
+[params]
+author = "Ian Tweedie"
 
 [params.reveal_hugo]
 history = true
