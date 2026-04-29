@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "_index"
             }
+          },
+          {
+            "id": "8d351b397121c4c9",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.5"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -180,7 +193,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "063ddcb5818a6b42",
+  "active": "8d351b397121c4c9",
   "lastOpenFiles": [
     "251217-calculate-working-days/image-1.png",
     "251217-calculate-working-days/image.png",
